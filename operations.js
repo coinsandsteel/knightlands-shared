@@ -3,8 +3,7 @@ module.exports = {
     ChangeNickname: "change_nickname",
     EngageQuest: "engage_quest",
     GetZones: "get_zones",
-    GetCharacterInfo: "get_character_info",
-    GetInventory: "get_inventory",
+    GetUserInfo: "get_user_info",
     ResetStat: "reset_stats",
     ApplyStats: "apply_stats"
 }
