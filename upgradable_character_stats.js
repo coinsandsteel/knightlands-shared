@@ -1,4 +1,4 @@
-const CharacterStats = require("./CharacterStats");
+const CharacterStats = require("./character_stat");
 
 module.exports = {
     Attack: CharacterStats.Attack,
