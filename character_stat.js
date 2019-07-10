@@ -5,5 +5,6 @@ module.exports = {
     Energy: "energy",
     Stamina: "stamina",
     Luck: "luck",
-    CriticalChance: "criticalChance"
+    CriticalChance: "criticalChance",
+    Honor: "honor"
 };
