@@ -7,7 +7,7 @@ module.exports = {
     Accessory: 5,
     Weapon: 6,
     OffHand: 10,
-    Legs: 7,
+    Cape: 7,
     Mount: 8,
     Potion: 9,
     Pet: 11,
@@ -29,8 +29,8 @@ module.exports = {
                 return "ring";
             case ItemType.Accessory:
                 return "accessory";
-            case ItemType.Legs:
-                return "legs";
+            case ItemType.Cape:
+                return "cape";
             case ItemType.Mount:
                 return "mount";
             case ItemType.Potion:
