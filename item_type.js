@@ -10,6 +10,7 @@ module.exports = {
     Legs: 7,
     Mount: 8,
     Potion: 9,
+    Pet: 11,
     toString(type) {
         switch (type) {
             case ItemType.Weapon:
@@ -34,6 +35,8 @@ module.exports = {
                 return "mount";
             case ItemType.Potion:
                 return "potion";
+            case ItemType.Pet:
+                return "pet";
         }
 
         return "unknown_item_type";
