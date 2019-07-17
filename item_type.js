@@ -1,4 +1,4 @@
-module.exports = {
+const ItemType = {
     Helmet: 0,
     Chest: 1,
     Gloves: 2,
@@ -41,4 +41,6 @@ module.exports = {
 
         return "unknown_item_type";
     }
-}
+};
+
+module.exports = ItemType;
