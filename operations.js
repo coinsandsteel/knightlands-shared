@@ -4,6 +4,8 @@ module.exports = {
     EngageQuest: "engage_quest",
     GetQuestData: "get_quest_data",
     GetUserInfo: "get_user_info",
-    ResetStat: "reset_stats",
-    ApplyStats: "apply_stats"
+    BuyStat: "buy_stat",
+    AttackQuestBoss: "att_quest_boss",
+    AttackRaidBoss: "att_raid_boss",
+    ResetZone: "reset_zone"
 }
