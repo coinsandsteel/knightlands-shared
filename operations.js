@@ -7,5 +7,6 @@ module.exports = {
     BuyStat: "buy_stat",
     AttackQuestBoss: "att_quest_boss",
     AttackRaidBoss: "att_raid_boss",
-    ResetZone: "reset_zone"
+    ResetZone: "reset_zone",
+    GetExpTable: "get_exp_table"
 }
