@@ -8,5 +8,7 @@ module.exports = {
     AttackQuestBoss: "att_quest_boss",
     AttackRaidBoss: "att_raid_boss",
     ResetZone: "reset_zone",
-    GetExpTable: "get_exp_table"
+    GetExpTable: "get_exp_table",
+    EquipItem: "equip_item",
+    UnequipItem: "unequip_item"
 }
