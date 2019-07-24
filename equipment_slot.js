@@ -1,58 +1,61 @@
 const EquipmentType = require("./equipment_type");
 
-const EquipmentSlot = {
+const EquipmentSlots = {
     MainHand: "main_hand",
     OffHand: "off_hand",
     Ring: "ring",
-    Necklace: "ring",
+    Necklace: "necklace",
     Pet: "pet",
     Boots: "boots",
     Helmet: "helmet",
     Chest: "chest",
     Gloves: "gloves",
-    Cape: "cape",
-
-    getSlot(equipmentType) {
-        switch (equipmentType) {
-            case EquipmentType.Axe:
-            case EquipmentType.Bow:
-            case EquipmentType.Sword:
-            case EquipmentType.Spear:
-            case EquipmentType.Wand:
-                return this.MainHand;
-
-            case EquipmentType.Axe:
-            case EquipmentType.Bow:
-            case EquipmentType.Sword:
-            case EquipmentType.Spear:
-            case EquipmentType.Wand:
-                return this.OffHand;
-
-            case EquipmentType.Chest:
-                return this.Chest;
-
-            case EquipmentType.Helmet:
-                return this.Helmet;
-
-            case EquipmentType.Boots:
-                return this.Boots;
-
-            case EquipmentType.Gloves:
-                return this.Gloves;
-
-            case EquipmentType.Cape:
-                return this.Cape;
-
-            case EquipmentType.Ring:
-                return this.Ring;
-
-            case EquipmentType.Necklace:
-                return this.Necklace;
-
-            case EquipmentType.Pet:
-                return this.Pet;
-        }
-    }
+    Cape: "cape"
 };
 
-module.exports = EquipmentSlot;
+function getSlot(equipmentType) {
+    switch (equipmentType) {
+        case EquipmentType.Axe:
+        case EquipmentType.Bow:
+        case EquipmentType.Sword:
+        case EquipmentType.Spear:
+        case EquipmentType.Wand:
+            return EquipmentSlots.MainHand;
+
+        case EquipmentType.Scythe:
+        case EquipmentType.Knive:
+        case EquipmentType.Star:
+        case EquipmentType.Shield:
+        case EquipmentType.Whip:
+            return EquipmentSlots.OffHand;
+
+        case EquipmentType.Chest:
+            return EquipmentSlots.Chest;
+
+        case EquipmentType.Helmet:
+            return EquipmentSlots.Helmet;
+
+        case EquipmentType.Boots:
+            return EquipmentSlots.Boots;
+
+        case EquipmentType.Gloves:
+            return EquipmentSlots.Gloves;
+
+        case EquipmentType.Cape:
+            return EquipmentSlots.Cape;
+
+        case EquipmentType.Ring:
+            return EquipmentSlots.Ring;
+
+        case EquipmentType.Necklace:
+            return EquipmentSlots.Necklace;
+
+        case EquipmentType.Pet:
+            return EquipmentSlots.Pet;
+    }
+}
+
+module.exports = {
+    EquipmentSlots,
+    getSlot
+}
