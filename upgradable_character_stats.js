@@ -1,8 +1,7 @@
-const CharacterStats = require("./character_stat");
+import CharacterStats from "./character_stat";
 
-module.exports = {
+export default {
     Attack: CharacterStats.Attack,
-    Defense: CharacterStats.Defense,
     Health: CharacterStats.Health,
     Energy: CharacterStats.Energy,
     Stamina: CharacterStats.Stamina,
