@@ -14,5 +14,6 @@ module.exports = {
     JoinRaid: "join_raid",
     FetchRaidInfo: "fetch_raid_info",
     SummonRaid: "summon_raid",
-    RefillTimer: "refill_timer"
+    RefillTimer: "refill_timer",
+    FetchRaidSummonList: "fetch_raid_summon"
 }
