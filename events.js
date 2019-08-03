@@ -1,3 +1,5 @@
 module.exports = {
-    ExperienceChanged: "exp-changed"
+    ExperienceChanged: "exp-changed",
+    InventoryUpdate: "inventory-upd",
+    RaidSummoned: "raid-summoned"
 }
