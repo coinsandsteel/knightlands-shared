@@ -16,5 +16,6 @@ module.exports = {
     SummonRaid: "summon_raid",
     RefillTimer: "refill_timer",
     FetchRaidSummonList: "fetch_raid_summon",
-    GetCurrencyConversionRate: "get_currency_rate"
+    GetCurrencyConversionRate: "get_currency_rate",
+    SendPayment: "send_payment"
 }
