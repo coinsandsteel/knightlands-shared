@@ -1,5 +1,6 @@
 export default {
     Pending: "pending",
     Success: "success",
-    Failed: "failed"
+    Failed: "failed",
+    WaitingForTx: "waiting-for-tx"
 }
