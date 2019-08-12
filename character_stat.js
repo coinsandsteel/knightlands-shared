@@ -6,7 +6,8 @@ const CharacterStat = {
     Stamina: "stamina",
     Luck: "luck",
     CriticalChance: "criticalChance",
-    Honor: "honor"
+    Honor: "honor",
+    Dodge: "dodge"
 };
 
 export default CharacterStat;

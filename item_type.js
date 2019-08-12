@@ -4,7 +4,8 @@ const ItemType = {
     Resource: "resource",
     Pet: "pet",
     Troop: "troop",
-    General: "general"
+    General: "general",
+    Key: "key"
 };
 
 module.exports = ItemType;
