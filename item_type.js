@@ -5,7 +5,8 @@ const ItemType = {
     Pet: "pet",
     Troop: "troop",
     General: "general",
-    Key: "key"
+    Key: "key",
+    Currency: "currency"
 };
 
 module.exports = ItemType;
