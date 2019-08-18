@@ -14,16 +14,17 @@ class ItemStatResolver {
         }
 
         // statWeight is already normalized
-        return Math.floor(itemTargetPower * statWeight);
+        return Math.ceil(itemTargetPower * statWeight);
     }
 
     convertStats(template, itemLevel) {
         let stats = {};
+        const powerFactor = template.powerFactor < 0.001 ? 0 : 1;
 
         for (let idx in template.statWeights) {
             let statWeight = template.statWeights[idx];
 
-            let statValue = this.getStatValue(template.rarity, itemLevel, statWeight.stat, statWeight.valueWeight);
+            let statValue = this.getStatValue(template.rarity, itemLevel, statWeight.stat, statWeight.valueWeight) * powerFactor;
             if (statValue != 0) {
                 stats[statWeight.stat] = statValue;
             }
