@@ -25,7 +25,7 @@ class ItemStatResolver {
             let statWeight = template.statWeights[idx];
 
             let statValue = this.getStatValue(template.rarity, itemLevel, statWeight.stat, statWeight.valueWeight) * powerFactor;
-            if (statValue != 0) {
+            if (Number.isInteger(statValue) && statValue != 0) {
                 stats[statWeight.stat] = statValue;
             }
         }
