@@ -18,5 +18,7 @@ module.exports = {
     FetchRaidSummonStatus: "raid_summon_status",
     GetCurrencyConversionRate: "get_currency_rate",
     SendPayment: "send_payment",
-    FetchRaidsList: "fetch_raids_list"
+    FetchRaidsList: "fetch_raids_list",
+    SyncTime: "sync_time",
+    ClaimRaidLoot: "claim_raid_loot"
 }
