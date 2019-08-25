@@ -14,7 +14,8 @@ class ItemStatResolver {
         }
 
         // statWeight is already normalized
-        return Math.ceil(itemTargetPower * statWeight);
+        let value = Math.ceil(itemTargetPower * statWeight);
+        return Number.isNaN(value) ? 0 : value;
     }
 
     convertStats(template, itemLevel) {
@@ -25,7 +26,7 @@ class ItemStatResolver {
             let statWeight = template.statWeights[idx];
 
             let statValue = this.getStatValue(template.rarity, itemLevel, statWeight.stat, statWeight.valueWeight) * powerFactor;
-            if (Number.isInteger(statValue) && statValue != 0) {
+            if (statValue != 0) {
                 stats[statWeight.stat] = statValue;
             }
         }
