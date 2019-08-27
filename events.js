@@ -4,5 +4,6 @@ module.exports = {
     RaidSummonStatus: "raid-summon-status",
     RaidDamaged: "raid-damaged",
     RaidFinished: "raid-finished",
-    RaidNewParticipant: "raid-new-participant"
+    RaidNewParticipant: "raid-new-participant",
+    RaidChallengeUpdate: "raid-ch-update"
 }
