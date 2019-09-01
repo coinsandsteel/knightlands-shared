@@ -20,5 +20,6 @@ module.exports = {
     SendPayment: "send_payment",
     FetchRaidsList: "fetch_raids_list",
     SyncTime: "sync_time",
-    ClaimRaidLoot: "claim_raid_loot"
+    ClaimRaidLoot: "claim_raid_loot",
+    UpgradeItem: "upgrade_item"
 }

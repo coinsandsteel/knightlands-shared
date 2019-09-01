@@ -1,8 +1,8 @@
 const EquipmentType = require("./equipment_type");
 
 const EquipmentSlots = {
-    MainHand: "main_hand",
-    OffHand: "off_hand",
+    MainHand: "mainHand",
+    OffHand: "offHand",
     Ring: "ring",
     Necklace: "necklace",
     Pet: "pet",
