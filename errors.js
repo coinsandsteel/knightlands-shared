@@ -5,5 +5,6 @@ export default {
     NoItem: "no such item",
     NoMaterial: "no such material",
     NoTemplate: "no template for item",
-    IncompatibleLevelingMaterial: "incompatible leveling material"
+    IncompatibleLevelingMaterial: "incompatible leveling material",
+    IncorrectArguments: "incorrect arguments"
 }
