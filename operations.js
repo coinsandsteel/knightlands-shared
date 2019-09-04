@@ -21,5 +21,7 @@ module.exports = {
     FetchRaidsList: "fetch_raids_list",
     SyncTime: "sync_time",
     ClaimRaidLoot: "claim_raid_loot",
-    UpgradeItem: "upgrade_item"
+    UpgradeItem: "upgrade_item",
+    UnbindItem: "unbind_item",
+    CraftItem: "craft_item"
 }
