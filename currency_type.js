@@ -1,5 +1,6 @@
 export default {
     Soft: "soft",
     Hard: "hard",
-    Dkt: "dkt"
+    Dkt: "dkt",
+    Fiat: "fiat"
 }

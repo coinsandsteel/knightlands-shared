@@ -7,5 +7,8 @@ export default {
     NoTemplate: "no template for item",
     IncompatibleLevelingMaterial: "incompatible leveling material",
     IncorrectArguments: "incorrect arguments",
-    ItemMaxLevel: "item at max level"
+    ItemMaxLevel: "item at max level",
+    NoRecipe: "no such recipe",
+    NoRecipeIngridients: "no recipe ingridient",
+    NotEnoughCurrency: "not enough currency"
 }
