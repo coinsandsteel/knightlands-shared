@@ -10,5 +10,6 @@ export default {
     ItemMaxLevel: "item at max level",
     NoRecipe: "no such recipe",
     NoRecipeIngridients: "no recipe ingridient",
-    NotEnoughCurrency: "not enough currency"
+    NotEnoughCurrency: "not enough currency",
+    PaymentIsPending: "payment is pending"
 }

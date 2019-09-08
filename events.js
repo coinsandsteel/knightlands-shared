@@ -6,5 +6,6 @@ module.exports = {
     RaidFinished: "raid-finished",
     RaidNewParticipant: "raid-new-participant",
     RaidChallengeUpdate: "raid-ch-update",
-    CraftingStatus: "crafting-status"
+    CraftingStatus: "crafting-status",
+    TimerRefilled: "timer-refilled"
 }
