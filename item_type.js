@@ -3,10 +3,11 @@ const ItemType = {
     Consumable: "consumable",
     Resource: "resource",
     Pet: "pet",
-    Troop: "troop",
-    General: "general",
+    // Troop: "troop",
+    // General: "general",
     Key: "key",
-    Currency: "currency"
+    Currency: "currency",
+    Charm: "charm"
 };
 
 module.exports = ItemType;
