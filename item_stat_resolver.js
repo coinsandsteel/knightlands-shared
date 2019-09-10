@@ -15,7 +15,7 @@ class ItemStatResolver {
         let itemTargetPower = this._itemPower[itemRarity][itemLevel - 1];
         let statConversionRate = this._conversions[stat];
         if (statConversionRate === undefined) {
-            statConversionRate = 0;
+            statConversionRate = 1;
         }
 
         // statWeight is already normalized
