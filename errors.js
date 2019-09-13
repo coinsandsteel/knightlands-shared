@@ -11,5 +11,7 @@ export default {
     NoRecipe: "no such recipe",
     NoRecipeIngridients: "no recipe ingridient",
     NotEnoughCurrency: "not enough currency",
-    PaymentIsPending: "payment is pending"
+    PaymentIsPending: "payment is pending",
+    BossDead: "boss is dead",
+    BossIsLocked: "boss is locked"
 }
