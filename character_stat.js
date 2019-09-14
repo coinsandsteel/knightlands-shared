@@ -11,7 +11,8 @@ const CharacterStat = {
     CriticalDamage: "criticalDamage",
     ExtraGold: "extraGold",
     ExtraExp: "extraExp",
-    ExtraDkt: "extraDkt"
+    ExtraDkt: "extraDkt",
+    RaidDamage: "raidDamage"
 };
 
 export default CharacterStat;
