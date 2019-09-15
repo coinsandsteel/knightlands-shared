@@ -17,6 +17,7 @@ module.exports = {
     RefillTimer: "refill_timer",
     FetchRefillTimerStatus: "fetch_refill_timer_status",
     FetchRaidSummonStatus: "raid_summon_status",
+    FetchRaidJoinStatus: "raid_join_status",
     GetCurrencyConversionRate: "get_currency_rate",
     SendPayment: "send_payment",
     FetchRaidsList: "fetch_raids_list",
@@ -26,5 +27,5 @@ module.exports = {
     UnbindItem: "unbind_item",
     CraftItem: "craft_item",
     FetchCraftingStatus: "fetch_craft_status",
-    GetTimerRefillInfo: "get_timer_refill_info"
+    GetTimerRefillInfo: "get_timer_refill_info",
 }

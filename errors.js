@@ -13,5 +13,7 @@ export default {
     NotEnoughCurrency: "not enough currency",
     PaymentIsPending: "payment is pending",
     BossDead: "boss is dead",
-    BossIsLocked: "boss is locked"
+    BossIsLocked: "boss is locked",
+    InvalidRaid: "invalid raid",
+    RaidIsFull: "raid is full"
 }
