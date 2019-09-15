@@ -10,6 +10,7 @@ module.exports = {
     ResetZone: "reset_zone",
     GetExpTable: "get_exp_table",
     EquipItem: "equip_item",
+    UseItem: "use_item",
     UnequipItem: "unequip_item",
     JoinRaid: "join_raid",
     FetchRaidInfo: "fetch_raid_info",
