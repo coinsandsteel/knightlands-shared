@@ -15,5 +15,6 @@ export default {
     BossDead: "boss is dead",
     BossIsLocked: "boss is locked",
     InvalidRaid: "invalid raid",
-    RaidIsFull: "raid is full"
+    RaidIsFull: "raid is full",
+    NotConsumable: "not a consumable"
 }
