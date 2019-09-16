@@ -16,5 +16,7 @@ export default {
     BossIsLocked: "boss is locked",
     InvalidRaid: "invalid raid",
     RaidIsFull: "raid is full",
-    NotConsumable: "not a consumable"
+    NotConsumable: "not a consumable",
+    UknownChest: "uknown chest",
+    NoChestKey: "no chest key"
 }
