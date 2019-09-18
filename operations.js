@@ -30,5 +30,6 @@ module.exports = {
     FetchCraftingStatus: "fetch_craft_status",
     GetTimerRefillInfo: "get_timer_refill_info",
     OpenChest: "open_chest",
-    GetChestsStatus: "get_chests_status"
+    GetChestsStatus: "get_chests_status",
+    FetchChestOpenStatus: "fetch_chest_status",
 }
