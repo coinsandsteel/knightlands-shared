@@ -8,5 +8,6 @@ module.exports = {
     RaidNewParticipant: "raid-new-participant",
     RaidChallengeUpdate: "raid-ch-update",
     CraftingStatus: "crafting-status",
-    TimerRefilled: "timer-refilled"
+    TimerRefilled: "timer-refilled",
+    ChestOpened: "chest-opened"
 }
