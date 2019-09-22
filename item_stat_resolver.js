@@ -52,7 +52,7 @@ class ItemStatResolver {
 
         for (let idx in template.statWeights) {
             let statWeight = template.statWeights[idx];
-            let statValue = statFunc(statWeight.stat, statWeight.valueWeight) * powerFactor * enchantingFactor;
+            let statValue = statFunc(statWeight.stat, statWeight.valueWeight) * powerFactor;
             if (statValue != 0) {
                 stats[statWeight.stat] = Math.ceil(statValue);
             }
