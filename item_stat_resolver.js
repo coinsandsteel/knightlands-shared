@@ -14,7 +14,7 @@ class ItemStatResolver {
     }
 
     getStatValue(itemRarity, itemSlot, itemLevel, enchantingLevel, stat, statWeight) {
-        const enchantingFactor = 1 + enchantingLevel * 0.1;
+        const enchantingFactor = 1 + (enchantingLevel || 0) * 0.1;
         let itemTargetPower = this._itemPower[itemRarity][itemLevel - 1];
         let statConversionRate = this._conversions[stat];
         if (statConversionRate === undefined) {
@@ -28,7 +28,7 @@ class ItemStatResolver {
     }
 
     getStatValueForCharm(itemRarity, itemLevel, enchantingLevel, stat, statWeight) {
-        const enchantingFactor = 1 + enchantingLevel * 0.1;
+        const enchantingFactor = 1 + (enchantingLevel || 0) * 0.1;
         let itemTargetPower = this._itemPower[itemRarity][itemLevel - 1];
         let statConversionRate = this._conversions[stat];
         if (statConversionRate === undefined) {
