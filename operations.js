@@ -29,6 +29,7 @@ module.exports = {
     CraftItem: "craft_item",
     EnchantItem: "enchant_item",
     FetchCraftingStatus: "fetch_craft_status",
+    FetchEnchantingStatus: "fetch_enchanting_status",
     GetTimerRefillInfo: "get_timer_refill_info",
     OpenChest: "open_chest",
     GetChestsStatus: "get_chests_status",
