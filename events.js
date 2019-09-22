@@ -9,5 +9,6 @@ module.exports = {
     RaidChallengeUpdate: "raid-ch-update",
     CraftingStatus: "crafting-status",
     TimerRefilled: "timer-refilled",
-    ChestOpened: "chest-opened"
+    ChestOpened: "chest-opened",
+    ItemEnchanted: "item-enchanted"
 }

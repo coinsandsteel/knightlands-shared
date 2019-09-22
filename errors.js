@@ -9,7 +9,7 @@ export default {
     IncorrectArguments: "incorrect arguments",
     ItemMaxLevel: "item at max level",
     NoRecipe: "no such recipe",
-    NoRecipeIngridients: "no recipe ingridient",
+    NoRecipeIngridients: "not enough ingridients",
     NotEnoughCurrency: "not enough currency",
     PaymentIsPending: "payment is pending",
     BossDead: "boss is dead",
@@ -18,5 +18,8 @@ export default {
     RaidIsFull: "raid is full",
     NotConsumable: "not a consumable",
     UknownChest: "uknown chest",
-    NoChestKey: "no chest key"
+    NoChestKey: "no chest key",
+    UknownIAP: "unknown iap",
+    MaxEnchantLevel: "max enchantement is reached",
+    EnchantingInProcess: "enchanting in process"
 }
