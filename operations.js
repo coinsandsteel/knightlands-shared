@@ -27,6 +27,7 @@ module.exports = {
     UpgradeItem: "upgrade_item",
     UnbindItem: "unbind_item",
     CraftItem: "craft_item",
+    EnchantItem: "enchant_item",
     FetchCraftingStatus: "fetch_craft_status",
     GetTimerRefillInfo: "get_timer_refill_info",
     OpenChest: "open_chest",

@@ -13,7 +13,8 @@ class ItemStatResolver {
         this._charmPowerFactor = charmPowerFactor;
     }
 
-    getStatValue(itemRarity, itemSlot, itemLevel, stat, statWeight) {
+    getStatValue(itemRarity, itemSlot, itemLevel, enchantingLevel, stat, statWeight) {
+        const enchantingFactor = 1 + enchantingLevel * 0.1;
         let itemTargetPower = this._itemPower[itemRarity][itemLevel - 1];
         let statConversionRate = this._conversions[stat];
         if (statConversionRate === undefined) {
@@ -22,37 +23,38 @@ class ItemStatResolver {
 
         // statWeight is already normalized
         let slotFactor = this._slotFactors[itemSlot] || 1;
-        let value = Math.ceil(itemTargetPower * statWeight * slotFactor / statConversionRate);
+        let value = Math.ceil(itemTargetPower * statWeight * slotFactor / statConversionRate * enchantingFactor);
         return Number.isNaN(value) ? 0 : value;
     }
 
-    getStatValueForCharm(itemRarity, itemLevel, stat, statWeight) {
+    getStatValueForCharm(itemRarity, itemLevel, enchantingLevel, stat, statWeight) {
+        const enchantingFactor = 1 + enchantingLevel * 0.1;
         let itemTargetPower = this._itemPower[itemRarity][itemLevel - 1];
         let statConversionRate = this._conversions[stat];
         if (statConversionRate === undefined) {
             statConversionRate = 1;
         }
 
-        let value = Math.ceil(itemTargetPower * statWeight * this._charmPowerFactor / statConversionRate);
+        let value = Math.ceil(itemTargetPower * statWeight * this._charmPowerFactor / statConversionRate * enchantingFactor);
         return Number.isNaN(value) ? 0 : value;
     }
 
-    convertStats(template, itemLevel) {
+    convertStats(template, itemLevel, enchantingLevel) {
         let stats = {};
         const powerFactor = template.powerFactor < 0.001 ? 0 : 1;
 
         let statFunc;
         if (template.type == ItemType.Charm) {
-            statFunc = this.getStatValueForCharm.bind(this, template.rarity, itemLevel);
+            statFunc = this.getStatValueForCharm.bind(this, template.rarity, itemLevel, enchantingLevel);
         } else {
-            statFunc = this.getStatValue.bind(this, template.rarity, getSlot(template.equipmentType), itemLevel);
+            statFunc = this.getStatValue.bind(this, template.rarity, getSlot(template.equipmentType), itemLevel, enchantingLevel);
         }
 
         for (let idx in template.statWeights) {
             let statWeight = template.statWeights[idx];
-            let statValue = statFunc(statWeight.stat, statWeight.valueWeight) * powerFactor;
+            let statValue = statFunc(statWeight.stat, statWeight.valueWeight) * powerFactor * enchantingFactor;
             if (statValue != 0) {
-                stats[statWeight.stat] = statValue;
+                stats[statWeight.stat] = Math.ceil(statValue);
             }
         }
 
