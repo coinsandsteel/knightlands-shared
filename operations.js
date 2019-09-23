@@ -37,7 +37,6 @@ module.exports = {
     FetchAdventuresStatus: "fetch_adventures_status",
     StartAdventure: "start_adventure",
     ClaimAdventure: "claim_adventure",
-    GetAvailableAdventures: "get_adventures",
     BuyAdventureSlot: "buy_adventure_slot",
     RefreshAdventures: "refresh_adventures"
 }

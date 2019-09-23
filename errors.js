@@ -21,5 +21,9 @@ export default {
     NoChestKey: "no chest key",
     UknownIAP: "unknown iap",
     MaxEnchantLevel: "max enchantement is reached",
-    EnchantingInProcess: "enchanting in process"
+    EnchantingInProcess: "enchanting in process",
+    UnknownAdventure: "unknown adventure",
+    AdventureInProcess: "adventure in process",
+    AdventureClaimed: "adventure is claimed",
+    AdventureWasRefreshed: "adventure already refreshed"
 }
