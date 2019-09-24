@@ -38,5 +38,6 @@ module.exports = {
     StartAdventure: "start_adventure",
     ClaimAdventure: "claim_adventure",
     BuyAdventureSlot: "buy_adventure_slot",
-    RefreshAdventures: "refresh_adventures"
+    RefreshAdventures: "refresh_adventures",
+    ChangeClass: "change_class"
 }

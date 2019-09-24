@@ -25,5 +25,7 @@ export default {
     UnknownAdventure: "unknown adventure",
     AdventureInProcess: "adventure in process",
     AdventureClaimed: "adventure is claimed",
-    AdventureWasRefreshed: "adventure already refreshed"
+    AdventureWasRefreshed: "adventure already refreshed",
+    CantChooseClass: "no class to choose",
+    UnknownClass: "unknown class"
 }
