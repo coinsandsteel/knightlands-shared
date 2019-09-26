@@ -10,11 +10,11 @@ for (let stat in EmptyStats) {
 
 class Buffs {
     constructor() {
-        this.bonusStats = { };
+        this.bonusStats = {};
         this.finalStats = { ...DefaultStats };
     }
 
-    calculate(rawStats, buffs, raidId) {
+    calculate(now, rawStats, buffs, raidId) {
         this.bonusStats = { ...EmptyStats };
 
         let i = 0;
@@ -22,7 +22,7 @@ class Buffs {
 
         for (; i < length; ++i) {
             const buff = buffs[i];
-            if (raidId != buff.raid) {
+            if (buff.duration < (now - buff.applyTime) / 1000 || raidId != buff.raid) {
                 continue;
             }
 
