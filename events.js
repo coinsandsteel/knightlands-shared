@@ -10,5 +10,6 @@ module.exports = {
     CraftingStatus: "crafting-status",
     TimerRefilled: "timer-refilled",
     ChestOpened: "chest-opened",
-    ItemEnchanted: "item-enchanted"
+    ItemEnchanted: "item-enchanted",
+    BuffApplied: "buff-applied"
 }
