@@ -28,3 +28,20 @@ conversions[CharacterStat.CriticalChance] = 1;
 conversions[CharacterStat.Honor] = 1;
 
 export const StatConversions = conversions;
+
+let DefaultStats = {}
+DefaultStats[CharacterStats.Health] = 50;
+DefaultStats[CharacterStats.Attack] = 5;
+DefaultStats[CharacterStats.CriticalChance] = 2;
+DefaultStats[CharacterStats.Energy] = 30;
+DefaultStats[CharacterStats.CriticalDamage] = 50;
+DefaultStats[CharacterStats.Stamina] = 5;
+DefaultStats[CharacterStats.Honor] = 1;
+DefaultStats[CharacterStats.Luck] = 0;
+DefaultStats[CharacterStats.Defense] = 0;
+DefaultStats[CharacterStats.ExtraDkt] = 0;
+DefaultStats[CharacterStats.ExtraExp] = 0;
+DefaultStats[CharacterStats.ExtraGold] = 0;
+DefaultStats[CharacterStats.RaidDamage] = 0;
+
+export const DefaultStats = DefaultStats; 
