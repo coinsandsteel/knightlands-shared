@@ -22,7 +22,8 @@ class Buffs {
 
         for (; i < length; ++i) {
             const buff = buffs[i];
-            if (buff.duration < (now - buff.applyTime) / 1000 || raidId != buff.raid) {
+            const timeElapsed = (now - buff.applyTime) / 1000;
+            if (buff.duration < timeElapsed || (buff.raid && raidId != buff.raid)) {
                 continue;
             }
 
