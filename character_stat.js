@@ -29,19 +29,19 @@ conversions[CharacterStat.Honor] = 1;
 
 export const StatConversions = conversions;
 
-let DefaultStats = {}
-DefaultStats[CharacterStats.Health] = 50;
-DefaultStats[CharacterStats.Attack] = 5;
-DefaultStats[CharacterStats.CriticalChance] = 2;
-DefaultStats[CharacterStats.Energy] = 30;
-DefaultStats[CharacterStats.CriticalDamage] = 50;
-DefaultStats[CharacterStats.Stamina] = 5;
-DefaultStats[CharacterStats.Honor] = 1;
-DefaultStats[CharacterStats.Luck] = 0;
-DefaultStats[CharacterStats.Defense] = 0;
-DefaultStats[CharacterStats.ExtraDkt] = 0;
-DefaultStats[CharacterStats.ExtraExp] = 0;
-DefaultStats[CharacterStats.ExtraGold] = 0;
-DefaultStats[CharacterStats.RaidDamage] = 0;
+let _DefaultStats = {}
+_DefaultStats[CharacterStat.Health] = 50;
+_DefaultStats[CharacterStat.Attack] = 5;
+_DefaultStats[CharacterStat.CriticalChance] = 2;
+_DefaultStats[CharacterStat.Energy] = 30;
+_DefaultStats[CharacterStat.CriticalDamage] = 50;
+_DefaultStats[CharacterStat.Stamina] = 5;
+_DefaultStats[CharacterStat.Honor] = 1;
+_DefaultStats[CharacterStat.Luck] = 0;
+_DefaultStats[CharacterStat.Defense] = 0;
+_DefaultStats[CharacterStat.ExtraDkt] = 0;
+_DefaultStats[CharacterStat.ExtraExp] = 0;
+_DefaultStats[CharacterStat.ExtraGold] = 0;
+_DefaultStats[CharacterStat.RaidDamage] = 0;
 
-export const DefaultStats = DefaultStats; 
+export const DefaultStats = _DefaultStats; 
