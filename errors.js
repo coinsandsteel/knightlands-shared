@@ -28,5 +28,6 @@ export default {
     AdventureClaimed: "adventure is claimed",
     AdventureWasRefreshed: "adventure already refreshed",
     CantChooseClass: "no class to choose",
-    UnknownClass: "unknown class"
+    UnknownClass: "unknown class",
+    DailyRewardCollected: "daily reward collected"
 }

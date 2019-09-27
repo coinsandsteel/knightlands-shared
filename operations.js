@@ -39,5 +39,7 @@ module.exports = {
     ClaimAdventure: "claim_adventure",
     BuyAdventureSlot: "buy_adventure_slot",
     RefreshAdventures: "refresh_adventures",
-    ChangeClass: "change_class"
+    ChangeClass: "change_class",
+    FetchDailyRewardStatus: "fetch_daily_reward_status",
+    CollectDailyReward: "collect_daily_reward"
 }
