@@ -3,6 +3,7 @@ export default {
     NoStamina: "not enough stamina",
     NoEnergy: "not enough energy",
     NoItem: "no such item",
+    NoEnoughItems: "not enough items",
     NoMaterial: "no such material",
     NoTemplate: "no template for item",
     IncompatibleLevelingMaterial: "incompatible leveling material",
