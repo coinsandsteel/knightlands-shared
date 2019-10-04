@@ -32,5 +32,6 @@ export default {
     UnknownClass: "unknown class",
     DailyRewardCollected: "daily reward collected",
     BeastMaxLevel: "beast at max level",
-    BeastCantEvolve: "cant evolve beast"
+    BeastCantEvolve: "cant evolve beast",
+    UknownPaymentId: "unknown payment id"
 }
