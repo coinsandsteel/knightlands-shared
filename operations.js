@@ -41,5 +41,7 @@ module.exports = {
     RefreshAdventures: "refresh_adventures",
     ChangeClass: "change_class",
     FetchDailyRewardStatus: "fetch_daily_reward_status",
-    CollectDailyReward: "collect_daily_reward"
+    CollectDailyReward: "collect_daily_reward",
+    BeastRegularBoost: "beast_regular_boost",
+    BeastAdvancedBoost: "beast_advanced_boost"
 }
