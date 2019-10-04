@@ -43,5 +43,6 @@ module.exports = {
     FetchDailyRewardStatus: "fetch_daily_reward_status",
     CollectDailyReward: "collect_daily_reward",
     BeastRegularBoost: "beast_regular_boost",
-    BeastAdvancedBoost: "beast_advanced_boost"
+    BeastAdvancedBoost: "beast_advanced_boost",
+    EvolveBeast: "evolve_beast"
 }

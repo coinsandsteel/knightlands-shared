@@ -30,5 +30,7 @@ export default {
     AdventureWasRefreshed: "adventure already refreshed",
     CantChooseClass: "no class to choose",
     UnknownClass: "unknown class",
-    DailyRewardCollected: "daily reward collected"
+    DailyRewardCollected: "daily reward collected",
+    BeastMaxLevel: "beast at max level",
+    BeastCantEvolve: "cant evolve beast"
 }

@@ -11,5 +11,6 @@ module.exports = {
     TimerRefilled: "timer-refilled",
     ChestOpened: "chest-opened",
     ItemEnchanted: "item-enchanted",
-    BuffApplied: "buff-applied"
+    BuffApplied: "buff-applied",
+    ItemPurchased: "item-purchased"
 }
