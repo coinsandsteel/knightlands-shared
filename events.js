@@ -12,5 +12,6 @@ module.exports = {
     ChestOpened: "chest-opened",
     ItemEnchanted: "item-enchanted",
     BuffApplied: "buff-applied",
+    BuffUpdate: "buff-update",
     ItemPurchased: "item-purchased"
 }

@@ -34,5 +34,7 @@ export default {
     BeastMaxLevel: "beast at max level",
     BeastCantEvolve: "cant evolve beast",
     UknownPaymentId: "unknown payment id",
-    NotEnoughResource: "not enough resource"
+    NotEnoughResource: "not enough resource",
+    TowerFloorInProcess: "tower floor not finished",
+    TowerNoTicket: "no ticket"
 }
