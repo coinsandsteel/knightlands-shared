@@ -52,5 +52,6 @@ module.exports = {
     AttackTowerFloor: "attack_tower_floor",
     ClaimTowerFloorRewards: "claim_tower_floor",
     SkipTowerFloor: "skip_tower_floor",
-    CancelTowerFloor: "cancel_tower_floor"
+    CancelTowerFloor: "cancel_tower_floor",
+    FetchChallengedTowerFloor: "fetch_challenged_tower_floor"
 }
