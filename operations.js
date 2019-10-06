@@ -46,5 +46,6 @@ module.exports = {
     BeastAdvancedBoost: "beast_advanced_boost",
     EvolveBeast: "evolve_beast",
     FetchBeastBoostPurchase: "fetch_beast_boost",
-    CancelPayment: "cancel_payment"
+    CancelPayment: "cancel_payment",
+    FetchTowerFloors: "fetch_tower_floors"
 }

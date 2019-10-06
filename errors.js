@@ -33,5 +33,6 @@ export default {
     DailyRewardCollected: "daily reward collected",
     BeastMaxLevel: "beast at max level",
     BeastCantEvolve: "cant evolve beast",
-    UknownPaymentId: "unknown payment id"
+    UknownPaymentId: "unknown payment id",
+    NotEnoughResource: "not enough resource"
 }
