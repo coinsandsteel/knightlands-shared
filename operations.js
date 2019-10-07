@@ -53,5 +53,7 @@ module.exports = {
     ClaimTowerFloorRewards: "claim_tower_floor",
     SkipTowerFloor: "skip_tower_floor",
     CancelTowerFloor: "cancel_tower_floor",
-    FetchChallengedTowerFloor: "fetch_challenged_tower_floor"
+    FetchChallengedTowerFloor: "fetch_challenged_tower_floor",
+    FetchDailyRefillsStatus: "fetch_daily_refills_status",
+    CollectDailyRefills: "collect_daily_refills",
 }

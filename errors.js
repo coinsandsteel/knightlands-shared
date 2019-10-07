@@ -31,10 +31,13 @@ export default {
     CantChooseClass: "no class to choose",
     UnknownClass: "unknown class",
     DailyRewardCollected: "daily reward collected",
+    DailyRefillCollected: "daily refills collected",
     BeastMaxLevel: "beast at max level",
     BeastCantEvolve: "cant evolve beast",
     UknownPaymentId: "unknown payment id",
     NotEnoughResource: "not enough resource",
     TowerFloorInProcess: "tower floor not finished",
-    TowerNoTicket: "no ticket"
+    TowerNoTicket: "no ticket",
+    TowerFloorClaimed: "tower_floor_claimed",
+    TowerFloorFinished: "tower_floor_finished"
 }
