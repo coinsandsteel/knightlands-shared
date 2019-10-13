@@ -1,18 +1,18 @@
 const CharacterStat = {
-    Attack: "attack",
-    Defense: "defense",
     Health: "health",
+    Attack: "attack",
+    RaidDamage: "raidDamage",
+    CriticalChance: "criticalChance",
+    CriticalDamage: "criticalDamage",
+    Defense: "defense",
     Energy: "energy",
     Stamina: "stamina",
     Luck: "luck",
-    CriticalChance: "criticalChance",
-    Honor: "honor",
     Dodge: "dodge",
-    CriticalDamage: "criticalDamage",
+    HitRating: "hitRating",
     ExtraGold: "extraGold",
     ExtraExp: "extraExp",
-    ExtraDkt: "extraDkt",
-    RaidDamage: "raidDamage"
+    ExtraDkt: "extraDkt"
 };
 
 export default CharacterStat;
@@ -36,12 +36,13 @@ _DefaultStats[CharacterStat.CriticalChance] = 2;
 _DefaultStats[CharacterStat.Energy] = 30;
 _DefaultStats[CharacterStat.CriticalDamage] = 50;
 _DefaultStats[CharacterStat.Stamina] = 5;
-_DefaultStats[CharacterStat.Honor] = 1;
 _DefaultStats[CharacterStat.Luck] = 0;
 _DefaultStats[CharacterStat.Defense] = 0;
 _DefaultStats[CharacterStat.ExtraDkt] = 0;
 _DefaultStats[CharacterStat.ExtraExp] = 0;
 _DefaultStats[CharacterStat.ExtraGold] = 0;
 _DefaultStats[CharacterStat.RaidDamage] = 0;
+_DefaultStats[CharacterStat.Dodge] = 0;
+_DefaultStats[CharacterStat.HitRating] = 0;
 
 export const DefaultStats = _DefaultStats; 

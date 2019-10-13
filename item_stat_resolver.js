@@ -2,7 +2,7 @@
 
 const {
     getSlot
-  } = require("./equipment_slot");
+} = require("./equipment_slot");
 const ItemType = require("./item_type");
 
 class ItemStatResolver {
@@ -11,6 +11,20 @@ class ItemStatResolver {
         this._itemPower = itemPower;
         this._slotFactors = slotFactors;
         this._charmPowerFactor = charmPowerFactor;
+    }
+
+    inverseStats(stats) {
+        let total = 0;
+        for (let stat in stats) {
+            let statConversionRate = this._conversions[stat];
+            if (statConversionRate === undefined) {
+                statConversionRate = 1;
+            }
+
+            total += stats[stat] * statConversionRate;
+        }
+
+        return Math.floor(total);
     }
 
     getStatValue(itemRarity, itemSlot, itemLevel, enchantingLevel, stat, statWeight) {
