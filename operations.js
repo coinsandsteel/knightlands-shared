@@ -56,4 +56,11 @@ module.exports = {
     FetchChallengedTowerFloor: "fetch_challenged_tower_floor",
     FetchDailyRefillsStatus: "fetch_daily_refills_status",
     CollectDailyRefills: "collect_daily_refills",
+    FetchTrialState: "fetch_trial_state",
+    ChallengeTrialFight: "challenge_trial_fight",
+    FetchCardsState: "fetch_cards_state",
+    PurchaseTrialAttempts: "purchase_trial_attempts",
+    AttackTrial: "attack_trial",
+    ImproveTrialCard: "improve_trial_card",
+    ResetTrialCards: "reset_trial_cards"
 }
