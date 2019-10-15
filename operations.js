@@ -58,6 +58,7 @@ module.exports = {
     CollectDailyRefills: "collect_daily_refills",
     FetchTrialState: "fetch_trial_state",
     ChallengeTrialFight: "challenge_trial_fight",
+    CollectTrialStageReward: "collect_trial_stage_reward",
     FetchCardsState: "fetch_cards_state",
     PurchaseTrialAttempts: "purchase_trial_attempts",
     AttackTrial: "attack_trial",
