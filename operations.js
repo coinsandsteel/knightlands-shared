@@ -59,7 +59,7 @@ module.exports = {
     FetchTrialState: "fetch_trial_state",
     ChallengeTrialFight: "challenge_trial_fight",
     CollectTrialStageReward: "collect_trial_stage_reward",
-    FetchCardsState: "fetch_cards_state",
+    FetchTrialFightMeta: "fetch_trial_fight_meta",
     PurchaseTrialAttempts: "purchase_trial_attempts",
     AttackTrial: "attack_trial",
     ChooseTrialCard: "choose_trial_card",
