@@ -25,6 +25,7 @@ export default {
     UknownIAP: "unknown iap",
     MaxEnchantLevel: "max enchantement is reached",
     EnchantingInProcess: "enchanting in process",
+    ItemNotEnchantable: "item is not enchantable",
     UnknownAdventure: "unknown adventure",
     AdventureInProcess: "adventure in process",
     AdventureClaimed: "adventure is claimed",
