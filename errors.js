@@ -53,7 +53,9 @@ export default {
     TrialNotInFight: "not in fight",
     TrialNoAttempts: "no attempts",
     TrialNoCards: "no cards to choose from",
-    TrialInvalidCard: "invalid card was chosen",
+    TrialInvalidCard: "invalid card",
     TrialStageRewardCollected: "stage reward is collected",
-    TrialStageNotCleared: "stage is not cleared"
+    TrialStageNotCleared: "stage is not cleared",
+    TrialCardMaxLevel: "card max level",
+    TrialNotEnoughPoints: "not enough trial points"
 }
