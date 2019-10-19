@@ -6,6 +6,10 @@ class TrialCardsResolver {
         this._cardModifiers = cardModifiers;
     }
 
+    getResetPrice(pointsSpent) {
+        return pointsSpent * 2500;
+    }
+
     getCurrentValue(fightMeta, cardEffect) {
         const cardMeta = fightMeta && fightMeta.cards ? fightMeta.cards[cardEffect] : null;
         const cardBaseValue = cardMeta ? cardMeta.value : 0;
@@ -16,13 +20,31 @@ class TrialCardsResolver {
     isMaxLevel(cardEffect) {
         let level = (this._leveledModifiers[cardEffect] || 0);
         return modifier.levels.length <= level + 1;
+    }   
+
+    getModifierValue(cardEffect, next = false) {
+        let level = (this._leveledModifiers[cardEffect] || 0);
+        if (next) {
+            level++;
+        }
+
+        const modifier = this._cardModifiers[cardEffect];
+        if (!modifier) {
+            return 0;
+        }
+
+        if (modifier.levels.length <= level) {
+            level = modifier.levels.length - 1;
+        }
+
+        return modifier.levels[level].value;
     }
 
-    getNextValue(cardEffect) {
-        return this._modifyValue(0, cardEffect, true);
+    getNextModifierValue(cardEffect) {
+        return this.getModifierValue(cardEffect, true);
     }
 
-    _modifyValue(value, cardEffect, next = false) {
+    _modifyValue(value, cardEffect) {
         const modifier = this._cardModifiers[cardEffect];
 
         // no modifier, do not do anything
@@ -30,36 +52,21 @@ class TrialCardsResolver {
             return value;
         }
 
-        let level = (this._leveledModifiers[cardEffect] || 0);
-        if (next) {
-            level++;
+        const modValue = this.getCurrentModifierValue(cardEffect);
+
+        switch (modifier.type) {
+            case TrialCardModifiers.FlatValue:
+                value += modValue;
+                break;
+
+            case TrialCardModifiers.IncreaseRelatively:
+                value = Math.floor(value * (100 + modValue) / 100);
+                break;
+
+            case TrialCardModifiers.DecreaseRelatively:
+                value = Math.floor(value * (100 - modValue) / 100);
+                break;
         }
-
-        if (modifier.levels.length <= level) {
-            level = modifier.levels.length - 1;
-        }
-
-        const modValue = modifier.levels[level].value;
-
-        if (next) {
-            value = modValue;
-        } else {
-            switch (modifier.type) {
-                case TrialCardModifiers.FlatValue:
-                    value += modValue;
-                    break;
-
-                case TrialCardModifiers.IncreaseRelatively:
-                    value = Math.floor(value * (100 + modValue) / 100);
-                    break;
-
-                case TrialCardModifiers.DecreaseRelatively:
-                    value = Math.floor(value * (100 - modValue) / 100);
-                    break;
-            }
-        }
-
-
 
         return value;
     }
