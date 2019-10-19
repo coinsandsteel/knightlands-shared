@@ -52,7 +52,7 @@ class TrialCardsResolver {
             return value;
         }
 
-        const modValue = this.getCurrentModifierValue(cardEffect);
+        const modValue = this.getModifierValue(cardEffect);
 
         switch (modifier.type) {
             case TrialCardModifiers.FlatValue:
