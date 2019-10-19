@@ -15,7 +15,7 @@ class TrialCardsResolver {
 
     isMaxLevel(cardEffect) {
         let level = (this._leveledModifiers[cardEffect] || 0);
-        return modifier.levels.length <= level+1;
+        return modifier.levels.length <= level + 1;
     }
 
     getNextValue(cardEffect) {
@@ -41,19 +41,25 @@ class TrialCardsResolver {
 
         const modValue = modifier.levels[level].value;
 
-        switch (modifier.type) {
-            case TrialCardModifiers.FlatValue:
-                value += modValue;
-                break;
+        if (next) {
+            value = modValue;
+        } else {
+            switch (modifier.type) {
+                case TrialCardModifiers.FlatValue:
+                    value += modValue;
+                    break;
 
-            case TrialCardModifiers.IncreaseRelatively:
-                value = Math.floor(value * (100 + modValue) / 100);
-                break;
+                case TrialCardModifiers.IncreaseRelatively:
+                    value = Math.floor(value * (100 + modValue) / 100);
+                    break;
 
-            case TrialCardModifiers.DecreaseRelatively:
-                value = Math.floor(value * (100 - modValue) / 100);
-                break;
+                case TrialCardModifiers.DecreaseRelatively:
+                    value = Math.floor(value * (100 - modValue) / 100);
+                    break;
+            }
         }
+
+
 
         return value;
     }
