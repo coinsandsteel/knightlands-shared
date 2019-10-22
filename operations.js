@@ -64,5 +64,6 @@ module.exports = {
     AttackTrial: "attack_trial",
     ChooseTrialCard: "choose_trial_card",
     ImproveTrialCard: "improve_trial_card",
-    ResetTrialCards: "reset_trial_cards"
+    ResetTrialCards: "reset_trial_cards",
+    SummonTrialCards: "summon_trial_cards"
 }

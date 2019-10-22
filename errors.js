@@ -58,5 +58,6 @@ export default {
     TrialStageRewardCollected: "stage reward is collected",
     TrialStageNotCleared: "stage is not cleared",
     TrialCardMaxLevel: "card max level",
-    TrialNotEnoughPoints: "not enough trial points"
+    TrialNotEnoughPoints: "not enough trial points",
+    TrialsNotEnoughMana: "not enough mana"
 }
