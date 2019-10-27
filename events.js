@@ -13,5 +13,7 @@ module.exports = {
     ItemEnchanted: "item-enchanted",
     BuffApplied: "buff-applied",
     BuffUpdate: "buff-update",
-    ItemPurchased: "item-purchased"
+    ItemPurchased: "item-purchased",
+    TrialAttemptsPurchased: "trial-attempts-purchased",
+    TowerAttemptsPurchased: "tower-attempts-purchased",
 }
