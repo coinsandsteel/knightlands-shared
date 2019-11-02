@@ -59,5 +59,6 @@ export default {
     TrialStageNotCleared: "stage is not cleared",
     TrialCardMaxLevel: "card max level",
     TrialNotEnoughPoints: "not enough trial points",
-    TrialsNotEnoughMana: "not enough mana"
+    TrialsNotEnoughMana: "not enough mana",
+    GoldExchangeNoFreeBoosts: "gold exchange no free boosts"
 }

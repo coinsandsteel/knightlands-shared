@@ -68,5 +68,8 @@ module.exports = {
     ChooseTrialCard: "choose_trial_card",
     ImproveTrialCard: "improve_trial_card",
     ResetTrialCards: "reset_trial_cards",
-    SummonTrialCards: "summon_trial_cards"
+    SummonTrialCards: "summon_trial_cards",
+    BoostGoldExchange: "boost_gold_exchange",
+    PremiumBoostGoldExchange: "premium_boost_gold_exchange",
+    ObtainGoldFromGoldExchange: "obtain_gold_gold_exchange"
 }
