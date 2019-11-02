@@ -72,5 +72,6 @@ module.exports = {
     BoostGoldExchange: "boost_gold_exchange",
     PremiumBoostGoldExchange: "premium_boost_gold_exchange",
     ObtainGoldFromGoldExchange: "obtain_gold_gold_exchange",
-    GetGoldExchangeExpRequired: "gold_exchange_exp_req"
+    GetGoldExchangeMeta: "gold_exchange_meta",
+    FetchGoldExchangePremiumBoostStatus: "gold_exchange_premium_status"
 }
