@@ -60,5 +60,6 @@ export default {
     TrialCardMaxLevel: "card max level",
     TrialNotEnoughPoints: "not enough trial points",
     TrialsNotEnoughMana: "not enough mana",
-    GoldExchangeNoFreeBoosts: "gold exchange no free boosts"
+    GoldExchangeNoFreeBoosts: "gold exchange no free boosts",
+    GoldExchangeNoFreeChanges: "gold exchange no free changes"
 }
