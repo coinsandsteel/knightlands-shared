@@ -61,5 +61,7 @@ export default {
     TrialNotEnoughPoints: "not enough trial points",
     TrialsNotEnoughMana: "not enough mana",
     GoldExchangeNoFreeBoosts: "gold exchange no free boosts",
-    GoldExchangeNoFreeChanges: "gold exchange no free changes"
+    GoldExchangeNoFreeChanges: "gold exchange no free changes",
+    DailyQuestsCantRefresh: "cant refresh daily quests",
+    DailyQuestsTaskCompleted: "daily task completed"
 }

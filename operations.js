@@ -73,5 +73,9 @@ module.exports = {
     PremiumBoostGoldExchange: "premium_boost_gold_exchange",
     ObtainGoldFromGoldExchange: "obtain_gold_gold_exchange",
     GetGoldExchangeMeta: "gold_exchange_meta",
-    FetchGoldExchangePremiumBoostStatus: "gold_exchange_premium_status"
+    FetchGoldExchangePremiumBoostStatus: "gold_exchange_premium_status",
+    RefreshDailyTasks: "refresh_daily_tasks",
+    AcceptDailyTask: "accept_daily_task",
+    CancelDailyTask: "cancel_daily_task",
+    ClaimDailyTasksRewards: "claim_daily_tasks_rewards",
 }
