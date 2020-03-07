@@ -78,4 +78,7 @@ module.exports = {
     AcceptDailyTask: "accept_daily_task",
     CancelDailyTask: "cancel_daily_task",
     ClaimDailyTasksRewards: "claim_daily_tasks_rewards",
+    WithdrawDividendToken: "withdraw_div_token",
+    FetchPendingDividendTokenWithdrawal: "fetch_pending_div_token_withdrawal",
+    SendDividendTokenWithdrawal: "send_div_token_withdrawal"
 }

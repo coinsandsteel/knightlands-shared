@@ -63,5 +63,6 @@ export default {
     GoldExchangeNoFreeBoosts: "gold exchange no free boosts",
     GoldExchangeNoFreeChanges: "gold exchange no free changes",
     DailyQuestsCantRefresh: "cant refresh daily quests",
-    DailyQuestsTaskCompleted: "daily task completed"
+    DailyQuestsTaskCompleted: "daily task completed",
+    DividendsWithdrawalPending: "div token withdrawal in process"
 }
