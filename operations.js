@@ -26,6 +26,7 @@ module.exports = {
     ClaimRaidLoot: "claim_raid_loot",
     UpgradeItem: "upgrade_item",
     UnbindItem: "unbind_item",
+    DisenchantItems: "dis_items",
     CraftItem: "craft_item",
     EnchantItem: "enchant_item",
     FetchCraftingStatus: "fetch_craft_status",
