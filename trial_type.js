@@ -1,4 +1,5 @@
 export default {
     Armour: "armour",
-    Weapon: "weapon"
+    Weapon: "weapon",
+    Accessory: "accessory"
 }
