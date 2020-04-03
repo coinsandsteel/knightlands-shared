@@ -85,5 +85,5 @@ module.exports = {
     DisenchantConvert: "dis_convert",
     FetchTournaments: "fetch_tournaments",
     JoinTournament: "join_tournament",
-    LeaveTournament: "leave_tournament"
+    ClaimTournamentRewards: "claim_tournament_rewards"
 }

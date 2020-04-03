@@ -65,5 +65,9 @@ export default {
     DailyQuestsCantRefresh: "cant refresh daily quests",
     DailyQuestsTaskCompleted: "daily task completed",
     DividendsWithdrawalPending: "div token withdrawal in process",
-    NoDividendsWithdrawal: "no pending withdrawals"
+    NoDividendsWithdrawal: "no pending withdrawals",
+    NoSuchTournament: "no_such_tournament",
+    PlayerNotRanked: "player_not_ranked",
+    NotInTournament: "not_in_tournament",
+    NoRewards: "no_rewards"
 }
