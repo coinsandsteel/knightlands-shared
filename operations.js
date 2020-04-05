@@ -88,4 +88,5 @@ module.exports = {
     ClaimTournamentRewards: "claim_tournament_rewards",
     FetchTournamentRankings: "fetch_tournament_ranks",
     GetTournamentRank: "get_tournament_rank",
+    GetFinishedTournaments: "get_finished_tournaments"
 }

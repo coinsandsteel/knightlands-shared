@@ -9,5 +9,6 @@ export default {
     DamageInParticularRaid: 7,
     CollectedItemsByRarity: 8,
     CraftedItemsByRarity: 9,
-    DisenchantedItemsByRarity: 10
+    DisenchantedItemsByRarity: 10,
+    LevelItemsByRarity: 11
 }
