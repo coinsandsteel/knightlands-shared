@@ -55,7 +55,7 @@ class ItemStatResolver {
 
     convertStats(template, itemLevel, enchantingLevel) {
         let stats = {};
-        const powerFactor = template.powerFactor < 0.001 ? 0 : 1;
+        const powerFactor = template.powerFactor < 0.001 ? 0 : template.powerFactor;
 
         let statFunc;
         if (template.type == ItemType.Charm) {

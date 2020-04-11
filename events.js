@@ -18,5 +18,6 @@ module.exports = {
     TowerAttemptsPurchased: "tower-attempts-purchased",
     GoldExchangeBoostPurchased: "gold-exchange-boost-purchased",
     DivTokenWithdrawal: "div-token-withdrawal",
-    TournamentFinished: "tournament-finished"
+    TournamentFinished: "tournament-finished",
+    RaceFinished: "race-finished"
 }

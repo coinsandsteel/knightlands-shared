@@ -89,5 +89,12 @@ module.exports = {
     FetchTournamentRankings: "fetch_tournament_ranks",
     GetTournamentRank: "get_tournament_rank",
     GetFinishedTournaments: "get_finished_tournaments",
-    GetTournamentRewards: "get_tournament_rewards"
+    GetTournamentRewards: "get_tournament_rewards",
+    FetchRaces: "fetch_races",
+    JoinRace: "join_race",
+    ClaimRaceRewards: "claim_race_rewards",
+    FetchRaceRankings: "fetch_race_ranks",
+    GetRaceRank: "get_race_rank",
+    GetFinishedRaces: "get_finished_race",
+    GetRaceRewards: "get_race_rewards"
 }
