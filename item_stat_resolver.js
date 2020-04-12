@@ -5,7 +5,7 @@ const {
 } = require("./equipment_slot");
 const ItemType = require("./item_type");
 
-class ItemStatResolver {
+export default class ItemStatResolver {
     constructor(statConversions, itemPower, slotFactors, charmPowerFactor) {
         this._conversions = statConversions;
         this._itemPower = itemPower;
@@ -49,7 +49,6 @@ class ItemStatResolver {
             statConversionRate = 1;
         }
         
-        console.log(itemTargetPower, statWeight, this._charmPowerFactor, statConversionRate, enchantingFactor);
         let value = (itemTargetPower * statWeight * this._charmPowerFactor / statConversionRate * enchantingFactor);
         return Number.isNaN(value) ? 0 : value;
     }
@@ -65,8 +64,7 @@ class ItemStatResolver {
             statFunc = this.getStatValue.bind(this, template.rarity, getSlot(template.equipmentType), itemLevel, enchantingLevel);
         }
 
-        for (let idx in template.statWeights) {
-            let statWeight = template.statWeights[idx];
+        for (let statWeight of template.statWeights) {
             let statValue = statFunc(statWeight.stat, statWeight.valueWeight) * powerFactor;
             if (statValue) {
                 stats[statWeight.stat] = Math.ceil(statValue);
@@ -76,5 +74,3 @@ class ItemStatResolver {
         return stats;
     }
 }
-
-export default ItemStatResolver;
