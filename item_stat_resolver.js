@@ -37,7 +37,7 @@ class ItemStatResolver {
 
         // statWeight is already normalized
         let slotFactor = this._slotFactors[itemSlot] || 1;
-        let value = Math.ceil(itemTargetPower * statWeight * slotFactor / statConversionRate * enchantingFactor);
+        let value = (itemTargetPower * statWeight * slotFactor / statConversionRate * enchantingFactor);
         return Number.isNaN(value) ? 0 : value;
     }
 
@@ -48,8 +48,9 @@ class ItemStatResolver {
         if (statConversionRate === undefined) {
             statConversionRate = 1;
         }
-
-        let value = Math.ceil(itemTargetPower * statWeight * this._charmPowerFactor / statConversionRate * enchantingFactor);
+        
+        console.log(itemTargetPower, statWeight, this._charmPowerFactor, statConversionRate, enchantingFactor);
+        let value = (itemTargetPower * statWeight * this._charmPowerFactor / statConversionRate * enchantingFactor);
         return Number.isNaN(value) ? 0 : value;
     }
 
@@ -67,7 +68,7 @@ class ItemStatResolver {
         for (let idx in template.statWeights) {
             let statWeight = template.statWeights[idx];
             let statValue = statFunc(statWeight.stat, statWeight.valueWeight) * powerFactor;
-            if (statValue != 0) {
+            if (statValue) {
                 stats[statWeight.stat] = Math.ceil(statValue);
             }
         }
