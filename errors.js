@@ -69,5 +69,7 @@ export default {
     NoSuchTournament: "no_such_tournament",
     PlayerNotRanked: "player_not_ranked",
     NotInTournament: "not_in_tournament",
-    NoRewards: "no_rewards"
+    NoRewards: "no_rewards",
+    NotInRace: "not_in_race",
+    NoSuchRace: "no_such_race"
 }

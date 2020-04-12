@@ -96,5 +96,6 @@ module.exports = {
     FetchRaceRankings: "fetch_race_ranks",
     GetRaceRank: "get_race_rank",
     GetFinishedRaces: "get_finished_race",
-    GetRaceRewards: "get_race_rewards"
+    GetRaceRewards: "get_race_rewards",
+    GetRaceShop: "get_race_shop"
 }
