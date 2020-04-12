@@ -64,10 +64,12 @@ export default class ItemStatResolver {
             statFunc = this.getStatValue.bind(this, template.rarity, getSlot(template.equipmentType), itemLevel, enchantingLevel);
         }
 
-        for (let statWeight of template.statWeights) {
-            let statValue = statFunc(statWeight.stat, statWeight.valueWeight) * powerFactor;
-            if (statValue) {
-                stats[statWeight.stat] = Math.ceil(statValue);
+        if (template.statWeights) {
+            for (let statWeight of template.statWeights) {
+                let statValue = statFunc(statWeight.stat, statWeight.valueWeight) * powerFactor;
+                if (statValue) {
+                    stats[statWeight.stat] = Math.ceil(statValue);
+                }
             }
         }
 
