@@ -71,5 +71,6 @@ export default {
     NotInTournament: "not_in_tournament",
     NoRewards: "no_rewards",
     NotInRace: "not_in_race",
-    NoSuchRace: "no_such_race"
+    NoSuchRace: "no_such_race",
+    UnknownLot: "unknown lot"
 }
