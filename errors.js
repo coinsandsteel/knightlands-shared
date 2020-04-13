@@ -72,5 +72,6 @@ export default {
     NoRewards: "no_rewards",
     NotInRace: "not_in_race",
     NoSuchRace: "no_such_race",
-    UnknownLot: "unknown lot"
+    UnknownLot: "unknown lot",
+    CantJoinRace: "can't join race"
 }
