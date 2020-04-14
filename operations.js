@@ -98,5 +98,7 @@ module.exports = {
     GetFinishedRaces: "get_finished_race",
     GetRaceRewards: "get_race_rewards",
     GetRaceShop: "get_race_shop",
-    PurchaseRaceShop: "purchase_race_shop"
+    PurchaseRaceShop: "purchase_race_shop",
+    GetLeaderboardRankings: "leaderboards_rankings",
+    GetLeaderboardRank: "leaderboard_rank"
 }
