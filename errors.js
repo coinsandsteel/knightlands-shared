@@ -73,5 +73,6 @@ export default {
     NotInRace: "not_in_race",
     NoSuchRace: "no_such_race",
     UnknownLot: "unknown lot",
-    CantJoinRace: "can't join race"
+    CantJoinRace: "can't join race",
+    ArmyNoUnit: "no such unit"
 }

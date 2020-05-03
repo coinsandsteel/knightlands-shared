@@ -100,5 +100,8 @@ module.exports = {
     GetRaceShop: "get_race_shop",
     PurchaseRaceShop: "purchase_race_shop",
     GetLeaderboardRankings: "leaderboards_rankings",
-    GetLeaderboardRank: "leaderboard_rank"
+    GetLeaderboardRank: "leaderboard_rank",
+    GetArmy: "get_army",
+    SetLegionSlot: "set_legion_slot",
+    SummonArmyUnit: "summon_army_unit"
 }
