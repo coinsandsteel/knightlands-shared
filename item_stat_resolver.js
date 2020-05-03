@@ -27,6 +27,14 @@ export default class ItemStatResolver {
         return Math.floor(total);
     }
 
+    powerToStatValue(powerValue, stat) {
+        let statConversionRate = this._conversions[stat];
+        if (statConversionRate === undefined) {
+            statConversionRate = 1;
+        }
+        return powerValue * statConversionRate;
+    }
+
     getStatValue(itemRarity, itemSlot, itemLevel, enchantingLevel, stat, statWeight) {
         const enchantingFactor = 1 + (enchantingLevel || 0) * 0.1;
         let itemTargetPower = this._itemPower[itemRarity][itemLevel - 1];
@@ -48,7 +56,7 @@ export default class ItemStatResolver {
         if (statConversionRate === undefined) {
             statConversionRate = 1;
         }
-        
+
         let value = (itemTargetPower * statWeight * this._charmPowerFactor / statConversionRate * enchantingFactor);
         return Number.isNaN(value) ? 0 : value;
     }
