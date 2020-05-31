@@ -103,5 +103,6 @@ module.exports = {
     GetLeaderboardRank: "leaderboard_rank",
     GetArmy: "get_army",
     SetLegionSlot: "set_legion_slot",
+    GetArmySummonInfo: "summon_army_info",
     SummonArmyUnit: "summon_army_unit"
 }
