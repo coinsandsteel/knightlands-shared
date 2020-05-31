@@ -104,5 +104,6 @@ module.exports = {
     GetArmy: "get_army",
     SetLegionSlot: "set_legion_slot",
     GetArmySummonInfo: "summon_army_info",
-    SummonArmyUnit: "summon_army_unit"
+    SummonArmyUnit: "summon_army_unit",
+    FetchArmySummonStatus: "fetch_army_summon_status"
 }
