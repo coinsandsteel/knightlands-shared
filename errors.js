@@ -74,5 +74,9 @@ export default {
     NoSuchRace: "no_such_race",
     UnknownLot: "unknown lot",
     CantJoinRace: "can't join race",
-    ArmyNoUnit: "no such unit"
+    ArmyNoUnit: "no such unit",
+    ArmyUnitUnknown: "unknown unit",
+    UnexpectedArmyUnit: "unexpected unit",
+    ArmyUnitMaxLvl: "unit is at max level",
+    NotEnoughEssence: "not enough essence"
 }
