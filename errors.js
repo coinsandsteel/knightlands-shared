@@ -78,5 +78,7 @@ export default {
     ArmyUnitUnknown: "unknown unit",
     UnexpectedArmyUnit: "unexpected unit",
     ArmyUnitMaxLvl: "unit is at max level",
-    NotEnoughEssence: "not enough essence"
+    NotEnoughEssence: "not enough essence",
+    ItemEquipped: "item already equipped",
+    NotEquipment: "not equipment"
 }
