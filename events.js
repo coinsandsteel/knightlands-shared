@@ -20,5 +20,6 @@ module.exports = {
     DivTokenWithdrawal: "div-token-withdrawal",
     TournamentFinished: "tournament-finished",
     RaceFinished: "race-finished",
-    UnitSummoned: "unit-summoned"
+    UnitSummoned: "unit-summoned",
+    UnitUpdated: "unit-updated"
 }

@@ -108,5 +108,7 @@ module.exports = {
     FetchArmySummonStatus: "fetch_army_summon_status",
     LevelUpArmyUnit: "lvl_up_army_unit",
     UnitEquipItem: "unit_equip",
-    UnitUnequipItem: "unit_unequip"
+    UnitUnequipItem: "unit_unequip",
+    UnitPromo: "unit_promo",
+    UnitAbilityTransfer: "unit_abili_transfer"
 }
