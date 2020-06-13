@@ -21,5 +21,6 @@ module.exports = {
     TournamentFinished: "tournament-finished",
     RaceFinished: "race-finished",
     UnitSummoned: "unit-summoned",
-    UnitUpdated: "unit-updated"
+    UnitUpdated: "unit-updated",
+    UnitsRemoved: "units-removed"
 }
