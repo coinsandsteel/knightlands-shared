@@ -9,6 +9,10 @@ class AbilityResolver {
     getAbilityLevelValue(unitStars, abilityId, isTroop) {
         const abilityRecords = isTroop ? this._meta.troops : this._meta.generals;
         const abilityTemplate = abilityRecords[abilityId];
+        if (!abilityTemplate) {
+            return 0;
+        }
+
         const levelRecord = abilityTemplate.levels[unitStars - 1];
 
         if (!levelRecord) {
