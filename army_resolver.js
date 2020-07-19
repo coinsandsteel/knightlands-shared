@@ -335,6 +335,10 @@ class ArmyResolver {
      * Ability Handlers
      */
 
+    _extraDamage({ context, abilityTemplate, unit, stars }) {
+        this._addExtraDamageToUnit(context, unit, this._getAbilityValue(abilityTemplate, stars));
+    }
+
     _increasedDamageWhenGeneralsUsed(params) {
         this._addDamageWhenUnitsUsed({ ...params, isTroop: false, category: TypeCategory, key: abilityTemplate.unitType, isRelative: true });
     }
