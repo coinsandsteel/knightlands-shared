@@ -53,5 +53,9 @@
   "ExtraGeneralsDamagePerTroopTypeUsed": "extraGeneralsDamagePerTroopTypeUsed",
   "ExtraGeneralsDamagePerTroopOwned": "extraGeneralsDamagePerTroopOwned",
   "IncreasedDamagePerTroopWeaponUsed": "increasedDamagePerTroopWeaponUsed",
-  "IncreasedGeneralsDamagePerTroopOwned": "increasedGeneralsDamagePerTroopOwned"
+  "IncreasedGeneralsDamagePerTroopOwned": "increasedGeneralsDamagePerTroopOwned",
+  "IncreasedDamageWhenTroopUsed": "increasedDamageWhenTroopUsed",
+  "ExtraDamageVsRaid": "extraDamageVsRaid",
+  "IncreasedTroopsDamageVsRaid": "increasedTroopsDamageVsRaid",
+  "ExtraDamage": "extraDamage"
 }
