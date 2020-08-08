@@ -6,12 +6,17 @@ const ElementCategory = "element";
 const TypeCategory = "type";
 const TemplateCategory = "template";
 
+function defaultRandomRange(min, max) {
+    return Math.floor(min + Math.random() * (max - min));
+}
+
 class ArmyResolver {
-    constructor(abilitiesMeta, statResolver, unitTemplates) {
+    constructor(abilitiesMeta, statResolver, unitTemplates, randomRange = defaultRandomRange) {
         this._meta = abilitiesMeta;
         this._statResolver = statResolver;
         this._unitTemplates = unitTemplates;
         this._abilityHandlers = {};
+        this._randomRange = randomRange;
 
         for (let key in UnitAbilityType) {
             const typeValue = UnitAbilityType[key];
@@ -19,6 +24,10 @@ class ArmyResolver {
             // _handler{Type}(troopQuantities, generalQuantities)
             this._abilityHandlers[typeValue] = this[`_${typeValue}`].bind(this);
         }
+    }
+
+    _isTriggered(chance) {
+        return this._randomRange(1, 100) <= chance;
     }
 
     _getAbilityTemplate(isTroop, abilityId) {
@@ -126,7 +135,8 @@ class ArmyResolver {
             bonusesByCategory: {},
             troops: [],
             generals: [],
-            ownedUnits: ownedUnitsIndex
+            ownedUnits: ownedUnitsIndex,
+            triggers: {}
         };
 
         // calculate troops and generals quantity by weapon type, element and unit type
@@ -201,30 +211,18 @@ class ArmyResolver {
             const finalBonuses = context.unitBonuses[unit.template];
             const categoryBonuses = unitTemplate.troop ? context.bonusesByCategory.troops : context.bonusesByCategory.generals;
 
-            for (let t in categoryBonuses.type) {
-                if (unitTemplate.unitType == t) {
-                    finalBonuses.flat += categoryBonuses.type[t].flat;
-                    finalBonuses.relative += categoryBonuses.type[t].relative;
-                    break;
-                }
-            }
+            let bonuses = categoryBonuses.type[unitTemplate.unitType];
+            finalBonuses.flat += bonuses.flat;
+            finalBonuses.relative += bonuses.relative;
 
             if (unitTemplate.troop) {
-                for (let w in categoryBonuses.weapon) {
-                    if (unitTemplate.weaponType == w) {
-                        finalBonuses.flat += categoryBonuses.weapon[w].flat;
-                        finalBonuses.relative += categoryBonuses.weapon[w].relative;
-                        break;
-                    }
-                }
+                bonuses = categoryBonuses.weapon[unitTemplate.weaponType];
+                finalBonuses.flat += bonuses.flat;
+                finalBonuses.relative += bonuses.relative;
 
-                for (let e in categoryBonuses.element) {
-                    if (unitTemplate.element == e) {
-                        finalBonuses.flat += categoryBonuses.element[e].flat;
-                        finalBonuses.relative += categoryBonuses.element[e].relative;
-                        break;
-                    }
-                }
+                bonuses = categoryBonuses.element[unitTemplate.element];
+                finalBonuses.flat += bonuses.flat;
+                finalBonuses.relative += bonuses.relative;
             }
 
             // apply relative bonus to flat
@@ -260,7 +258,7 @@ class ArmyResolver {
         let bonuses = isTroop ? context.bonusesByCategory.troops : context.bonusesByCategory.generals;
         bonuses = bonuses[category];
         const damageKey = isRelative ? "relative" : "flat";
-        
+
         if (key == 0) {
             // add to all categories
             for (const k in bonuses) {
@@ -405,19 +403,43 @@ class ArmyResolver {
         this._addUnitsDamagePerUnitsUsed({ context, abilityTemplate, stars, isTroopRef: false, isTroopTarget: true, isRelative: false });
     }
 
-    _extraDamagePerGeneralTypeUsed({ context, abilityTemplate, stars }) { 
+    _extraDamagePerGeneralTypeUsed({ context, abilityTemplate, stars }) {
         this._addDamagePerUnitsTypeUsed({ context, abilityTemplate, stars, isTroopRef: false, isRelative: false });
     }
 
-    _extraDamageChance() { }
+    _extraDamageChance({ context, abilityTemplate, stars }) {
+        if (this._isTriggered(abilityTemplate.chance)) {
+            context.triggers[abilityTemplate.id] = {
+                damage: this._getAbilityValue(abilityTemplate, stars)
+            };
+        }
+    }
 
-    _chanceToRestoreStamina() { }
+    _chanceToRestoreStamina({ context, abilityTemplate, stars }) { 
+        if (this._isTriggered(abilityTemplate.chance)) {
+            context.triggers[abilityTemplate.id] = {
+                stamina: this._getAbilityValue(abilityTemplate, stars)
+            }
+        }
+    }
 
-    _chanceToRestoreEnergy() { }
+    _chanceToRestoreEnergy({ context, abilityTemplate, stars }) { 
+        if (this._isTriggered(abilityTemplate.chance)) {
+            context.triggers[abilityTemplate.id] = {
+                energy: this._getAbilityValue(abilityTemplate, stars)
+            }
+        }
+    }
 
-    _chanceToHeal() { }
+    _chanceToHeal({ context, abilityTemplate, stars }) { 
+        if (this._isTriggered(abilityTemplate.chance)) {
+            context.triggers[abilityTemplate.id] = {
+                heal: this._getAbilityValue(abilityTemplate, stars)
+            }
+        }
+    }
 
-    _extraDamagePerTroopTypeUsed({ context, abilityTemplate, stars }) { 
+    _extraDamagePerTroopTypeUsed({ context, abilityTemplate, stars }) {
         this._addDamagePerUnitsTypeUsed({ context, abilityTemplate, stars, isTroopRef: true, isRelative: false });
     }
 
@@ -429,15 +451,15 @@ class ArmyResolver {
 
     _extraDamagePerTroopOwned() { }
 
-    _extraDamagePerTroopWeaponUsed({ context, abilityTemplate, stars }) { 
+    _extraDamagePerTroopWeaponUsed({ context, abilityTemplate, stars }) {
         this._addDamagePerUnitsWeaponUsed({ context, abilityTemplate, stars, isTroopRef: true, isRelative: false });
     }
 
-    _extraDamagePerTroopElementUsed({ context, abilityTemplate, stars }) { 
+    _extraDamagePerTroopElementUsed({ context, abilityTemplate, stars }) {
         this._addDamagePerUnitsElementUsed({ context, abilityTemplate, stars, isTroopRef: true, isRelative: false });
     }
 
-    _increasedDamagePerTroopElementUsed({ context, abilityTemplate, stars }) { 
+    _increasedDamagePerTroopElementUsed({ context, abilityTemplate, stars }) {
         this._addDamagePerUnitsElementUsed({ context, abilityTemplate, stars, isTroopRef: true, isRelative: true });
     }
 
@@ -445,31 +467,31 @@ class ArmyResolver {
 
     _increasedDamagePerTroopOwned() { }
 
-    _increasedDamageWhenTroopsWeaponUsed() { 
+    _increasedDamageWhenTroopsWeaponUsed() {
         this._addDamageWhenUnitsUsed({ ...params, isTroop: true, category: WeaponCategory, key: abilityTemplate.weapon, isRelative: true });
     }
 
-    _extraTroopsDamageWeapon({ context, abilityTemplate, stars }) { 
+    _extraTroopsDamageWeapon({ context, abilityTemplate, stars }) {
         this._addDamageToUnitsByWeapon(context, this._getAbilityValue(abilityTemplate, stars), abilityTemplate.weapon, true, false);
     }
 
-    _extraTroopsDamageElement({ context, abilityTemplate, stars }) { 
+    _extraTroopsDamageElement({ context, abilityTemplate, stars }) {
         this._addDamageToUnitsByElement(context, this._getAbilityValue(abilityTemplate, stars), abilityTemplate.element, true, false);
     }
 
-    _increasedTroopsDamageWeapon({ context, abilityTemplate, stars }) { 
+    _increasedTroopsDamageWeapon({ context, abilityTemplate, stars }) {
         this._addDamageToUnitsByWeapon(context, this._getAbilityValue(abilityTemplate, stars), abilityTemplate.weapon, true, true);
     }
 
-    _increasedTroopsDamageElement({ context, abilityTemplate, stars }) { 
+    _increasedTroopsDamageElement({ context, abilityTemplate, stars }) {
         this._addDamageToUnitsByElement(context, this._getAbilityValue(abilityTemplate, stars), abilityTemplate.element, true, true);
     }
 
-    _extraGeneralsDamage({ context, abilityTemplate, stars }) { 
+    _extraGeneralsDamage({ context, abilityTemplate, stars }) {
         this._addDamageToUnitsByType(context, this._getAbilityValue(abilityTemplate, stars), abilityTemplate.unitType, false, false);
     }
 
-    _increasedGeneralsDamage({ context, abilityTemplate, stars }) { 
+    _increasedGeneralsDamage({ context, abilityTemplate, stars }) {
         this._addDamageToUnitsByType(context, this._getAbilityValue(abilityTemplate, stars), abilityTemplate.unitType, false, true);
     }
 
@@ -477,7 +499,7 @@ class ArmyResolver {
 
     _increasedGeneralsDamagePerGeneralOwned() { }
 
-    _extraDamageWhenTroopsUsed(params) { 
+    _extraDamageWhenTroopsUsed(params) {
         this._addDamageWhenUnitsUsed({ ...params, isTroop: true, category: TypeCategory, key: abilityTemplate.unitType, isRelative: false });
     }
 
@@ -487,15 +509,15 @@ class ArmyResolver {
 
     _extraTroopsDamagePerTroopOwned() { }
 
-    _extraTroopsDamagePerTroopTypeOwned({ context, abilityTemplate, stars }) { 
-        this._addUnitsDamagePerUnitsOwned({ 
-            context, 
+    _extraTroopsDamagePerTroopTypeOwned({ context, abilityTemplate, stars }) {
+        this._addUnitsDamagePerUnitsOwned({
+            context,
             targetUnitsType: abilityTemplate.unitType,
-            TypeCategory, 
-            key: abilityTemplate.unitType2, 
+            TypeCategory,
+            key: abilityTemplate.unitType2,
             stars,
             isTroopRef: true,
-            isTroopTarget: true, 
+            isTroopTarget: true,
             isRelative: false
         });
     }
@@ -504,7 +526,7 @@ class ArmyResolver {
 
     _increasedTroopsDamagePerGeneralTypeOwned() { }
 
-    _increasedGeneralsDamagePerGeneralTypeUsed({ context, abilityTemplate, stars }) { 
+    _increasedGeneralsDamagePerGeneralTypeUsed({ context, abilityTemplate, stars }) {
         this._addUnitsDamagePerUnitsUsed({ context, abilityTemplate, stars, isTroopRef: false, isTroopTarget: false, isRelative: true });
     }
 
@@ -515,12 +537,12 @@ class ArmyResolver {
     _extraStatPerTroopOwned() { }
 
     _increasedTroopsDamageWhenTroopsUsed({ context, abilityTemplate, stars }) {
-        this._addUnitsDamageWhenUnitsUsed({ 
+        this._addUnitsDamageWhenUnitsUsed({
             context, abilityTemplate, stars, isTroopRef: true, isTroopTarget: true, isRelative: true,
             category: TypeCategory,
             key: abilityTemplate.unitType2
         });
-     }
+    }
 
     _increasedDamageWhenTroopsOwned() { }
 
@@ -528,13 +550,13 @@ class ArmyResolver {
 
     _extraGeneralsDamagePerTroopTypeUsed({ context, abilityTemplate, stars }) {
         this._addUnitsDamagePerUnitsUsed({ context, abilityTemplate, stars, isTroopRef: true, isTroopTarget: false, isRelative: false });
-     }
+    }
 
     _extraGeneralsDamagePerTroopOwned() { }
 
     _extraGeneralsDamagePerTroopOwned() { }
 
-    _increasedDamagePerTroopWeaponUsed({ context, abilityTemplate, stars }) { 
+    _increasedDamagePerTroopWeaponUsed({ context, abilityTemplate, stars }) {
         this._addDamagePerUnitsWeaponUsed({ context, abilityTemplate, stars, isTroopRef: true, isRelative: true });
     }
 
