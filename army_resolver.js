@@ -28,7 +28,7 @@ class ArmyResolver {
     }
 
     _isTriggered(chance) {
-        return this._randomRange(1, 100) <= chance;
+        return this._randomRange(1, 100, true) <= chance;
     }
 
     _getAbilityTemplate(isTroop, abilityId) {
@@ -62,7 +62,6 @@ class ArmyResolver {
     }
 
     /**
-     * 
      * @param {Object} owned units inventory
      */
     buildUnitsIndex(units) {
@@ -227,6 +226,8 @@ class ArmyResolver {
             const damageProcd = context.damageTriggers[unit.id];
             if (damageProcd) {
                 context.damageTriggers[unit.id] = Math.floor(damageProcd * (100 + finalBonuses.relative) / 100);
+                // contribute to total damage inflicted
+                totalDamageOutput += context.damageTriggers[unit.id];
             }
         }
 
@@ -454,8 +455,8 @@ class ArmyResolver {
         }
     }
 
-    _extraDamagePerTroopTypeUsed({ context, abilityTemplate, stars }) {
-        this._addDamagePerUnitsTypeUsed({ context, abilityTemplate, stars, isTroopRef: true, isRelative: false });
+    _extraDamagePerTroopTypeUsed(params) {
+        this._addDamagePerUnitsTypeUsed({ ...params, isTroopRef: true, isRelative: false });
     }
 
     _extraDamagePerGeneralTypeOwned({ context, unit, abilityTemplate, stars }) { 
