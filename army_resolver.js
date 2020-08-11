@@ -121,10 +121,10 @@ class ArmyResolver {
             generals: [],
             index: unitsIndex,
             damageTriggers: {},
-            staminaRestored: 0,
-            energyRestored: 0,
-            healthRestored: 0,
-            statBonuses: {},
+            stamina: {},
+            energy: {},
+            health: {},
+            stats: {},
             raidBonuses: {}
         };
 
@@ -235,10 +235,10 @@ class ArmyResolver {
             totalDamageOutput, 
             unitsDamageOutput,
             damageProcs: context.damageTriggers,
-            staminaRestored: context.staminaRestored,
-            energyRestored: context.energyRestored,
-            healthRestored: context.healthRestored,
-            playerStats: context.playerStats
+            stamina: context.stamina,
+            energy: context.energy,
+            health: context.health,
+            playerStats: context.stats
         };
     }
 
@@ -352,7 +352,7 @@ class ArmyResolver {
     }
 
     _addStat(context, stat, value) {
-        this._addOrModify(context.statBonuses, stat, value);
+        this._addOrModify(context.stats, stat, value);
     }
 
     /**
@@ -437,21 +437,21 @@ class ArmyResolver {
         }
     }
 
-    _chanceToRestoreStamina({ context, abilityTemplate, stars }) {
+    _chanceToRestoreStamina({ unit, context, abilityTemplate, stars }) {
         if (this._isTriggered(abilityTemplate.chance)) {
-            context.staminaRestored += this._getAbilityValue(abilityTemplate, stars);
+            this._addOrModify(context.stamina, unit.id, this._getAbilityValue(abilityTemplate, stars));
         }
     }
 
-    _chanceToRestoreEnergy({ context, abilityTemplate, stars }) {
+    _chanceToRestoreEnergy({ unit, context, abilityTemplate, stars }) {
         if (this._isTriggered(abilityTemplate.chance)) {
-            context.energyRestored += this._getAbilityValue(abilityTemplate, stars);
+            this._addOrModify(context.energy, unit.id, this._getAbilityValue(abilityTemplate, stars));
         }
     }
 
-    _chanceToHeal({ context, abilityTemplate, stars }) {
+    _chanceToHeal({ unit, context, abilityTemplate, stars }) {
         if (this._isTriggered(abilityTemplate.chance)) {
-            context.healthRestored += this._getAbilityValue(abilityTemplate, stars);
+            this._addOrModify(context.health, unit.id, this._getAbilityValue(abilityTemplate, stars));
         }
     }
 
