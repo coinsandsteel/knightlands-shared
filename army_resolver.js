@@ -69,7 +69,7 @@ class ArmyResolver {
     }
 
     estimateDamage(unit, unitsIndex) {
-        return this.estimateDamageOutput({ [unit.id]: unit }, unitsIndex);
+        return this.resolve({ [unit.id]: unit }, unitsIndex);
     }
 
     getDamage(unit, nextLevel, nextStar) {
@@ -185,7 +185,7 @@ class ArmyResolver {
                 if (!this._abilityHandlers[abilityTemplate.type]) {
                     console.error(`no handler for ability ${abilityTemplate.type}`);
                 }
-                
+
                 this._abilityHandlers[abilityTemplate.type]({
                     context, abilityTemplate, unit, unitTemplate, stars
                 });
@@ -231,8 +231,8 @@ class ArmyResolver {
             }
         }
 
-        return { 
-            totalDamageOutput, 
+        return {
+            totalDamageOutput,
             unitsDamageOutput,
             damageProcs: context.damageTriggers,
             stamina: context.stamina,
@@ -459,7 +459,7 @@ class ArmyResolver {
         this._addDamagePerUnitsTypeUsed({ ...params, isTroopRef: true, isRelative: false });
     }
 
-    _extraDamagePerGeneralTypeOwned({ context, unit, abilityTemplate, stars }) { 
+    _extraDamagePerGeneralTypeOwned({ context, unit, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, false, stars, TypeCategory, abilityTemplate.unitType, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addExtraDamageToUnit(context, unit, damage);
@@ -469,14 +469,14 @@ class ArmyResolver {
         const totalUnits = this._queryOwnedUnits(context, true, stars, TypeCategory, abilityTemplate.unitType, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addExtraDamageToUnit(context, unit, damage);
-     }
+    }
 
-    _extraStatToPlayer({ context, stars, abilityTemplate }) { 
+    _extraStatToPlayer({ context, stars, abilityTemplate }) {
         const statValue = this._getAbilityValue(abilityTemplate, stars);
         this._addStat(context, abilityTemplate.stat, statValue);
     }
 
-    _extraDamagePerTroopOwned({ context, unit, abilityTemplate, stars }) { 
+    _extraDamagePerTroopOwned({ context, unit, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, true, stars, TemplateCategory, abilityTemplate.troop, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addExtraDamageToUnit(context, unit, damage);
@@ -494,19 +494,19 @@ class ArmyResolver {
         this._addDamagePerUnitsElementUsed({ ...params, isTroopRef: true, isRelative: true });
     }
 
-    _extraDamagePerTroopWeaponOwned({ context, unit, abilityTemplate, stars }) { 
+    _extraDamagePerTroopWeaponOwned({ context, unit, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, true, stars, WeaponCategory, abilityTemplate.weaponType, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addExtraDamageToUnit(context, unit, damage);
     }
 
-    _increasedDamagePerTroopOwned({ context, unit, abilityTemplate, stars }) { 
+    _increasedDamagePerTroopOwned({ context, unit, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, true, stars, TemplateCategory, abilityTemplate.troop, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addIncreasedDamageToUnit(context, unit, damage);
     }
 
-    _increasedDamageWhenTroopsWeaponUsed({ ...params, abilityTemplate }) {
+    _increasedDamageWhenTroopsWeaponUsed({ abilityTemplate, ...params }) {
         this._addDamageWhenUnitsUsed({ ...params, isTroop: true, category: WeaponCategory, key: abilityTemplate.weapon, isRelative: true });
     }
 
@@ -534,7 +534,7 @@ class ArmyResolver {
         this._addDamageToUnitsByType(context, this._getAbilityValue(abilityTemplate, stars), abilityTemplate.unitType, false, true);
     }
 
-    _extraGeneralsDamagePerGeneralOwned({ context, abilityTemplate, stars }) { 
+    _extraGeneralsDamagePerGeneralOwned({ context, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, false, stars, TemplateCategory, abilityTemplate.general, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, false, false);
@@ -544,25 +544,25 @@ class ArmyResolver {
         const totalUnits = this._queryOwnedUnits(context, false, stars, TemplateCategory, abilityTemplate.general, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, false, true);
-     }
+    }
 
     _extraDamageWhenTroopsUsed(params) {
         this._addDamageWhenUnitsUsed({ ...params, isTroop: true, category: TypeCategory, key: abilityTemplate.unitType, isRelative: false });
     }
 
-    _extraTroopsDamagePerGeneralOwned({ context, abilityTemplate, stars }) { 
+    _extraTroopsDamagePerGeneralOwned({ context, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, false, stars, TemplateCategory, abilityTemplate.general, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, true, false);
     }
 
-    _increasedTroopsDamagePerGeneralOwned({ context, abilityTemplate, stars }) { 
+    _increasedTroopsDamagePerGeneralOwned({ context, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, false, stars, TemplateCategory, abilityTemplate.general, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, true, true);
     }
 
-    _extraTroopsDamagePerTroopOwned({ context, abilityTemplate, stars }) { 
+    _extraTroopsDamagePerTroopOwned({ context, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, true, stars, TemplateCategory, abilityTemplate.troop, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, true, false);
@@ -585,31 +585,31 @@ class ArmyResolver {
         const totalUnits = this._queryOwnedUnits(context, false, stars, TypeCategory, abilityTemplate.unitType2, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, true, false);
-     }
+    }
 
     _increasedTroopsDamagePerGeneralTypeOwned({ context, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, false, stars, TypeCategory, abilityTemplate.unitType2, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, true, true);
-     }
+    }
 
     _increasedGeneralsDamagePerGeneralTypeUsed({ context, abilityTemplate, stars }) {
         this._addUnitsDamagePerUnitsUsed({ context, abilityTemplate, stars, isTroopRef: false, isTroopTarget: false, isRelative: true });
     }
 
-    _extraDamagePerGeneralOwned() { 
+    _extraDamagePerGeneralOwned() {
         const totalUnits = this._queryOwnedUnits(context, true, stars, TemplateCategory, abilityTemplate.general, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addExtraDamageToUnit(context, damage, abilityTemplate.unitType, true, false);
     }
 
-    _extraStatPerGeneralOwned({ context, stars, abilityTemplate }) { 
+    _extraStatPerGeneralOwned({ context, stars, abilityTemplate }) {
         const totalUnits = this._queryOwnedUnits(context, false, stars, TemplateCategory, abilityTemplate.general, abilityTemplate.max);
         const statValue = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addStat(context, abilityTemplate.stat, statValue);
     }
 
-    _extraStatPerTroopOwned({ context, stars, abilityTemplate }) { 
+    _extraStatPerTroopOwned({ context, stars, abilityTemplate }) {
         const totalUnits = this._queryOwnedUnits(context, true, stars, TemplateCategory, abilityTemplate.troop, abilityTemplate.max);
         const statValue = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addStat(context, abilityTemplate.stat, statValue);
@@ -640,7 +640,7 @@ class ArmyResolver {
         this._addUnitsDamagePerUnitsUsed({ context, abilityTemplate, stars, isTroopRef: true, isTroopTarget: false, isRelative: false });
     }
 
-    _extraGeneralsDamagePerTroopOwned({ context, abilityTemplate, stars }) { 
+    _extraGeneralsDamagePerTroopOwned({ context, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, true, stars, TemplateCategory, abilityTemplate.troop, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, false, false);
@@ -650,13 +650,13 @@ class ArmyResolver {
         this._addDamagePerUnitsWeaponUsed({ context, abilityTemplate, stars, isTroopRef: true, isRelative: true });
     }
 
-    _increasedGeneralsDamagePerTroopOwned({ context, abilityTemplate, stars }) { 
+    _increasedGeneralsDamagePerTroopOwned({ context, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, true, stars, TemplateCategory, abilityTemplate.troop, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, false, true);
     }
 
-    _extraDamageVsRaid({ context, abilityTemplate, stars }) { 
+    _extraDamageVsRaid({ context, abilityTemplate, stars }) {
 
     }
 

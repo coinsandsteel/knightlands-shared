@@ -78,13 +78,13 @@ export class UnitsIndex {
         this._build(newUnits);
     }
 
-    queryOwnedUnits(context, isTroop, stars, category, key) {
+    queryOwnedUnits(isTroop, stars, category, key) {
         let totalUnits = 0;
         let categoryIndex;
         if (category == TemplateCategory) {
-            categoryIndex = context.ownedUnits[category];
+            categoryIndex = this.index[TemplateCategory][category];
         } else {
-            let baseIndex = isTroop ? context.ownedUnits.troops : context.ownedUnits.generals;
+            let baseIndex = isTroop ? this.index.troops : this.index.generals;
             categoryIndex = baseIndex[category];
         }
 
