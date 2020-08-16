@@ -111,5 +111,6 @@ module.exports = {
     UnitUnequipItem: "unit_unequip",
     UnitPromo: "unit_promo",
     UnitAbilityTransfer: "unit_abili_transfer",
-    UnitBanishment: "unit_banish"
+    UnitBanishment: "unit_banish",
+    UnitReserve: "unit_reserve"
 }
