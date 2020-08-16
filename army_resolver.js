@@ -64,8 +64,8 @@ class ArmyResolver {
     /**
      * @param {Object} owned units inventory
      */
-    buildUnitsIndex(units) {
-        return new UnitsIndex(units, this._unitTemplates);
+    buildUnitsIndex(units, reserve) {
+        return new UnitsIndex(units, reserve, this._unitTemplates);
     }
 
     estimateDamage(unit, unitsIndex) {
@@ -344,7 +344,7 @@ class ArmyResolver {
     }
 
     _queryOwnedUnits(context, isTroop, stars, category, key, max = -1) {
-        let count = context.index.queryOwnedUnits(isTroop, stars, category, key);
+        let count = context.index.queryOwnedUnits(isTroop, stars, category, key, max > 0);
         if (max != -1 && count > max) {
             count = max;
         }

@@ -10,10 +10,21 @@ export const TemplateCategory = "template";
     index must have units separated by each star
  */
 export class UnitsIndex {
-    constructor(units, unitTemplates) {
+    constructor(units, reserve, unitTemplates) {
         this._unitTemplates = unitTemplates;
         this._units = { ...units };
         this.index = {
+            [TemplateCategory]: {},
+            troops: {
+                [TypeCategory]: {},
+                [ElementCategory]: {},
+                [WeaponCategory]: {}
+            },
+            generals: {
+                [TypeCategory]: {}
+            }
+        };
+        this.reserveIndex = {
             [TemplateCategory]: {},
             troops: {
                 [TypeCategory]: {},
@@ -35,7 +46,7 @@ export class UnitsIndex {
             this._initField(this.index.generals[TypeCategory], stars, {});
         }
 
-        this._build(units);
+        this._build(units, reserve);
     }
 
     _addOrModify(obj, key, value) {
@@ -46,27 +57,35 @@ export class UnitsIndex {
         obj[key] = (obj[key] || value);
     }
 
-    _build(units) {
-        let index = this.index;
-
+    _build(units, reserve) {
         for (let id in units) {
             const unit = units[id];
-            const unitTemplate = this._unitTemplates[unit.template];
-            let stars = unit.promotions + unitTemplate.stars;
-            // treat units higher than 5 stars as 5 stars for simplicity
-            if (stars > 5) {
-                stars = 5;
-            }
+            this._indexUnit(this.index, unit);
+        }
 
-            this._addOrModify(index[TemplateCategory][stars], unitTemplate.id, 1);
+        for (let key in reserve) {
+            const unit = units[key];
+            this._indexUnit(this.reserveIndex, unit);
+        }
+    }
 
-            if (unitTemplate.troop) {
-                this._addOrModify(index.troops[TypeCategory][stars], unitTemplate.unitType, 1);
-                this._addOrModify(index.troops[ElementCategory][stars], unitTemplate.element, 1);
-                this._addOrModify(index.troops[WeaponCategory][stars], unitTemplate.weapon, 1);
-            } else {
-                this._addOrModify(index.generals[TypeCategory][stars], unitTemplate.unitType, 1);
-            }
+    _indexUnit(index, unit) {
+        const unitTemplate = this._unitTemplates[unit.template];
+        let stars = unit.promotions + unitTemplate.stars;
+        // treat units higher than 5 stars as 5 stars for simplicity
+        if (stars > 5) {
+            stars = 5;
+        }
+        // it might be a reserved unit, and will have explicit count field
+        const count = unit.count || 1;
+        this._addOrModify(index[TemplateCategory][stars], unitTemplate.id, count);
+
+        if (unitTemplate.troop) {
+            this._addOrModify(index.troops[TypeCategory][stars], unitTemplate.unitType, count);
+            this._addOrModify(index.troops[ElementCategory][stars], unitTemplate.element, count);
+            this._addOrModify(index.troops[WeaponCategory][stars], unitTemplate.weapon, count);
+        } else {
+            this._addOrModify(index.generals[TypeCategory][stars], unitTemplate.unitType, count);
         }
     }
 
@@ -78,13 +97,17 @@ export class UnitsIndex {
         this._build(newUnits);
     }
 
-    queryOwnedUnits(isTroop, stars, category, key) {
+    queryOwnedUnits(isTroop, stars, category, key, fromReserve) {
+        return this._queryOwnedUnits(isTroop, stars, category, key, fromReserve ? this.reserveIndex : this.index);
+    }
+    
+    _queryOwnedUnits(isTroop, stars, category, key, index) {
         let totalUnits = 0;
         let categoryIndex;
         if (category == TemplateCategory) {
-            categoryIndex = this.index[TemplateCategory][category];
+            categoryIndex = index[TemplateCategory][category];
         } else {
-            let baseIndex = isTroop ? this.index.troops : this.index.generals;
+            let baseIndex = isTroop ? index.troops : index.generals;
             categoryIndex = baseIndex[category];
         }
 
