@@ -22,5 +22,6 @@ module.exports = {
     RaceFinished: "race-finished",
     UnitSummoned: "unit-summoned",
     UnitUpdated: "unit-updated",
-    UnitsRemoved: "units-removed"
+    UnitsRemoved: "units-removed",
+    UnitsReserveUpdate: "units-rsv-upd"
 }

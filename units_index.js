@@ -64,7 +64,7 @@ export class UnitsIndex {
         }
 
         for (let key in reserve) {
-            const unit = units[key];
+            const unit = reserve[key];
             this._indexUnit(this.reserveIndex, unit);
         }
     }
