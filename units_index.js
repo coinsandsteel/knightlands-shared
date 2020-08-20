@@ -38,12 +38,16 @@ export class UnitsIndex {
 
         for (let stars = 1; stars <= 5; ++stars) {
             this._initField(this.index[TemplateCategory], stars, {});
-
             this._initField(this.index.troops[TypeCategory], stars, {});
             this._initField(this.index.troops[ElementCategory], stars, {});
             this._initField(this.index.troops[WeaponCategory], stars, {});
-
             this._initField(this.index.generals[TypeCategory], stars, {});
+
+            this._initField(this.reserveIndex[TemplateCategory], stars, {});
+            this._initField(this.reserveIndex.troops[TypeCategory], stars, {});
+            this._initField(this.reserveIndex.troops[ElementCategory], stars, {});
+            this._initField(this.reserveIndex.troops[WeaponCategory], stars, {});
+            this._initField(this.reserveIndex.generals[TypeCategory], stars, {});
         }
 
         this._build(units, reserve);

@@ -80,5 +80,6 @@ export default {
     ArmyUnitMaxLvl: "unit is at max level",
     NotEnoughEssence: "not enough essence",
     ItemEquipped: "item already equipped",
-    NotEquipment: "not equipment"
+    NotEquipment: "not equipment",
+    UnitInLegion: "unit in legion"
 }
