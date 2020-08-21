@@ -81,5 +81,6 @@ export default {
     NotEnoughEssence: "not enough essence",
     ItemEquipped: "item already equipped",
     NotEquipment: "not equipment",
-    UnitInLegion: "unit in legion"
+    UnitInLegion: "unit in legion",
+    RaidLootClaimed: "raid loot claimed"
 }
