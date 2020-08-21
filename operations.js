@@ -14,6 +14,7 @@ module.exports = {
     UnequipItem: "unequip_item",
     JoinRaid: "join_raid",
     FetchRaidInfo: "fetch_raid_info",
+    FetchRaidRewards: "fetch_raid_rewards",
     SummonRaid: "summon_raid",
     RefillTimer: "refill_timer",
     FetchRefillTimerStatus: "fetch_refill_timer_status",
