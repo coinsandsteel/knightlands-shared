@@ -23,5 +23,6 @@ module.exports = {
     UnitSummoned: "unit-summoned",
     UnitUpdated: "unit-updated",
     UnitsRemoved: "units-removed",
-    UnitsReserveUpdate: "units-rsv-upd"
+    UnitsReserveUpdate: "units-rsv-upd",
+    TokenChartUpdate: "token-chart-upd"
 }
