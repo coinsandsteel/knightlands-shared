@@ -3,5 +3,9 @@ module.exports = {
     AddExperience: "addExperience",
     RefillTimer: "refillTimer",
     Buff: "buff",
-    RaidBuff: "raidBuff"
+    RaidBuff: "raidBuff",
+    Equip: "equip",
+    Unequip: "unequip",
+    Use: "use",
+    Compare: "compare"
 }
