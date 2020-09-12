@@ -114,5 +114,7 @@ module.exports = {
     UnitPromo: "unit_promo",
     UnitAbilityTransfer: "unit_abili_transfer",
     UnitBanishment: "unit_banish",
-    UnitReserve: "unit_reserve"
+    UnitReserve: "unit_reserve",
+    Evolve: "item_evolve",
+    CreateWeapon: "create_weapon"
 }
