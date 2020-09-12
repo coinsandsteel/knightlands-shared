@@ -61,15 +61,15 @@ export default class ItemStatResolver {
         return Number.isNaN(value) ? 0 : value;
     }
 
-    convertStats(template, itemLevel, enchantingLevel) {
+    convertStats(template, itemLevel, enchantingLevel, rarity) {
         let stats = {};
         const powerFactor = template.powerFactor < 0.001 ? 0 : template.powerFactor;
-
+        let targetRarity = rarity || template.rarity;
         let statFunc;
         if (template.type == ItemType.Charm) {
-            statFunc = this.getStatValueForCharm.bind(this, template.rarity, itemLevel, enchantingLevel);
+            statFunc = this.getStatValueForCharm.bind(this, targetRarity, itemLevel, enchantingLevel);
         } else {
-            statFunc = this.getStatValue.bind(this, template.rarity, getSlot(template.equipmentType), itemLevel, enchantingLevel);
+            statFunc = this.getStatValue.bind(this, targetRarity, getSlot(template.equipmentType), itemLevel, enchantingLevel);
         }
 
         if (template.statWeights) {
