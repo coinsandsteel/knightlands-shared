@@ -1,3 +1,5 @@
+/*jshint esversion: 9 */
+
 import CharacterStat from "./character_stat";
 import UnitAbilityType from "./unit_ability_type.json";
 import { WeaponCategory, ElementCategory, TypeCategory, UnitsIndex, TemplateCategory } from "./units_index";
@@ -7,7 +9,16 @@ function defaultRandomRange(min, max) {
 }
 
 class ArmyResolver {
-    constructor(abilitiesMeta, statResolver, unitTemplates, troopsMeta, generalsMeta, randomRange = defaultRandomRange) {
+    constructor(
+        abilitiesMeta, 
+        statResolver, 
+        unitTemplates, 
+        troopsMeta, 
+        generalsMeta, 
+        equipmentBonuses,
+        randomRange = defaultRandomRange
+    ) {
+        this._equipmentBonuses = equipmentBonuses;
         this._troopsMeta = troopsMeta;
         this._generalsMeta = generalsMeta;
         this._meta = abilitiesMeta;
@@ -79,24 +90,32 @@ class ArmyResolver {
             level++;
         }
 
-        return this._getFlatDamage(unit, level, stars, false);
+        return Math.floor(this._getFlatDamage(unit, level, stars) * this._getEquipmentBonus(unit));
     }
 
-    _getFlatDamage(unit, level, stars, includeItems) {
-        let meta = unit.troop ? this._troopsMeta : this._generalsMeta;
-        let totalDamage = meta.leveling.levelingSteps[level - 1].power;
-
-        if (includeItems) {
-            for (const itemId in unit.items) {
-                const item = unit.items[itemId];
-                if (item) {
-                    const stats = this._statResolver.convertStats(item.template, item.level || 1, item.enchant || 0);
-                    if (stats.attack) {
-                        totalDamage += stats.attack;
-                    }
+    _getEquipmentBonus(unit) {
+        let equipmentBonus = 0;
+        // each item increase unit's damage based on it's rarity, level, and enchanting level
+        for (const itemId in unit.items) {
+            const item = unit.items[itemId];
+            if (item) {
+                const levelBonus = this._equipmentBonuses.level[item.level - 1];
+                const rarityBonus = this._equipmentBonuses.rarity.find(x=>x.rarity == item.rarity).bonus;
+                let enchantBonus = 0;
+                if (item.enchant) {
+                    enchantBonus = this._equipmentBonuses.enchant[item.enchant - 1];
                 }
+
+                equipmentBonus += levelBonus * (1 + rarityBonus) * (1 + enchantBonus);
             }
         }
+
+        return equipmentBonus + 1;
+    }
+
+    _getFlatDamage(unit, level, stars) {
+        let meta = unit.troop ? this._troopsMeta : this._generalsMeta;
+        let totalDamage = meta.leveling.levelingSteps[level - 1].power;
 
         let record = meta.fusionMeta.maxLevelByStars.find(x => x.stars == stars);
         if (!record) {
@@ -159,7 +178,7 @@ class ArmyResolver {
             }
 
             context.unitBonuses[unit.template] = {
-                flat: this._getFlatDamage(unit, unit.level, this.getStars(unit), true),
+                flat: this._getFlatDamage(unit, unit.level, this.getStars(unit)),
                 relative: 0
             };
             raidBonuses.unitBonuses[unit.template] = { flat: 0, relative: 0 };
@@ -231,7 +250,7 @@ class ArmyResolver {
             }
 
             // apply relative bonus to flat
-            unitsDamageOutput[unit.id] = Math.floor(finalBonuses.flat * (100 + finalBonuses.relative) / 100);
+            unitsDamageOutput[unit.id] = Math.floor(finalBonuses.flat * (100 + finalBonuses.relative) / 100 * this._getEquipmentBonus(unit));
             totalDamageOutput += unitsDamageOutput[unit.id];
 
             // scale proc'd damages
