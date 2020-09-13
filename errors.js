@@ -82,5 +82,8 @@ export default {
     ItemEquipped: "item already equipped",
     NotEquipment: "not equipment",
     UnitInLegion: "unit in legion",
-    RaidLootClaimed: "raid loot claimed"
+    RaidLootClaimed: "raid loot claimed",
+    UnknownIap: "unknown iap",
+    MaxUnbind: "max unbind",
+    NotMaxLevel: "not max level"
 }
