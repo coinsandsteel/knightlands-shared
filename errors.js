@@ -85,5 +85,6 @@ export default {
     RaidLootClaimed: "raid loot claimed",
     UnknownIap: "unknown iap",
     MaxUnbind: "max unbind",
-    NotMaxLevel: "not max level"
+    NotMaxLevel: "not max level",
+    ArmyUnitMaxPromotions: "max promotions"
 }
