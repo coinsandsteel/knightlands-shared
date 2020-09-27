@@ -86,5 +86,7 @@ export default {
     UnknownIap: "unknown iap",
     MaxUnbind: "max unbind",
     NotMaxLevel: "not max level",
-    ArmyUnitMaxPromotions: "max promotions"
+    ArmyUnitMaxPromotions: "max promotions",
+    CantClaimReward: "can't claim a reward",
+    UnknownTask: "unknown task"
 }
