@@ -3,10 +3,21 @@ export default {
     DailyLevelUpItem: "dailyLevelUpItem",
     DailyBoostBeast: "dailyBoostBeast",
     DailySpendGold: "dailySpendGold",
+    DailyDisenchant: "dailyDisenchant",
+    DailyFreeRaid: "dailyFreeRaid",
+    DailyPaidRaid: "dailyPaidRaid",
     DailyTower: "dailyTower",
+    DailyBasicSummon: "dailyBasicSummon",
+    DailyAdvancedSummon: "dailyAdvancedSummon",
+    DailySilverChest: "dailySilverChest",
+    DailyLegendaryChest: "dailyLegendaryChest",
+    DailyLevelUpTroop: "dailyLevelUpTroop",
+    DailyLevelUpGeneral: "dailyLevelUpGeneral",
     DailyArmourTrial: "dailyArmourTrial",
     DailyWeaponTrial: "dailyWeaponTrial",
     DailyAccessoryTrial: "dailyAccessoryTrial",
     DailyEngageQuest: "dailyEngageQuest",
-    DailySpendPremium: "dailySpendPremium"
+    DailySpendPremium: "dailySpendPremium",
+    DailyStartAdventure: "dailyStartAdventure",
+    DailyAllTasks: "dailyAllTasks"
 };
