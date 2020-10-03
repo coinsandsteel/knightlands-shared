@@ -19,5 +19,7 @@ export default {
     DailyEngageQuest: "dailyEngageQuest",
     DailySpendPremium: "dailySpendPremium",
     DailyStartAdventure: "dailyStartAdventure",
-    DailyAllTasks: "dailyAllTasks"
+    DailyAllTasks: "dailyAllTasks",
+    DailyAllTasks2: "dailyAllTasks2",
+    DailyAllTasks3: "dailyAllTasks3"
 };

@@ -24,5 +24,6 @@ module.exports = {
     UnitUpdated: "unit-updated",
     UnitsRemoved: "units-removed",
     UnitsReserveUpdate: "units-rsv-upd",
-    TokenChartUpdate: "token-chart-upd"
+    TokenChartUpdate: "token-chart-upd",
+    DailyTaskComplete: "daily-task-com"
 }
