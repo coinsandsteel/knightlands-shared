@@ -88,5 +88,8 @@ export default {
     NotMaxLevel: "not max level",
     ArmyUnitMaxPromotions: "max promotions",
     CantClaimReward: "can't claim a reward",
-    UnknownTask: "unknown task"
+    UnknownTask: "unknown task",
+    GoldMineMaxLevel: "gold mine at max lvl",
+    GoldMineStorageMaxLevel: "gold mine storage at max lvl",
+    MaxMines: "max mines"
 }

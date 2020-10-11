@@ -116,5 +116,9 @@ module.exports = {
     UnitBanishment: "unit_banish",
     UnitReserve: "unit_reserve",
     Evolve: "item_evolve",
-    CreateWeapon: "create_weapon"
+    CreateWeapon: "create_weapon",
+    UpgradeMine: "upg_mine",
+    UpgradeMineStorage: "upg_mine_strg",
+    ExpandMine: "expd_mine",
+    CollectMine: "collect_mine"
 }
