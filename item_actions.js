@@ -8,5 +8,7 @@ module.exports = {
     Unequip: "unequip",
     Use: "use",
     Compare: "compare",
-    SummonUnit: "summonUnit"
+    SummonUnit: "summonUnit",
+    Lock: "lock",
+    Unlock: "unlock"
 }
