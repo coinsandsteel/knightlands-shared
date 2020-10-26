@@ -120,5 +120,7 @@ module.exports = {
     UpgradeMine: "upg_mine",
     UpgradeMineStorage: "upg_mine_strg",
     ExpandMine: "expd_mine",
-    CollectMine: "collect_mine"
+    CollectMine: "collect_mine",
+    LockItem: "lock_item",
+    UnlockItem: "unlock_item"
 }
