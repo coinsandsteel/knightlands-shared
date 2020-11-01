@@ -18,7 +18,6 @@ class Buffs {
         this.bonusStats = { ...EmptyStats };
 
         let i = 0;
-        console.log(buffs)
         const length = buffs.length;
 
         for (; i < length; ++i) {
