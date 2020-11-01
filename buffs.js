@@ -18,18 +18,19 @@ class Buffs {
         this.bonusStats = { ...EmptyStats };
 
         let i = 0;
+        console.log(buffs)
         const length = buffs.length;
 
         for (; i < length; ++i) {
             const buff = buffs[i];
             const timeElapsed = (now - buff.applyTime) / 1000;
-            if (buff.duration < timeElapsed || (buff.raid && raidId != buff.raid)) {
+            if (buff.duration < timeElapsed || (buff.raid > -1 && raidId != buff.raid)) {
                 continue;
             }
 
             let value = buff.value;
             if (buff.relative) {
-                value = rawStats[buff.stat] * buff.value / 100;
+                value = Math.floor(rawStats[buff.stat] * buff.value / 100);
             }
 
             this.bonusStats[buff.stat] += value;
