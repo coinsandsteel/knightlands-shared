@@ -25,5 +25,6 @@ export default {
     // ReduceDamageAgainstRaidName,
     // ReduceDamageAgainstPvp,
     // ChanceForDoubleAttack,
-    MaxEffectStack: "maxEffectStack"
+    MaxEffectStack: "maxEffectStack",
+    GoldMineUpgradeDiscount: "goldMineUpgradeDiscount"
 }
