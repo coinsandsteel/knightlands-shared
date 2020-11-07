@@ -10,15 +10,17 @@ for (let stat in EmptyStats) {
 
 class Buffs {
     constructor() {
-        this.bonusStats = {};
+        this.bonuses = {};
+        this.flatBonuses = {};
+        this.relativeBonuses = {};
         this.finalStats = { ...DefaultStats };
     }
 
-    calculate(now, rawStats, buffs, raidId) {
-        this.bonusStats = { ...EmptyStats };
+    _countBonuses(now, buffs, raidId) {
+        this.flatBonuses = { ...EmptyStats };
+        this.relativeBonuses = { ...EmptyStats };
 
         let i = 0;
-        console.log(buffs)
         const length = buffs.length;
 
         for (; i < length; ++i) {
@@ -30,15 +32,31 @@ class Buffs {
 
             let value = buff.value;
             if (buff.relative) {
-                value = Math.floor(rawStats[buff.stat] * buff.value / 100);
+                this.relativeBonuses[buff.stat] += buff.value / 100;
+            } else {
+                this.flatBonuses[buff.stat] += value;    
             }
+        }
+    }
 
-            this.bonusStats[buff.stat] += value;
+    calculateBonuses(now, stats, buffs, raidId) {
+        this._countBonuses(now, buffs, raidId);
+
+        const bonuses = { ...EmptyStats };
+        for (const stat in stats) {
+            bonuses[stat] = stats[stat] - stats[stat] / (this.relativeBonuses[stat] + 1) + this.flatBonuses[stat];
         }
 
+        this.bonuses = bonuses;
+    }
+
+    calculate(now, rawStats, buffs, raidId) {
+        this._countBonuses(now, buffs, raidId);
+
         this.finalStats = { ...DefaultStats };
-        for (let stat in this.bonusStats) {
-            this.finalStats[stat] = this.bonusStats[stat] + rawStats[stat];
+        for (let stat in rawStats) {
+            this.finalStats[stat] = this.flatBonuses[stat] + rawStats[stat];
+            this.finalStats[stat] = Math.floor(this.finalStats[stat] * (this.relativeBonuses[stat] + 1));
         }
     }
 }
