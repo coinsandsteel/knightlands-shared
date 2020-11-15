@@ -122,5 +122,8 @@ module.exports = {
     ExpandMine: "expd_mine",
     CollectMine: "collect_mine",
     LockItem: "lock_item",
-    UnlockItem: "unlock_item"
+    UnlockItem: "unlock_item",
+    CraftAccessory: "craft_acc",
+    RerollAccessory: "reroll_acc",
+    UpgradeAccessory: "upgrade_acc"
 }
