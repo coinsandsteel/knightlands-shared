@@ -125,5 +125,6 @@ module.exports = {
     UnlockItem: "unlock_item",
     CraftAccessory: "craft_acc",
     RerollAccessory: "reroll_acc",
+    CancelRerollAccessory: "reroll_acc_can",
     UpgradeAccessory: "upgrade_acc"
 }
