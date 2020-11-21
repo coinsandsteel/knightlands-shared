@@ -1,4 +1,4 @@
-/*jshint esversion: 9 */
+ /*jshint esversion: 9 */
 
 import CharacterStat from "./character_stat";
 import UnitAbilityType from "./unit_ability_type.json";

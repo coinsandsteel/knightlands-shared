@@ -109,14 +109,14 @@ export class UnitsIndex {
         let totalUnits = 0;
         let categoryIndex;
         if (category == TemplateCategory) {
-            categoryIndex = index[TemplateCategory][category];
+            categoryIndex = index[TemplateCategory];
         } else {
             let baseIndex = isTroop ? index.troops : index.generals;
             categoryIndex = baseIndex[category];
         }
 
         for (let i = stars; i <= 5; ++i) {
-            totalUnits += categoryIndex[stars][key];
+            totalUnits += categoryIndex[stars][key] || 0;
         }
 
         return totalUnits;
