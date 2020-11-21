@@ -263,7 +263,7 @@ class ArmyResolver {
         }
 
         return {
-            totalDamageOutput,
+            totalDamageOutput: totalDamageOutput + (context.stats.stats || 0),
             unitsDamageOutput,
             damageProcs: context.damageTriggers,
             stamina: context.stamina,
@@ -383,7 +383,7 @@ class ArmyResolver {
     }
 
     _addStat(context, stat, value) {
-        this._addOrModify(context.stats, stat, value);
+        this._addOrModify(context.stats, stat, Math.floor(value));
     }
 
     /**
@@ -464,25 +464,25 @@ class ArmyResolver {
 
     _extraDamageChance({ context, unit, abilityTemplate, stars }) {
         if (this._isTriggered(abilityTemplate.chance)) {
-            this._addOrModify(context.damageTriggers, unit.id, this._getAbilityValue(abilityTemplate, stars));
+            this._addOrModify(context.damageTriggers, unit.id, Math.floor(this._getAbilityValue(abilityTemplate, stars)));
         }
     }
 
     _chanceToRestoreStamina({ unit, context, abilityTemplate, stars }) {
         if (this._isTriggered(abilityTemplate.chance)) {
-            this._addOrModify(context.stamina, unit.id, this._getAbilityValue(abilityTemplate, stars));
+            this._addOrModify(context.stamina, unit.id, Math.floor(this._getAbilityValue(abilityTemplate, stars)));
         }
     }
 
     _chanceToRestoreEnergy({ unit, context, abilityTemplate, stars }) {
         if (this._isTriggered(abilityTemplate.chance)) {
-            this._addOrModify(context.energy, unit.id, this._getAbilityValue(abilityTemplate, stars));
+            this._addOrModify(context.energy, unit.id, Math.floor(this._getAbilityValue(abilityTemplate, stars)));
         }
     }
 
     _chanceToHeal({ unit, context, abilityTemplate, stars }) {
         if (this._isTriggered(abilityTemplate.chance)) {
-            this._addOrModify(context.health, unit.id, this._getAbilityValue(abilityTemplate, stars));
+            this._addOrModify(context.health, unit.id, Math.floor(this._getAbilityValue(abilityTemplate, stars)));
         }
     }
 
