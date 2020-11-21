@@ -1,14 +1,11 @@
 export default {
     DropItemInQuest: "dropItemInQuest",
     DropItemInRaid: "dropItemInRaid",
-    DropUnitShard: "dropUnitShard",
+    IncreasedArmyDamage: "increasedArmyDamage",
     IncreasedDktInRaid: "increasedDktInRaid",
     GoldOnHitInRaid: "goldOnHitInRaid",
     ExpOnHitInRaid: "expOnHitInRaid",
     ArmyDamageInRaidElement: "armyDamageInRaidElement",
     Dodge: "dodge",
-    RewardsOnyxTower: "rewardsOnyxTower",
-    RewardsAdventures: "rewardsAdventures",
-    RewardsTrial: "rewardsTrial",
     IncreasedStat: "increasedStat"
 }
