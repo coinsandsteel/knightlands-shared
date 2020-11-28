@@ -126,5 +126,9 @@ module.exports = {
     CraftAccessory: "craft_acc",
     RerollAccessory: "reroll_acc",
     CancelRerollAccessory: "reroll_acc_can",
-    UpgradeAccessory: "upgrade_acc"
+    UpgradeAccessory: "upgrade_acc",
+    GetDivsStatus: "divs_status",
+    DivsPurchaseShop: "divs_purc_shop",
+    DivsMineUpgrade: "divs_mine_upg",
+    DivsDropUpgrade: "divs_drop_upg"
 }
