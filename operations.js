@@ -131,5 +131,6 @@ module.exports = {
     GetDivsStatus: "divs_status",
     DivsPurchaseShop: "divs_purc_shop",
     DivsMineUpgrade: "divs_mine_upg",
-    DivsDropUpgrade: "divs_drop_upg"
+    DivsDropUpgrade: "divs_drop_upg",
+    ClaimMinedDkt: "claim_mined_dkt"
 }
