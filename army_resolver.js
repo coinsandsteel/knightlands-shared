@@ -577,8 +577,15 @@ class ArmyResolver {
         this._addDamageToUnitsByType(context, damage, abilityTemplate.unitType, false, true);
     }
 
-    _extraDamageWhenTroopsUsed(params) {
-        this._addDamageWhenUnitsUsed({ ...params, isTroop: true, category: TypeCategory, key: abilityTemplate.unitType, isRelative: false });
+    _extraDamageWhenTroopsUsed({ abilityTemplate, ...params }) {
+        this._addDamageWhenUnitsUsed({
+            ...params, 
+            isTroop: true,
+            category: TypeCategory,
+            key: abilityTemplate.unitType,
+            isRelative: false,
+            abilityTemplate
+        });
     }
 
     _extraTroopsDamagePerGeneralOwned({ context, abilityTemplate, stars }) {
@@ -628,7 +635,7 @@ class ArmyResolver {
         this._addUnitsDamagePerUnitsUsed({ context, abilityTemplate, stars, isTroopRef: false, isTroopTarget: false, isRelative: true });
     }
 
-    _extraDamagePerGeneralOwned() {
+    _extraDamagePerGeneralOwned({ context, abilityTemplate, stars }) {
         const totalUnits = this._queryOwnedUnits(context, true, stars, TemplateCategory, abilityTemplate.general, abilityTemplate.max);
         const damage = totalUnits * this._getAbilityValue(abilityTemplate, stars);
         this._addExtraDamageToUnit(context, damage, abilityTemplate.unitType, true, false);
