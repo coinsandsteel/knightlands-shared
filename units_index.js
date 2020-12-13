@@ -12,7 +12,6 @@ export const TemplateCategory = "template";
 export class UnitsIndex {
     constructor(units, reserve, unitTemplates) {
         this._unitTemplates = unitTemplates;
-        this._units = { ...units };
         this.index = {
             [TemplateCategory]: {},
             troops: {
@@ -73,13 +72,15 @@ export class UnitsIndex {
         }
     }
 
-    _indexUnit(index, unit) {
+    _indexUnit(index, unit, indexTemplate) {
         const unitTemplate = this._unitTemplates[unit.template];
         let stars = unit.promotions + unitTemplate.stars;
+
         // treat units higher than 5 stars as 5 stars for simplicity
         if (stars > 5) {
             stars = 5;
         }
+
         // it might be a reserved unit, and will have explicit count field
         const count = unit.count || 1;
         this._addOrModify(index[TemplateCategory][stars], unitTemplate.id, count);
@@ -91,10 +92,6 @@ export class UnitsIndex {
         } else {
             this._addOrModify(index.generals[TypeCategory][stars], unitTemplate.unitType, count);
         }
-    }
-
-    hasUnit(unit) {
-        return !!this._units[unit.id];
     }
 
     update(newUnits, removedUnits) {

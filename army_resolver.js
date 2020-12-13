@@ -143,7 +143,8 @@ class ArmyResolver {
             stamina: {},
             energy: {},
             health: {},
-            stats: {}
+            stats: {},
+            unitsByTemplate: {}
         };
 
         // calculate troops and generals quantity by weapon type, element and unit type
@@ -158,6 +159,8 @@ class ArmyResolver {
         for (let i in units) {
             const unit = units[i]
             const unitTemplate = this._unitTemplates[unit.template];
+
+            context.unitsByTemplate[unit.template] = true;
 
             if (unit.troop) {
                 this._addOrModify(troopQuantities.weapon, unitTemplate.weaponType, 1);
@@ -429,7 +432,7 @@ class ArmyResolver {
     }
 
     _increasedDamageWhenTroopUsed({ context, abilityTemplate, stars, unit }) {
-        if (context.index.hasUnit(unit)) {
+        if (context.unitsByTemplate[abilityTemplate.troop]) {
             this._addIncreasedDamageToUnit(context, unit, this._getAbilityValue(abilityTemplate, stars));
         }
     }
