@@ -1,4 +1,5 @@
 export default {
+    MalformedAuth: "malformed auth",
     NoHealth: "not enough health",
     NoStamina: "not enough stamina",
     NoEnergy: "not enough energy",
@@ -92,5 +93,6 @@ export default {
     UnknownTask: "unknown task",
     GoldMineMaxLevel: "gold mine at max lvl",
     GoldMineStorageMaxLevel: "gold mine storage at max lvl",
-    MaxMines: "max mines"
+    MaxMines: "max mines",
+    PaymentInProgress: "purchase in progress"
 }

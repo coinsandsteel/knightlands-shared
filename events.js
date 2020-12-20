@@ -25,5 +25,7 @@ module.exports = {
     UnitsRemoved: "units-removed",
     UnitsReserveUpdate: "units-rsv-upd",
     TokenChartUpdate: "token-chart-upd",
-    DailyTaskComplete: "daily-task-com"
+    DailyTaskComplete: "daily-task-com",
+    ShiniesTopUp: "shinies-top-up",
+    RaidTicketsTopUp: "r-tickets-top-up",
 }
