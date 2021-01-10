@@ -95,5 +95,6 @@ export default {
     GoldMineStorageMaxLevel: "gold mine storage at max lvl",
     MaxMines: "max mines",
     PaymentInProgress: "purchase in progress",
-    AlreadyPurchased: "already purchased"
+    AlreadyPurchased: "already purchased",
+    NameUsed: "name is used"
 }
