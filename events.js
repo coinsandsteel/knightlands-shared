@@ -27,4 +27,5 @@ module.exports = {
     TokenChartUpdate: "token-chart-upd",
     DailyTaskComplete: "daily-task-com",
     PurchaseComplete: "purchase-complete",
+    CommitChanges: "commit_changes"
 }
