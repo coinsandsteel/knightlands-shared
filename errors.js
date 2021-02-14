@@ -96,5 +96,6 @@ export default {
     MaxMines: "max mines",
     PaymentInProgress: "purchase in progress",
     AlreadyPurchased: "already purchased",
-    NameUsed: "name is used"
+    NameUsed: "name is used",
+    NotEnoughLevel: "not enough level"
 }
