@@ -97,5 +97,6 @@ export default {
     PaymentInProgress: "purchase in progress",
     AlreadyPurchased: "already purchased",
     NameUsed: "name is used",
-    NotEnoughLevel: "not enough level"
+    NotEnoughLevel: "not enough level",
+    ArmyMaxSlots: "Army slots at max"
 }
