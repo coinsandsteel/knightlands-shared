@@ -98,5 +98,6 @@ export default {
     AlreadyPurchased: "already purchased",
     NameUsed: "name is used",
     NotEnoughLevel: "not enough level",
-    ArmyMaxSlots: "Army slots at max"
+    ArmyMaxSlots: "army slots at max",
+    NotEnoughArmySlots: "not enough army slots"
 }

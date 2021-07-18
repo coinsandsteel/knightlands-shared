@@ -138,5 +138,7 @@ module.exports = {
     PurchaseDailyItem: "purchase_daily",
     RefreshDailyShop: "refresh_daily_shop",
     FetchCharacter: "fetch_char",
-    ExpandArmyInventory: "exp_army_inv"
+    ExpandArmyInventory: "exp_army_inv",
+    WithdrawTokens: "withdraw_tokens",
+    GetWithdrawTokensStatus: "withdraw_tokens_status"
 }
