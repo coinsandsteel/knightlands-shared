@@ -3,5 +3,6 @@ export default {
     EOS: "EOS",
     Waves: "Waves",
     Ethereum: "Ethereum",
+    Polygon: "Polygon",
     Mock: "Mock"
 }

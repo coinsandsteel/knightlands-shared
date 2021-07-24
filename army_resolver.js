@@ -541,7 +541,7 @@ class ArmyResolver {
     }
 
     _increasedDamageWhenTroopsWeaponUsed({ abilityTemplate, ...params }) {
-        this._addDamageWhenUnitsUsed({ ...params, isTroop: true, category: WeaponCategory, key: abilityTemplate.weapon, isRelative: true });
+        this._addDamageWhenUnitsUsed({ ...params, isTroop: true, category: WeaponCategory, key: abilityTemplate.weapon, abilityTemplate, isRelative: true });
     }
 
     _extraTroopsDamageWeapon({ context, abilityTemplate, stars }) {
