@@ -140,5 +140,6 @@ module.exports = {
     FetchCharacter: "fetch_char",
     ExpandArmyInventory: "exp_army_inv",
     WithdrawTokens: "withdraw_tokens",
-    GetWithdrawTokensStatus: "withdraw_tokens_status"
+    GetWithdrawTokensStatus: "withdraw_tokens_status",
+    StakeDivs: "stake_divs"
 }
