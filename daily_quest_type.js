@@ -21,5 +21,6 @@ export default {
     DailyStartAdventure: "dailyStartAdventure",
     DailyAllTasks: "dailyAllTasks",
     DailyAllTasks2: "dailyAllTasks2",
-    DailyAllTasks3: "dailyAllTasks3"
+    DailyAllTasks3: "dailyAllTasks3",
+    DailySpendEnergy: "dailySpendEnergy"
 };

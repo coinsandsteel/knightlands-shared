@@ -10,5 +10,6 @@ export default {
     CollectedItemsByRarity: 8,
     CraftedItemsByRarity: 9,
     DisenchantedItemsByRarity: 10,
-    LevelItemsByRarity: 11
+    LevelItemsByRarity: 11,
+    Dkt2Earned: 12
 }
