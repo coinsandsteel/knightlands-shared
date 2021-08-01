@@ -99,5 +99,6 @@ export default {
     NameUsed: "name is used",
     NotEnoughLevel: "not enough level",
     ArmyMaxSlots: "army slots at max",
-    NotEnoughArmySlots: "not enough army slots"
+    NotEnoughArmySlots: "not enough army slots",
+    UnknownPlayer: "unknown player"
 }
