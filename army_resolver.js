@@ -154,7 +154,7 @@ class ArmyResolver {
         // prepare bonuses by category for constant modification of units of that category
         const troopBonuses = { weapon: {}, element: {}, type: {} };
         const generalBonuses = { type: {} };
-        const raidBonuses = { unitBonuses: {}, troops: {} };
+        const raidBonuses = { unitBonuses: {} };
 
         for (let i in units) {
             const unit = units[i]
@@ -171,7 +171,7 @@ class ArmyResolver {
                 this._initField(troopBonuses.element, unitTemplate.element, { flat: 0, relative: 0 });
                 this._initField(troopBonuses.type, unitTemplate.unitType, { flat: 0, relative: 0 });
 
-                this._initField(raidBonuses.troops, unitTemplate.unitType, { flat: 0, relative: 0 });
+                this._initField(raidBonuses, "troops", { flat: 0, relative: 0 });
                 // context.troops.push({ unit, unitTemplate });
             } else {
                 this._addOrModify(generalQuantities.type, unitTemplate.unitType, 1);
@@ -247,7 +247,7 @@ class ArmyResolver {
                 finalBonuses.flat += bonuses.flat;
                 finalBonuses.relative += bonuses.relative;
 
-                bonuses = context.raidBonuses.troops[unitTemplate.unitType];
+                bonuses = context.raidBonuses.troops;
                 finalBonuses.flat += bonuses.flat;
                 finalBonuses.relative += bonuses.relative;
             }
@@ -703,9 +703,9 @@ class ArmyResolver {
         }
     }
 
-    _increasedTroopsDamageVsRaid({ context, abilityTemplate, stars, raid }) {
+    _increasedTroopsDamageVsRaid({ context, abilityTemplate, unitTemplate, stars, raid }) {
         if (raid == abilityTemplate.raid) {
-            context.raidBonuses.troops[abilityTemplate.unitType].relative += this._getAbilityValue(abilityTemplate, stars);
+            context.raidBonuses.troops.relative += this._getAbilityValue(abilityTemplate, stars);
         }
     }
 }
