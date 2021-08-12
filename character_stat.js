@@ -12,7 +12,8 @@ const CharacterStat = {
     HitRating: "hitRating",
     ExtraGold: "extraGold",
     ExtraExp: "extraExp",
-    ExtraDkt: "extraDkt"
+    ExtraDkt: "extraDkt",
+    ArmyDamage: "armyDamage"
 };
 
 export default CharacterStat;
@@ -41,6 +42,7 @@ _DefaultStats[CharacterStat.Defense] = 0;
 _DefaultStats[CharacterStat.ExtraDkt] = 0;
 _DefaultStats[CharacterStat.ExtraExp] = 0;
 _DefaultStats[CharacterStat.ExtraGold] = 0;
+_DefaultStats[CharacterStat.ArmyDamage] = 0;
 _DefaultStats[CharacterStat.RaidDamage] = 0;
 _DefaultStats[CharacterStat.Dodge] = 0;
 _DefaultStats[CharacterStat.HitRating] = 0;

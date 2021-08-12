@@ -5,7 +5,7 @@ export default class LegionResolver {
         this._generalsMeta = generalsMeta;
     }
 
-    getDamage(legion, units, templates) {
+    getDamage(legion, units, templates, armyDamage) {
         let totalDamage = 0;
 
         for (const slotId in legion.units) {

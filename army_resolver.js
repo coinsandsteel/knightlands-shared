@@ -79,18 +79,18 @@ class ArmyResolver {
         return new UnitsIndex(units, reserve, this._unitTemplates);
     }
 
-    estimateDamage(unit, unitsIndex) {
-        return this.resolve({ [unit.id]: unit }, unitsIndex);
+    estimateDamage(unit, unitsIndex, userStats) {
+        return this.resolve({ [unit.id]: unit }, unitsIndex, userStats);
     }
 
-    getDamage(unit, nextLevel, nextStar) {
+    getDamage(unit, nextLevel, nextStar, armyDamage) {
         let level = unit.level;
         let stars = this.getStars(unit) + (nextStar ? 1 : 0);
         if (nextLevel) {
             level++;
         }
 
-        return Math.floor(this._getFlatDamage(unit, level, stars) * this._getEquipmentBonus(unit));
+        return Math.floor((this._getFlatDamage(unit, level, stars) + armyDamage)* this._getEquipmentBonus(unit));
     }
 
     _getEquipmentBonus(unit) {
@@ -130,7 +130,7 @@ class ArmyResolver {
      * @param {Array} units list of units to estimate damage for - usually will represent whole legion
      * @param {Object} unitsIndex table of owned units indexed by type, weapon, element and stars
      */
-    resolve(units, unitsIndex, raid) {
+    resolve(units, unitsIndex, raid, userStats) {
         const context = {
             quantities: {},
             unitBonuses: {},
@@ -181,7 +181,7 @@ class ArmyResolver {
             }
 
             context.unitBonuses[unit.template] = {
-                flat: this._getFlatDamage(unit, unit.level, this.getStars(unit)),
+                flat: this._getFlatDamage(unit, unit.level, this.getStars(unit)) + userStats[CharacterStat.ArmyDamage],
                 relative: 0
             };
             raidBonuses.unitBonuses[unit.template] = { flat: 0, relative: 0 };
