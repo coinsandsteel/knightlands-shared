@@ -80,7 +80,7 @@ class ArmyResolver {
     }
 
     estimateDamage(unit, unitsIndex, userStats) {
-        return this.resolve({ [unit.id]: unit }, unitsIndex, userStats);
+        return this.resolve({ [unit.id]: unit }, unitsIndex, null, userStats);
     }
 
     getDamage(unit, nextLevel, nextStar, armyDamage) {
