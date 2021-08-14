@@ -142,5 +142,6 @@ module.exports = {
     WithdrawTokens: "withdraw_tokens",
     GetWithdrawTokensStatus: "withdraw_tokens_status",
     StakeDivs: "stake_divs",
-    ChangeAvatar: "change_avatar"
+    ChangeAvatar: "change_avatar",
+    Tutorial: "tutorial"
 }
