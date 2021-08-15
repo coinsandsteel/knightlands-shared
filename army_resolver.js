@@ -361,7 +361,7 @@ class ArmyResolver {
         this._addDamageToUnitsByType(context, this._getAbilityValue(abilityTemplate, stars) * totalUnitsOfType, abilityTemplate.unitType, isTroopTarget, isRelative);
     }
 
-    _addUnitsDamagePerUnitsOwned({ context, targetUnitsType, category, key, stars, isTroopRef, isTroopTarget, isRelative }) {
+    _addUnitsDamagePerUnitsOwned({ context, targetUnitsType, abilityTemplate, category, key, stars, isTroopRef, isTroopTarget, isRelative }) {
         const totalUnits = this._queryOwnedUnits(context, isTroopRef, stars, category, key);
         this._addDamageToUnitsByType(context, this._getAbilityValue(abilityTemplate, stars) * totalUnits, targetUnitsType, isTroopTarget, isRelative);
     }
@@ -612,6 +612,7 @@ class ArmyResolver {
     _extraTroopsDamagePerTroopTypeOwned({ context, abilityTemplate, stars }) {
         this._addUnitsDamagePerUnitsOwned({
             context,
+            abilityTemplate,
             targetUnitsType: abilityTemplate.unitType,
             category: TypeCategory,
             key: abilityTemplate.unitType2,
