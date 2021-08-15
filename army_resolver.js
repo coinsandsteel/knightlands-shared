@@ -613,7 +613,7 @@ class ArmyResolver {
         this._addUnitsDamagePerUnitsOwned({
             context,
             targetUnitsType: abilityTemplate.unitType,
-            TypeCategory,
+            category: TypeCategory,
             key: abilityTemplate.unitType2,
             stars,
             isTroopRef: true,
