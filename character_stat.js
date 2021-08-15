@@ -13,7 +13,8 @@ const CharacterStat = {
     ExtraGold: "extraGold",
     ExtraExp: "extraExp",
     ExtraDkt: "extraDkt",
-    ArmyDamage: "armyDamage"
+    ArmyDamage: "armyDamage",
+    DamageReduction: "dmg_red"
 };
 
 export default CharacterStat;
