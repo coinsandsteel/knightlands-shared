@@ -143,5 +143,6 @@ module.exports = {
     GetWithdrawTokensStatus: "withdraw_tokens_status",
     StakeDivs: "stake_divs",
     ChangeAvatar: "change_avatar",
-    Tutorial: "tutorial"
+    Tutorial: "tutorial",
+    GetOnline: "online"
 }
