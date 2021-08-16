@@ -130,7 +130,7 @@ class ArmyResolver {
      * @param {Array} units list of units to estimate damage for - usually will represent whole legion
      * @param {Object} unitsIndex table of owned units indexed by type, weapon, element and stars
      */
-    resolve(units, unitsIndex, raid, userStats) {
+    resolve(units, unitsIndex, raid, userStats, bonusDamage = 1) {
         const context = {
             quantities: {},
             unitBonuses: {},
@@ -253,13 +253,13 @@ class ArmyResolver {
             }
 
             // apply relative bonus to flat
-            unitsDamageOutput[unit.id] = Math.floor(finalBonuses.flat * (100 + finalBonuses.relative) / 100 * this._getEquipmentBonus(unit));
+            unitsDamageOutput[unit.id] = Math.floor(finalBonuses.flat * (100 + finalBonuses.relative) / 100 * this._getEquipmentBonus(unit) * bonusDamage);
             totalDamageOutput += unitsDamageOutput[unit.id];
 
             // scale proc'd damages
             const damageProcd = context.damageTriggers[unit.id];
             if (damageProcd) {
-                context.damageTriggers[unit.id] = Math.floor(damageProcd * (100 + finalBonuses.relative) / 100);
+                context.damageTriggers[unit.id] = Math.floor(damageProcd * (100 + finalBonuses.relative) / 100 * bonusDamage);
                 // contribute to total damage inflicted
                 totalDamageOutput += context.damageTriggers[unit.id];
             }
