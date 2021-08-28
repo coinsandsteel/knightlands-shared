@@ -1,11 +1,11 @@
-export default {
+const AccessoryOptions = {
     DropItemInQuest: "dropItemInQuest",
     DropItemInRaid: "dropItemInRaid",
-    IncreasedArmyDamage: "increasedArmyDamage",
     IncreasedDktInRaid: "increasedDktInRaid",
     GoldOnHitInRaid: "goldOnHitInRaid",
     ExpOnHitInRaid: "expOnHitInRaid",
     ArmyDamageInRaidElement: "armyDamageInRaidElement",
-    Dodge: "dodge",
     IncreasedStat: "increasedStat"
 }
+
+export default AccessoryOptions;

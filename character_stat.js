@@ -14,7 +14,12 @@ const CharacterStat = {
     ExtraExp: "extraExp",
     ExtraDkt: "extraDkt",
     ArmyDamage: "armyDamage",
-    DamageReduction: "dmg_red"
+    DamageReduction: "dmg_red",
+    GoldOnHitInRaid: "gold_on_hit_raid",
+    ExpOnHitInRaid: "xp_on_hit_raid",
+    DropItemQuest: "drop_item_q",
+    DropItemInRaid: "drop_item_r",
+    ArmyDamageInRaidElement: "army_dmg_elem"
 };
 
 export default CharacterStat;
@@ -46,6 +51,10 @@ _DefaultStats[CharacterStat.ExtraGold] = 0;
 _DefaultStats[CharacterStat.ArmyDamage] = 0;
 _DefaultStats[CharacterStat.RaidDamage] = 0;
 _DefaultStats[CharacterStat.Dodge] = 0;
-_DefaultStats[CharacterStat.HitRating] = 0;
+_DefaultStats[CharacterStat.ExpOnHitInRaid] = 0;
+_DefaultStats[CharacterStat.GoldOnHitInRaid] = 0;
+_DefaultStats[CharacterStat.DropItemQuest] = {};
+_DefaultStats[CharacterStat.DropItemInRaid] = {};
+_DefaultStats[CharacterStat.ArmyDamageInRaidElement] = {};
 
-export const DefaultStats = _DefaultStats; 
+export const DefaultStats = _DefaultStats;
