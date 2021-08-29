@@ -5,5 +5,6 @@ export default {
     StakedDkt: "sDkt",
     Dkt2: "dkt2",
     Fiat: "fiat",
-    RaceChips: "raceChips"
+    RaceChips: "raceChips",
+    RaidPoints: "rp"
 }
