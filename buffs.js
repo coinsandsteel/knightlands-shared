@@ -1,9 +1,13 @@
-import {
+import CharacterStat, {
     DefaultStats
 }
-    from "./character_stat";
+from "./character_stat";
 
-let EmptyStats = { ...DefaultStats };
+let EmptyStats = {...DefaultStats };
+delete EmptyStats[CharacterStat.DropItemQuest]
+delete EmptyStats[CharacterStat.DropItemInRaid]
+delete EmptyStats[CharacterStat.ArmyDamageInRaidElement]
+
 for (let stat in EmptyStats) {
     EmptyStats[stat] = 0;
 }
@@ -13,12 +17,12 @@ class Buffs {
         this.bonuses = {};
         this.flatBonuses = {};
         this.relativeBonuses = {};
-        this.finalStats = { ...DefaultStats };
+        this.finalStats = {...EmptyStats };
     }
 
     _countBonuses(now, buffs, raidId) {
-        this.flatBonuses = { ...EmptyStats };
-        this.relativeBonuses = { ...EmptyStats };
+        this.flatBonuses = {...EmptyStats };
+        this.relativeBonuses = {...EmptyStats };
 
         let i = 0;
         const length = buffs.length;
@@ -34,7 +38,7 @@ class Buffs {
             if (buff.relative) {
                 this.relativeBonuses[buff.stat] += buff.value / 100;
             } else {
-                this.flatBonuses[buff.stat] += value;    
+                this.flatBonuses[buff.stat] += value;
             }
         }
     }
@@ -42,8 +46,8 @@ class Buffs {
     calculateBonuses(now, stats, buffs, raidId) {
         this._countBonuses(now, buffs, raidId);
 
-        const bonuses = { ...EmptyStats };
-        for (const stat in stats) {
+        const bonuses = {...EmptyStats };
+        for (const stat in bonuses) {
             bonuses[stat] = stats[stat] - stats[stat] / (this.relativeBonuses[stat] + 1) + this.flatBonuses[stat];
         }
 
@@ -53,8 +57,12 @@ class Buffs {
     calculate(now, rawStats, buffs, raidId) {
         this._countBonuses(now, buffs, raidId);
 
-        this.finalStats = { ...DefaultStats };
+        this.finalStats = {...EmptyStats };
         for (let stat in rawStats) {
+            if (typeof rawStats[stat] == 'object') {
+                this.finalStats[stat] = rawStats[stat];
+                continue;
+            }
             this.finalStats[stat] = this.flatBonuses[stat] + rawStats[stat];
             this.finalStats[stat] = Math.floor(this.finalStats[stat] * (this.relativeBonuses[stat] + 1));
         }
