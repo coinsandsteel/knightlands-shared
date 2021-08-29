@@ -16,6 +16,9 @@ export default class ItemStatResolver {
     inverseStats(stats) {
         let total = 0;
         for (let stat in stats) {
+            if (typeof stats[stat] == "object") {
+                continue;
+            }
             let statConversionRate = this._conversions[stat];
             if (statConversionRate === undefined) {
                 statConversionRate = 1;
