@@ -129,6 +129,7 @@ module.exports = {
     UpgradeAccessory: "upgrade_acc",
     ClaimDivs: "claim_divs",
     GetDivsStatus: "divs_status",
+    PendingDivs: "pending_divs",
     DivsPurchaseShop: "divs_purc_shop",
     DivsMineUpgrade: "divs_mine_upg",
     DivsDropUpgrade: "divs_drop_upg",
