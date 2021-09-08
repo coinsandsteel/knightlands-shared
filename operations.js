@@ -145,5 +145,6 @@ module.exports = {
     StakeDivs: "stake_divs",
     ChangeAvatar: "change_avatar",
     Tutorial: "tutorial",
-    GetOnline: "online"
+    GetOnline: "online",
+    UpgradeAccount: "upg_account"
 }
