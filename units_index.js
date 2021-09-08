@@ -12,6 +12,32 @@ export const TemplateCategory = "template";
 export class UnitsIndex {
     constructor(units, reserve, unitTemplates) {
         this._unitTemplates = unitTemplates;
+        
+        this._reset();
+        this._build(units, reserve);
+    }
+
+    _addOrModify(obj, key, value) {
+        obj[key] = (obj[key] || 0) + value;
+    }
+
+    _initField(obj, key, value) {
+        obj[key] = (obj[key] || value);
+    }
+
+    _build(units, reserve) {
+        for (let id in units) {
+            const unit = units[id];
+            this._indexUnit(this.index, unit);
+        }
+
+        for (let key in reserve) {
+            const unit = reserve[key];
+            this._indexUnit(this.reserveIndex, unit);
+        }
+    }
+
+    _reset() {
         this.index = {
             [TemplateCategory]: {},
             troops: {
@@ -48,28 +74,6 @@ export class UnitsIndex {
             this._initField(this.reserveIndex.troops[WeaponCategory], stars, {});
             this._initField(this.reserveIndex.generals[TypeCategory], stars, {});
         }
-
-        this._build(units, reserve);
-    }
-
-    _addOrModify(obj, key, value) {
-        obj[key] = (obj[key] || 0) + value;
-    }
-
-    _initField(obj, key, value) {
-        obj[key] = (obj[key] || value);
-    }
-
-    _build(units, reserve) {
-        for (let id in units) {
-            const unit = units[id];
-            this._indexUnit(this.index, unit);
-        }
-
-        for (let key in reserve) {
-            const unit = reserve[key];
-            this._indexUnit(this.reserveIndex, unit);
-        }
     }
 
     _indexUnit(index, unit, indexTemplate) {
@@ -94,8 +98,11 @@ export class UnitsIndex {
         }
     }
 
-    update(newUnits, removedUnits) {
-        this._build(newUnits);
+    update(newUnits, reserve) {
+        if (newUnits || reserve) {
+            this._reset();
+            this._build(newUnits, reserve);
+        }
     }
 
     queryOwnedUnits(isTroop, stars, category, key, fromReserve) {
