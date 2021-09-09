@@ -146,5 +146,6 @@ module.exports = {
     ChangeAvatar: "change_avatar",
     Tutorial: "tutorial",
     GetOnline: "online",
-    UpgradeAccount: "upg_account"
+    UpgradeAccount: "upg_account",
+    GetPublicRaids: "pub_raids"
 }
