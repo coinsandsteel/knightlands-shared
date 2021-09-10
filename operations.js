@@ -148,5 +148,6 @@ module.exports = {
     GetOnline: "online",
     UpgradeAccount: "upg_account",
     GetPublicRaids: "pub_raids",
-    GetRaidPlayers: "raid_players"
+    GetRaidPlayers: "raid_players",
+    CancelAsset: "cancel_asset"
 }
