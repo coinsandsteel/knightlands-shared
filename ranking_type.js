@@ -11,5 +11,9 @@ export default {
     CraftedItemsByRarity: 9,
     DisenchantedItemsByRarity: 10,
     LevelItemsByRarity: 11,
-    Dkt2Earned: 12
+    Dkt2Earned: 12,
+    GroupRaidDefeated: 13,
+    CharacterPower: 14,
+    LegionPower: 15,
+    CollectedItem: 17
 }

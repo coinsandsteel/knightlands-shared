@@ -51,7 +51,7 @@ export default {
     TrialFinishPreviousFights: "finish previous fights",
     TrialFightFinished: "fight is finished",
     TrialStageCleared: "stage is cleared",
-    TrialInFight:"in fight",
+    TrialInFight: "in fight",
     TrialNotInFight: "not in fight",
     TrialNoAttempts: "no attempts",
     TrialNoCards: "no cards to choose from",
@@ -100,5 +100,6 @@ export default {
     NotEnoughLevel: "not enough level",
     ArmyMaxSlots: "army slots at max",
     NotEnoughArmySlots: "not enough army slots",
-    UnknownPlayer: "unknown player"
+    UnknownPlayer: "unknown player",
+    UnknownAction: "unknown action"
 }

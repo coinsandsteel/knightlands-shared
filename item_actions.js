@@ -10,5 +10,6 @@ module.exports = {
     Compare: "compare",
     SummonUnit: "summonUnit",
     Lock: "lock",
-    Unlock: "unlock"
+    Unlock: "unlock",
+    AddPrizePoints: "addPrizePoints"
 }

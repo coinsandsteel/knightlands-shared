@@ -149,5 +149,6 @@ module.exports = {
     UpgradeAccount: "upg_account",
     GetPublicRaids: "pub_raids",
     GetRaidPlayers: "raid_players",
-    CancelAsset: "cancel_asset"
+    CancelAsset: "cancel_asset",
+    FetchPrizePool: "fetch_pr_pool"
 }
