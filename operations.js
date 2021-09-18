@@ -152,5 +152,6 @@ module.exports = {
     CancelAsset: "cancel_asset",
     FetchPrizePool: "fetch_pr_pool",
     GetPrizePoolRank: "get_pr_pool_rank",
-    GetPrizePoolRewards: "get_pr_pool_rewards"
+    GetPrizePoolRewards: "get_pr_pool_rewards",
+    FetchSeason: "fetch_season"
 }
