@@ -150,5 +150,6 @@ module.exports = {
     GetPublicRaids: "pub_raids",
     GetRaidPlayers: "raid_players",
     CancelAsset: "cancel_asset",
-    FetchPrizePool: "fetch_pr_pool"
+    FetchPrizePool: "fetch_pr_pool",
+    GetPrizePoolRank: "get_pr_pool_rank"
 }
