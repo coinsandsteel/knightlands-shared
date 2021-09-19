@@ -5,7 +5,8 @@ const AccessoryOptions = {
     GoldOnHitInRaid: "goldOnHitInRaid",
     ExpOnHitInRaid: "expOnHitInRaid",
     ArmyDamageInRaidElement: "armyDamageInRaidElement",
-    IncreasedStat: "increasedStat"
+    IncreasedStat: "increasedStat",
+    AddStat: "addStat"
 }
 
 export default AccessoryOptions;

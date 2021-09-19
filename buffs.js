@@ -64,7 +64,7 @@ class Buffs {
                 continue;
             }
             this.finalStats[stat] = this.flatBonuses[stat] + rawStats[stat];
-            this.finalStats[stat] = Math.floor(this.finalStats[stat] * (this.relativeBonuses[stat] + 1));
+            this.finalStats[stat] = this.finalStats[stat] * (this.relativeBonuses[stat] + 1);
         }
     }
 }
