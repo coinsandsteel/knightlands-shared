@@ -101,5 +101,6 @@ export default {
     ArmyMaxSlots: "army slots at max",
     NotEnoughArmySlots: "not enough army slots",
     UnknownPlayer: "unknown player",
-    UnknownAction: "unknown action"
+    UnknownAction: "unknown action",
+    NoSoloRaidAttempts: "solo_raid_attempts"
 }
