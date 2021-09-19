@@ -1,37 +1,38 @@
  /*jshint esversion: 9 */
 
-import CharacterStat from "./character_stat";
-import UnitAbilityType from "./unit_ability_type.json";
-import { WeaponCategory, ElementCategory, TypeCategory, UnitsIndex, TemplateCategory } from "./units_index";
+ import CharacterStat from "./character_stat";
+ import UnitAbilityType from "./unit_ability_type.json";
+ import { WeaponCategory, ElementCategory, TypeCategory, UnitsIndex, TemplateCategory } from "./units_index";
+ import random from "../random";
 
-function defaultRandomRange(min, max) {
-    return Math.floor(min + Math.random() * (max - min));
-}
+ function defaultRandomRange(min, max) {
+     return Math.floor(min + Math.random() * (max - min));
+ }
 
-class ArmyResolver {
-    constructor(
-        abilitiesMeta, 
-        statResolver, 
-        unitTemplates, 
-        troopsMeta, 
-        generalsMeta, 
-        equipmentBonuses,
-        randomRange = defaultRandomRange
-    ) {
-        this._equipmentBonuses = equipmentBonuses;
-        this._troopsMeta = troopsMeta;
-        this._generalsMeta = generalsMeta;
-        this._meta = abilitiesMeta;
-        this._statResolver = statResolver;
-        this._unitTemplates = unitTemplates;
-        this._abilityHandlers = {};
-        this._randomRange = randomRange;
+ class ArmyResolver {
+     constructor(
+             abilitiesMeta,
+             statResolver,
+             unitTemplates,
+             troopsMeta,
+             generalsMeta,
+             equipmentBonuses,
+             randomRange = defaultRandomRange
+         ) {
+             this._equipmentBonuses = equipmentBonuses;
+             this._troopsMeta = troopsMeta;
+             this._generalsMeta = generalsMeta;
+             this._meta = abilitiesMeta;
+             this._statResolver = statResolver;
+             this._unitTemplates = unitTemplates;
+             this._abilityHandlers = {};
+             this._randomRange = randomRange;
 
-        for (let key in UnitAbilityType) {
-            const typeValue = UnitAbilityType[key];
-            // ability handler is in form of
-            if (!this[`_${typeValue}`]) {
-                console.error(`unknown handler ${`_${typeValue}`}`);
+             for (let key in UnitAbilityType) {
+                 const typeValue = UnitAbilityType[key];
+                 // ability handler is in form of
+                 if (!this[`_${typeValue}`]) {
+                     console.error(`unknown handler ${`_${typeValue}`}`);
                 continue;
             }
             this._abilityHandlers[typeValue] = this[`_${typeValue}`].bind(this);
@@ -147,6 +148,10 @@ class ArmyResolver {
             unitsByTemplate: {}
         };
 
+        // 50% of the player stat goes to army
+        const critChance = Math.floor(userStats[CharacterStat.CriticalChance] / 2); 
+        const critDamage = Math.floor(userStats[CharacterStat.CriticalDamage] / 2);
+
         // calculate troops and generals quantity by weapon type, element and unit type
         const troopQuantities = { weapon: {}, element: {}, type: {} };
         const generalQuantities = { type: {} };
@@ -252,12 +257,14 @@ class ArmyResolver {
                 finalBonuses.relative += bonuses.relative;
             }
 
+            finalBonuses.flat = this._applyCrit(finalBonuses.flat, critChance, critDamage);
+
             // apply relative bonus to flat
             unitsDamageOutput[unit.id] = Math.floor(finalBonuses.flat * (100 + finalBonuses.relative) / 100 * this._getEquipmentBonus(unit) * bonusDamage);
             totalDamageOutput += unitsDamageOutput[unit.id];
 
             // scale proc'd damages
-            const damageProcd = context.damageTriggers[unit.id];
+            const damageProcd = this._applyCrit(context.damageTriggers[unit.id], critChance, critDamage);
             if (damageProcd) {
                 context.damageTriggers[unit.id] = Math.floor(damageProcd * (100 + finalBonuses.relative) / 100 * bonusDamage);
                 // contribute to total damage inflicted
@@ -274,6 +281,14 @@ class ArmyResolver {
             health: context.health,
             playerStats: context.stats
         };
+    }
+
+    _applyCrit(damage, critChance, critDamage) {
+        if (random.range(1, 10000, true) <= critChance) {
+            damage *= (1 + critDamage / 100);
+        }
+
+        return damage;
     }
 
     _getUnitQuantity(context, isTroop, category, key) {
