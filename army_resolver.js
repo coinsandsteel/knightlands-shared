@@ -3,7 +3,6 @@
  import CharacterStat from "./character_stat";
  import UnitAbilityType from "./unit_ability_type.json";
  import { WeaponCategory, ElementCategory, TypeCategory, UnitsIndex, TemplateCategory } from "./units_index";
- import random from "../random";
 
  function defaultRandomRange(min, max) {
      return Math.floor(min + Math.random() * (max - min));
@@ -284,7 +283,7 @@
     }
 
     _applyCrit(damage, critChance, critDamage) {
-        if (random.range(1, 10000, true) <= critChance) {
+        if (this._randomRange(1, 10000, true) <= critChance) {
             damage *= (1 + critDamage / 100);
         }
 
