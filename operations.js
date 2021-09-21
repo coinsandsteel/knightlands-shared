@@ -153,5 +153,6 @@ module.exports = {
     FetchPrizePool: "fetch_pr_pool",
     GetPrizePoolRank: "get_pr_pool_rank",
     GetPrizePoolRewards: "get_pr_pool_rewards",
-    FetchSeason: "fetch_season"
+    FetchSeason: "fetch_season",
+    FetchFounderPresale: "fetch_founder_sale"
 }
