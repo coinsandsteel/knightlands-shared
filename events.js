@@ -29,5 +29,6 @@ module.exports = {
     DailyTaskComplete: "daily-task-com",
     PurchaseComplete: "purchase-complete",
     CommitChanges: "commit_changes",
-    ArmySlots: "army_slots"
+    ArmySlots: "army_slots",
+    FounderPackAcquired: "founder_pack_acquired"
 }
