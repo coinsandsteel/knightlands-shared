@@ -11,5 +11,6 @@ module.exports = {
     SummonUnit: "summonUnit",
     Lock: "lock",
     Unlock: "unlock",
-    AddPrizePoints: "addPrizePoints"
+    AddPrizePoints: "addPrizePoints",
+    AddArmySlots: "addArmySlots"
 }
