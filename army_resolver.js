@@ -106,13 +106,14 @@
             const item = unit.items[itemId];
             if (item) {
                 const levelBonus = this._equipmentBonuses.level[item.level - 1];
-                const rarityBonus = this._equipmentBonuses.rarity.find(x=>x.rarity == item.rarity).bonus;
+                const rarityBonus = this._equipmentBonuses.rarity.find(x=>x.rarity == item.rarity);
+                const rarityBonusValue = rarityBonus ? rarityBonus.bonus : 0;
                 let enchantBonus = 0;
                 if (item.enchant) {
                     enchantBonus = this._equipmentBonuses.enchant[item.enchant - 1];
                 }
 
-                equipmentBonus += levelBonus * (1 + rarityBonus) * (1 + enchantBonus);
+                equipmentBonus += levelBonus * (1 + rarityBonusValue) * (1 + enchantBonus);
             }
         }
 
