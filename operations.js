@@ -84,7 +84,7 @@ module.exports = {
     WithdrawDividendToken: "withdraw_div_token",
     FetchPendingDividendTokenWithdrawal: "fetch_pending_div_token_withdrawal",
     SendDividendTokenWithdrawal: "send_div_token_withdrawal",
-    DisenchantConvert: "dis_convert",
+    Convert: "convert",
     FetchTournaments: "fetch_tournaments",
     JoinTournament: "join_tournament",
     ClaimTournamentRewards: "claim_tournament_rewards",
