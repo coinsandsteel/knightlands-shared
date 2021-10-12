@@ -20,6 +20,8 @@ export default {
     BossIsLocked: "boss is locked",
     InvalidRaid: "invalid raid",
     RaidIsFull: "raid is full",
+    NoParticipant: "no such raid participant",
+    RaidLootWasNotClaimed: "raid loot wasn't claimed yet",
     NotConsumable: "not a consumable",
     UknownChest: "uknown chest",
     NoChestKey: "no chest key",
