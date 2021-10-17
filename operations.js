@@ -155,5 +155,8 @@ module.exports = {
     GetPrizePoolRewards: "get_pr_pool_rewards",
     FetchSeason: "fetch_season",
     FetchFounderPresale: "fetch_founder_sale",
-    DepositFounderPack: "deposit_founder_pack"
+    DepositFounderPack: "deposit_founder_pack",
+    SDungeonGenerateNew: "sdungeon_generate_new",
+    SDungeonRevealTile: "sdungeon_reveal_tile",
+    SDungeonUseTile: "sdungeon_use_tile"
 }
