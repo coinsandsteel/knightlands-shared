@@ -30,5 +30,6 @@ module.exports = {
     PurchaseComplete: "purchase-complete",
     CommitChanges: "commit_changes",
     ArmySlots: "army_slots",
-    FounderPackAcquired: "founder_pack_acquired"
+    FounderPackAcquired: "founder_pack_acquired",
+    SDungeonUpdate: "sdung_upd"
 }

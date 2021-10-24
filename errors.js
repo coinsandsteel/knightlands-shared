@@ -102,5 +102,6 @@ export default {
     NotEnoughArmySlots: "not enough army slots",
     UnknownPlayer: "unknown player",
     UnknownAction: "unknown action",
-    NoSoloRaidAttempts: "solo_raid_attempts"
+    NoSoloRaidAttempts: "solo_raid_attempts",
+    SDungeonInCombat: "sdung_combat"
 }

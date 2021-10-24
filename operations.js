@@ -159,5 +159,6 @@ module.exports = {
     SDungeonGenerateNew: "sdungeon_generate_new",
     SDungeonLoad: "sdungeon_load",
     SDungeonRevealCell: "sdungeon_reveal_tile",
-    SDungeonUseCell: "sdungeon_use_tile"
+    SDungeonUseCell: "sdungeon_use_tile",
+    SDunegonCombatAction: "sdungeon_combat_action"
 }
