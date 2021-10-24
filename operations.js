@@ -157,6 +157,7 @@ module.exports = {
     FetchFounderPresale: "fetch_founder_sale",
     DepositFounderPack: "deposit_founder_pack",
     SDungeonGenerateNew: "sdungeon_generate_new",
+    SDungeonLoad: "sdungeon_load",
     SDungeonRevealCell: "sdungeon_reveal_tile",
     SDungeonUseCell: "sdungeon_use_tile"
 }
