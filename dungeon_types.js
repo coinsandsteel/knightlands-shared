@@ -13,3 +13,8 @@ export const TrapType = {
     Energy: 0,
     Health: 1
 }
+
+export const CombatAction = {
+    Attack: 0,
+    SwapEquipment: 1
+}
