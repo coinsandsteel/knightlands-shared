@@ -1,7 +1,13 @@
 export const MoveType = {
-    Attack: 0,
-    Parry: 1,
-    Block: 2
+    Scissors: 0,
+    Paper: 1,
+    Rock: 2
+}
+
+export const MoveWinTable = {
+    [MoveType.Scissors]: MoveType.Paper,
+    [MoveType.Paper]: MoveType.Rock,
+    [MoveType.Rock]: MoveType.Scissors
 }
 
 export const AltarType = {
