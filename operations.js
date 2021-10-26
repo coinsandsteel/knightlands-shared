@@ -161,5 +161,6 @@ module.exports = {
     SDungeonRevealCell: "sdungeon_reveal_tile",
     SDungeonUseCell: "sdungeon_use_tile",
     SDungeonMove: "sdungeon_move",
-    SDunegonCombatAction: "sdungeon_combat_action"
+    SDunegonCombatAction: "sdungeon_combat_action",
+    SDungeonUseItem: "sdungeon_use_item"
 }
