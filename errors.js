@@ -103,5 +103,6 @@ export default {
     UnknownPlayer: "unknown player",
     UnknownAction: "unknown action",
     NoSoloRaidAttempts: "solo_raid_attempts",
-    SDungeonInCombat: "sdung_combat"
+    SDungeonInCombat: "sdung_combat",
+    SDungeonInTrap: "sdung_trap"
 }
