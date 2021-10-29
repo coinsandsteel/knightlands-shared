@@ -165,5 +165,6 @@ module.exports = {
     SDungeonUseItem: "sdungeon_use_item",
     SDungeonNextFloor: "sdungeon_next",
     SDungeonTestAction: "sdungeon_test",
-    SDungeonEquip: "sdungeon_equip"
+    SDungeonEquip: "sdungeon_equip",
+    SDungeonPath: "sdungeon_path"
 }
