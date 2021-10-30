@@ -168,5 +168,6 @@ module.exports = {
     SDungeonEquip: "sdungeon_equip",
     SDungeonPath: "sdungeon_path",
     SDungeonRank: "sdungeon_rank",
-    SDungeonEnter: "sdungeon_enter"
+    SDungeonEnter: "sdungeon_enter",
+    SDunegonCommitStats: "sdungeon_commit_stats",
 }
