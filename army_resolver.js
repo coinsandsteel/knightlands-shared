@@ -79,13 +79,12 @@
         return new UnitsIndex(units, reserve, this._unitTemplates);
     }
 
-    estimateDamage(legionUnits, unit, unitsIndex, userStats) {
+    estimateDamage(units, unitsIndex, userStats) {
         return this.resolve({
-            units: { [unit.id]: unit }, 
-            legionUnits,
+            units, 
             unitsIndex,
             userStats,
-            ignoreCrit: true
+            ignoreProcs: true
         });
     }
 
@@ -137,7 +136,7 @@
      * @param {Array} units list of units to estimate damage for - usually will represent whole legion
      * @param {Object} unitsIndex table of owned units indexed by type, weapon, element and stars
      */
-    resolve({ units, legionUnits = {}, unitsIndex, raid, userStats = {}, bonusDamage = 1, ignoreCrit = false }) {
+    resolve({ units, unitsIndex, raid, userStats = {}, bonusDamage = 1, ignoreProcs = false }) {
         const context = {
             quantities: {},
             unitBonuses: {},
@@ -170,34 +169,6 @@
 
         for (let i in units) {
             const unit = units[i]
-            const unitTemplate = this._unitTemplates[unit.template];
-
-            context.unitsByTemplate[unit.template] = true;
-
-            if (unit.troop) {
-                this._addOrModify(troopQuantities.weapon, unitTemplate.weaponType, 1);
-                this._addOrModify(troopQuantities.element, unitTemplate.element, 1);
-                this._addOrModify(troopQuantities.type, unitTemplate.unitType, 1);
-
-                this._initField(troopBonuses.weapon, unitTemplate.weaponType, { flat: 0, relative: 0 });
-                this._initField(troopBonuses.element, unitTemplate.element, { flat: 0, relative: 0 });
-                this._initField(troopBonuses.type, unitTemplate.unitType, { flat: 0, relative: 0 });
-
-                this._initField(raidBonuses, "troops", { flat: 0, relative: 0 });
-            } else {
-                this._addOrModify(generalQuantities.type, unitTemplate.unitType, 1);
-                this._initField(generalBonuses.type, unitTemplate.unitType, { flat: 0, relative: 0 });
-            }
-
-            context.unitBonuses[unit.template] = {
-                flat: this._getFlatDamage(unit, unit.level, this.getStars(unit)) + armyDamage,
-                relative: 0
-            };
-            raidBonuses.unitBonuses[unit.template] = { flat: 0, relative: 0 };
-        }
-
-        for (let i in legionUnits) {
-            const unit = legionUnits[i]
             const unitTemplate = this._unitTemplates[unit.template];
 
             context.unitsByTemplate[unit.template] = true;
@@ -289,7 +260,7 @@
                 finalBonuses.relative += bonuses.relative;
             }
 
-            if (!ignoreCrit) {
+            if (!ignoreProcs) {
                 finalBonuses.flat = this._applyCrit(finalBonuses.flat, critChance, critDamage);
             }
             
@@ -299,7 +270,7 @@
 
             // scale proc'd damages
             const damageProcd = this._applyCrit(context.damageTriggers[unit.id], critChance, critDamage);
-            if (damageProcd) {
+            if (!ignoreProcs && damageProcd) {
                 context.damageTriggers[unit.id] = Math.floor(damageProcd * (100 + finalBonuses.relative) / 100 * bonusDamage);
                 // contribute to total damage inflicted
                 totalDamageOutput += context.damageTriggers[unit.id];
