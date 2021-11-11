@@ -1,4 +1,5 @@
 module.exports = {
+    UpdateRecieved: "update-recieved",
     ExperienceChanged: "exp-changed",
     InventoryUpdate: "inventory-upd",
     RaidSummonStatus: "raid-summon-status",
