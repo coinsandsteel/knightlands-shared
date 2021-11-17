@@ -170,4 +170,5 @@ module.exports = {
     SDungeonRank: "sdungeon_rank",
     SDungeonEnter: "sdungeon_enter",
     SDunegonCommitStats: "sdungeon_commit_stats",
+    SDungeonWithdraw: "sdungeon_withdraw"
 }
