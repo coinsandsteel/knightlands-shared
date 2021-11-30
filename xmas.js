@@ -14,15 +14,69 @@ export const TOWER_PERK_SUPER_BOOST = 'super_boost';
 export const TOWER_PERK_SUPER_SPEED = 'super_speed';
 
 export const farmConfig = {
-  1: { currency: CURRENCY_SANTABUCKS,        baseBuildingPrice: 5,       baseIncome: 2,       resourceIncome: 2 },
-  2: { currency: CURRENCY_GOLD,              baseBuildingPrice: 10,      baseIncome: 4,       resourceIncome: 2 },
-  3: { currency: CURRENCY_UNIT_ESSENCE,      baseBuildingPrice: 30,      baseIncome: 12,      resourceIncome: 12/3 },
-  4: { currency: CURRENCY_CHRISTMAS_POINTS,  baseBuildingPrice: 120,     baseIncome: 48,      resourceIncome: 48/1000 },
-  5: { currency: CURRENCY_SANTABUCKS,        baseBuildingPrice: 600,     baseIncome: 240,     resourceIncome: 240 },
-  6: { currency: CURRENCY_SHINIES,           baseBuildingPrice: 3600,    baseIncome: 1440,    resourceIncome: 1440/1 },
-  7: { currency: CURRENCY_CHRISTMAS_POINTS,  baseBuildingPrice: 25200,   baseIncome: 10080,   resourceIncome: 10080/1000 },
-  8: { currency: CURRENCY_CHRISTMAS_POINTS,  baseBuildingPrice: 201600,  baseIncome: 80640,   resourceIncome: 80640/1000 },
-  9: { currency: CURRENCY_CHRISTMAS_POINTS,  baseBuildingPrice: 181440,  baseIncome: 725760,  resourceIncome: 725760/1000 },
+  1: {
+    currency: CURRENCY_SANTABUCKS,
+    currencyConvertDivider: 1,
+    baseBuildingPrice: 5,
+    baseIncome: 2,
+    resourceIncome: 2
+  },
+  2: {
+    currency: CURRENCY_GOLD,
+    currencyConvertDivider: 1,
+    baseBuildingPrice: 10,
+    baseIncome: 4,
+    resourceIncome: 2
+  },
+  3: {
+    currency: CURRENCY_UNIT_ESSENCE,
+    currencyConvertDivider: 3,
+    baseBuildingPrice: 30,
+    baseIncome: 12,
+    resourceIncome: 12 / 3
+  },
+  4: {
+    currency: CURRENCY_CHRISTMAS_POINTS,
+    currencyConvertDivider: 1000,
+    baseBuildingPrice: 120,
+    baseIncome: 48,
+    resourceIncome: 48 / 1000
+  },
+  5: {
+    currency: CURRENCY_SANTABUCKS,
+    currencyConvertDivider: 1,
+    baseBuildingPrice: 600,
+    baseIncome: 240,
+    resourceIncome: 240
+  },
+  6: {
+    currency: CURRENCY_SHINIES,
+    currencyConvertDivider: 1440,
+    baseBuildingPrice: 3600,
+    baseIncome: 1440,
+    resourceIncome: 1440 / 1
+  },
+  7: {
+    currency: CURRENCY_CHRISTMAS_POINTS,
+    currencyConvertDivider: 1000,
+    baseBuildingPrice: 25200,
+    baseIncome: 10080,
+    resourceIncome: 10080 / 1000
+  },
+  8: {
+    currency: CURRENCY_CHRISTMAS_POINTS,
+    currencyConvertDivider: 1000,
+    baseBuildingPrice: 201600,
+    baseIncome: 80640,
+    resourceIncome: 80640 / 1000
+  },
+  9: {
+    currency: CURRENCY_CHRISTMAS_POINTS,
+    currencyConvertDivider: 1000,
+    baseBuildingPrice: 181440,
+    baseIncome: 725760,
+    resourceIncome: 725760 / 1000
+  },
 }
 
 const mainTowerPerkValue = (perkName, perkLevel, baseValue) => {
@@ -47,11 +101,10 @@ const mainTowerPerkValue = (perkName, perkLevel, baseValue) => {
     levelStep = 1;
   }
 
-  console.log('[Main Tower Perk]', { perkName, perkLevel, baseValue, multiplier });
   return baseValue * (levelStep + perkLevel * multiplier);
 }
 
-const getMainTowerPerkValue = function (tier, perkName, perkLevel) {
+const getMainTowerPerkValue = function(tier, perkName, perkLevel) {
   let currency = farmConfig[tier].currency;
 
   switch (currency) {
@@ -65,7 +118,12 @@ const getMainTowerPerkValue = function (tier, perkName, perkLevel) {
       return mainTowerPerkValue(perkName, perkLevel, TOWER_PERK_AUTOCYCLES_COUNT == perkName ? 90 : -1);
     }
     case CURRENCY_CHRISTMAS_POINTS: {
-      const tierBaseValues = { 4: 45, 7: 6, 8: 3, 9: 1 };
+      const tierBaseValues = {
+        4: 45,
+        7: 6,
+        8: 3,
+        9: 1
+      };
       return mainTowerPerkValue(perkName, perkLevel, TOWER_PERK_AUTOCYCLES_COUNT == perkName ? tierBaseValues[tier] : -1);
     }
     case CURRENCY_SHINIES: {
@@ -74,34 +132,53 @@ const getMainTowerPerkValue = function (tier, perkName, perkLevel) {
   }
 }
 
-export const getFarmUpgradeData = function (tier, level, perks) {
+export const getTowerLevelBoundaries = function() {
+  let map = {};
+  for (let i = 1; i <= 500; i++) {
+    map[i] = 100 + Math.pow(1.5, i - 1);
+  }
+  return map;
+}
+
+export const getFarmUpgradeData = function(tier, level, perks) {
   let upgradeData = {
     upgradeMultiplier: 1 + (0.01 * tier),
     baseSaleBuilding: farmConfig[tier].baseBuildingPrice,
     perksMultiplier: 1 + getMainTowerPerkValue(tier, TOWER_PERK_UPGRADE, perks.upgradePerkLevel)
   };
   let upgradePrice = (upgradeData.baseSaleBuilding / upgradeData.perksMultiplier) * Math.pow(upgradeData.upgradeMultiplier, level - 1);
-  return { upgradePrice }
+  return {
+    upgradePrice
+  };
 }
 
-export const getFarmTimeData = function (tier, perks) {
+export const getFarmTimeData = function(tier, perks) {
   let baseTime = 2;
   let reductionTime = 1;
   let cycleDurationPerk = getMainTowerPerkValue(tier, TOWER_PERK_CYCLE_DURATION, perks.cycleDurationPerkLevel);
   let baseCycleLength = Math.pow(baseTime, tier - 1);
   let cycleLength = baseCycleLength * reductionTime * (perks[TOWER_PERK_SPEED] ? 0.5 : 1) * (perks[TOWER_PERK_SUPER_SPEED] ? 0.2 : 1) / (1 + cycleDurationPerk);
-  return { cycleLength }
+  console.log('[Tier ' + tier + ']', {
+    cycleLength,
+    cycleDurationPerk
+  });
+  return {
+    cycleLength
+  };
 }
 
-export const getFarmIncomeData = function (tier, level, perks) {
-  let farmTimeData = getFarmTimeData(tier, { cycleDurationPerkLevel: perks.cycleDurationPerkLevel });
+export const getFarmIncomeData = function(tier, level, perks) {
+  let farmTimeData = getFarmTimeData(tier, {
+    cycleDurationPerkLevel: perks.cycleDurationPerkLevel
+  });
   let incomePerk = getMainTowerPerkValue(tier, TOWER_PERK_INCOME, perks.incomePerkLevel);
   let expIncomePerSecond = (1 + incomePerk) * farmConfig[tier].baseIncome * level * ((tier === 6 ? 0 : 1) + 0.01 * tier) * (perks[TOWER_PERK_BOOST] ? 2 : 1) * (perks[TOWER_PERK_SUPER_BOOST] ? 5 : 1);
-  let expIncome = {
+  let expIncomePerCycle = farmTimeData.cycleLength * expIncomePerSecond;
+  return {
     expIncomePerSecond,
-    expIncomePerCycle: farmTimeData.cycleLength * expIncomePerSecond
+    expIncomePerCycle,
+    currencyIncomePerCycle: expIncomePerCycle / farmConfig[tier].currencyConvertDivider
   };
-  return expIncome;
 }
 
 export function abbreviateNumber(value) {
@@ -112,9 +189,7 @@ export function abbreviateNumber(value) {
     newValue /= 1000;
     suffixNum++;
   }
-
   newValue = newValue.toPrecision(3);
-
   newValue += suffixes[suffixNum];
   return newValue;
 }
