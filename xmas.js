@@ -18,64 +18,55 @@ export const farmConfig = {
     currency: CURRENCY_SANTABUCKS,
     currencyConvertDivider: 1,
     baseBuildingPrice: 5,
-    baseIncome: 2,
-    resourceIncome: 2
+    baseIncome: 2
   },
   2: {
     currency: CURRENCY_GOLD,
     currencyConvertDivider: 1,
     baseBuildingPrice: 10,
-    baseIncome: 4,
-    resourceIncome: 2
+    baseIncome: 4
   },
   3: {
     currency: CURRENCY_UNIT_ESSENCE,
     currencyConvertDivider: 3,
     baseBuildingPrice: 30,
-    baseIncome: 12,
-    resourceIncome: 12 / 3
+    baseIncome: 12
   },
   4: {
     currency: CURRENCY_CHRISTMAS_POINTS,
     currencyConvertDivider: 1000,
     baseBuildingPrice: 120,
-    baseIncome: 48,
-    resourceIncome: 48 / 1000
+    baseIncome: 48
   },
   5: {
     currency: CURRENCY_SANTABUCKS,
     currencyConvertDivider: 1,
     baseBuildingPrice: 600,
-    baseIncome: 240,
-    resourceIncome: 240
+    baseIncome: 240
   },
   6: {
     currency: CURRENCY_SHINIES,
     currencyConvertDivider: 1440,
     baseBuildingPrice: 3600,
-    baseIncome: 1440,
-    resourceIncome: 1440 / 1
+    baseIncome: 1440
   },
   7: {
     currency: CURRENCY_CHRISTMAS_POINTS,
     currencyConvertDivider: 1000,
     baseBuildingPrice: 25200,
-    baseIncome: 10080,
-    resourceIncome: 10080 / 1000
+    baseIncome: 10080
   },
   8: {
     currency: CURRENCY_CHRISTMAS_POINTS,
     currencyConvertDivider: 1000,
     baseBuildingPrice: 201600,
-    baseIncome: 80640,
-    resourceIncome: 80640 / 1000
+    baseIncome: 80640
   },
   9: {
     currency: CURRENCY_CHRISTMAS_POINTS,
     currencyConvertDivider: 1000,
-    baseBuildingPrice: 181440,
-    baseIncome: 725760,
-    resourceIncome: 725760 / 1000
+    baseBuildingPrice: 1814400,
+    baseIncome: 725760
   },
 }
 
@@ -172,12 +163,14 @@ export const getFarmIncomeData = function(tier, level, perks) {
     cycleDurationPerkLevel: perks.cycleDurationPerkLevel
   });
   let incomePerk = getMainTowerPerkValue(tier, TOWER_PERK_INCOME, perks.incomePerkLevel);
-  let expIncomePerSecond = (1 + incomePerk) * farmConfig[tier].baseIncome * level * ((tier === 6 ? 0 : 1) + 0.01 * tier) * (perks[TOWER_PERK_BOOST] ? 2 : 1) * (perks[TOWER_PERK_SUPER_BOOST] ? 5 : 1);
+  let expIncomePerSecond = (1 + incomePerk) * farmConfig[tier].baseIncome * level * ((tier == 6 ? 0 : 1) + 0.01 * tier) * (perks[TOWER_PERK_BOOST] ? 2 : 1) * (perks[TOWER_PERK_SUPER_BOOST] ? 5 : 1);
   let expIncomePerCycle = farmTimeData.cycleLength * expIncomePerSecond;
+  let currencyDivider = farmConfig[tier].currencyConvertDivider;
   return {
     expIncomePerSecond,
     expIncomePerCycle,
-    currencyIncomePerCycle: expIncomePerCycle / farmConfig[tier].currencyConvertDivider
+    currencyIncomePerSecond: expIncomePerSecond / currencyDivider,
+    currencyIncomePerCycle: expIncomePerCycle / currencyDivider
   };
 }
 
