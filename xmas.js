@@ -25,31 +25,31 @@ export const currencies = [
 export const farmConfig = {
   1: {
     currency: CURRENCY_SANTABUCKS,
-    currencyConvertDivider: 2,
+    currencyConvertDivider: 4,
     baseBuildingPrice: 20,
     baseIncome: 2
   },
   2: {
     currency: CURRENCY_GOLD,
-    currencyConvertDivider: 2,
+    currencyConvertDivider: 4,
     baseBuildingPrice: 40,
     baseIncome: 4
   },
   3: {
     currency: CURRENCY_UNIT_ESSENCE,
-    currencyConvertDivider: 6,
+    currencyConvertDivider: 24,
     baseBuildingPrice: 120,
     baseIncome: 12
   },
   4: {
     currency: CURRENCY_CHRISTMAS_POINTS,
-    currencyConvertDivider: 2000,
+    currencyConvertDivider: 4000,
     baseBuildingPrice: 480,
     baseIncome: 48
   },
   5: {
     currency: CURRENCY_SANTABUCKS,
-    currencyConvertDivider: 2,
+    currencyConvertDivider: 4,
     baseBuildingPrice: 2400,
     baseIncome: 240
   },
@@ -61,19 +61,19 @@ export const farmConfig = {
   },
   7: {
     currency: CURRENCY_CHRISTMAS_POINTS,
-    currencyConvertDivider: 2000,
+    currencyConvertDivider: 4000,
     baseBuildingPrice: 100800,
     baseIncome: 10080
   },
   8: {
     currency: CURRENCY_CHRISTMAS_POINTS,
-    currencyConvertDivider: 2000,
+    currencyConvertDivider: 4000,
     baseBuildingPrice: 806400,
     baseIncome: 80640
   },
   9: {
     currency: CURRENCY_CHRISTMAS_POINTS,
-    currencyConvertDivider: 2000,
+    currencyConvertDivider: 4000,
     baseBuildingPrice: 7257600,
     baseIncome: 725760
   },
@@ -153,7 +153,6 @@ export const perksTree = {
   },
 };
 
-// TODO charge 1 level for perk branch reveal
 // TODO add 1 hr of cooldown
 // TODO build confirmation prompt should be accounted in SB
 
@@ -166,10 +165,10 @@ const mainTowerPerkValue = (perkName, perkLevel, baseValue) => {
 
   if ([TOWER_PERK_CYCLE_DURATION, TOWER_PERK_INCOME].includes(perkName)) {
     baseValue = 0.05;
-    multiplier = 1.05;
+    multiplier = 1.025;
   } else if (TOWER_PERK_UPGRADE == perkName) {
     baseValue = 0.01;
-    multiplier = 1.05;
+    multiplier = 1.025;
   } else if (TOWER_PERK_AUTOCYCLES_COUNT == perkName) {
     multiplier = 1;
   } else if ([TOWER_PERK_BOOST, TOWER_PERK_SPEED, TOWER_PERK_SUPER_BOOST, TOWER_PERK_SUPER_SPEED].includes(perkName)) {
