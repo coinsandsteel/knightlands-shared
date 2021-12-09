@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 export const CURRENCY_SANTABUCKS = 'santa_bucks';
 export const CURRENCY_GOLD = 'gold';
 export const CURRENCY_UNIT_ESSENCE = 'unit_essence';
@@ -77,9 +79,86 @@ export const farmConfig = {
   },
 }
 
-// TODO 1 hr of cooldown
+const perksBranch = {
+  [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
+  [TOWER_PERK_INCOME]: { level: 0 },
+  [TOWER_PERK_UPGRADE]: { level: 0 },
+  [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
+  [TOWER_PERK_BOOST]: { level: 0, lastActivated: null },
+  [TOWER_PERK_SPEED]: { level: 0, lastActivated: null },
+  [TOWER_PERK_SUPER_BOOST]: { level: 0, lastActivated: null },
+  [TOWER_PERK_SUPER_SPEED]: { level: 0, lastActivated: null }
+};
+
+export const perksTree = {
+  [CURRENCY_SANTABUCKS]: {
+    unlocked: false,
+    tiers: {
+      all: _.cloneDeep(perksBranch)
+    }
+  },
+  [CURRENCY_GOLD]: {
+    unlocked: false,
+    tiers: {
+      all: _.cloneDeep(perksBranch)
+    }
+  },
+  [CURRENCY_UNIT_ESSENCE]: {
+    unlocked: false,
+    tiers: {
+      all: _.cloneDeep(perksBranch)
+    }
+  },
+  [CURRENCY_SHINIES]: {
+    unlocked: false,
+    tiers: {
+      all: {
+        [TOWER_PERK_INCOME]: { level: 0 },
+        [TOWER_PERK_UPGRADE]: { level: 0 },
+        [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
+      }
+    }
+  },
+  [CURRENCY_CHRISTMAS_POINTS]: {
+    unlocked: false,
+    tiers: {
+      4: {
+        [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
+        [TOWER_PERK_UPGRADE]: { level: 0 },
+        [TOWER_PERK_SPEED]: { level: 0, lastActivated: null },
+        [TOWER_PERK_SUPER_SPEED]: { level: 0, lastActivated: null }
+      },
+      7: {
+        [TOWER_PERK_INCOME]: { level: 0 },
+        [TOWER_PERK_UPGRADE]: { level: 0 },
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
+        [TOWER_PERK_BOOST]: { level: 0, lastActivated: null },
+        [TOWER_PERK_SUPER_BOOST]: { level: 0, lastActivated: null }
+      },
+      8: {
+        [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
+        [TOWER_PERK_UPGRADE]: { level: 0 },
+        [TOWER_PERK_SPEED]: { level: 0, lastActivated: null },
+        [TOWER_PERK_SUPER_SPEED]: { level: 0, lastActivated: null }
+      },
+      9: {
+        [TOWER_PERK_INCOME]: { level: 0 },
+        [TOWER_PERK_UPGRADE]: { level: 0 },
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
+        [TOWER_PERK_BOOST]: { level: 0, lastActivated: null },
+        [TOWER_PERK_SUPER_BOOST]: { level: 0, lastActivated: null }
+      },
+    }
+  },
+};
+
+// TODO charge 1 level for perk branch reveal
+// TODO add 1 hr of cooldown
+// TODO build confirmation prompt should be accounted in SB
+
 // TODO level multipliers
-// TODO debit 1 level for branch activation
+// TODO adjust a balance
 
 const mainTowerPerkValue = (perkName, perkLevel, baseValue) => {
   let levelStep = 0;
@@ -103,6 +182,7 @@ const mainTowerPerkValue = (perkName, perkLevel, baseValue) => {
     levelStep = 1;
   }
 
+  console.log('mainTowerPerkValue', { baseValue, levelStep, perkLevel, multiplier });
   return baseValue * (levelStep + perkLevel * multiplier);
 }
 
