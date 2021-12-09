@@ -153,11 +153,8 @@ export const perksTree = {
   },
 };
 
-// TODO add 1 hr of cooldown
-// TODO build confirmation prompt should be accounted in SB
-
+// TODO implement boost and speed + cooldown
 // TODO level multipliers
-// TODO adjust a balance
 
 const mainTowerPerkValue = (perkName, perkLevel, baseValue) => {
   let levelStep = 0;
@@ -271,7 +268,7 @@ export const getFarmIncomeData = function(tier, level, perks) {
 
 export function abbreviateNumber(value) {
   let newValue = value;
-  const suffixes = ["", "K", "M", "B", "T"];
+  const suffixes = ["", "K", "M", "B", "T", "QV", "QN", "S"];
   let suffixNum = 0;
   while (newValue >= 1000) {
     newValue /= 1000;
