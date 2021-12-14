@@ -24,59 +24,60 @@ export const currencies = [
   CURRENCY_CHRISTMAS_POINTS,
   CURRENCY_SHINIES
 ];
+
 export const farmConfig = {
   1: {
     currency: CURRENCY_SANTABUCKS,
     currencyConvertDivider: 1,
-    baseBuildingPrice: 20,
+    baseBuildingPrice: 50,
     baseIncome: 2
   },
   2: {
     currency: CURRENCY_GOLD,
     currencyConvertDivider: 1,
-    baseBuildingPrice: 40,
+    baseBuildingPrice: 100,
     baseIncome: 4
   },
   3: {
     currency: CURRENCY_UNIT_ESSENCE,
     currencyConvertDivider: 6,
-    baseBuildingPrice: 120,
+    baseBuildingPrice: 300,
     baseIncome: 12
   },
   4: {
     currency: CURRENCY_CHRISTMAS_POINTS,
     currencyConvertDivider: 1000,
-    baseBuildingPrice: 480,
+    baseBuildingPrice: 1200,
     baseIncome: 48
   },
   5: {
     currency: CURRENCY_SANTABUCKS,
     currencyConvertDivider: 1,
-    baseBuildingPrice: 2400,
+    baseBuildingPrice: 6000,
     baseIncome: 240
   },
   6: {
     currency: CURRENCY_SHINIES,
-    currencyConvertDivider: 3150,
-    baseBuildingPrice: 14400,
+    currencyConvertDivider: 76000,
+    baseBuildingPrice: 36000,
     baseIncome: 1440
   },
   7: {
     currency: CURRENCY_CHRISTMAS_POINTS,
     currencyConvertDivider: 1000,
-    baseBuildingPrice: 100800,
+    baseBuildingPrice: 252000,
     baseIncome: 10080
   },
   8: {
     currency: CURRENCY_CHRISTMAS_POINTS,
     currencyConvertDivider: 1000,
-    baseBuildingPrice: 806400,
+    baseBuildingPrice: 2016000,
     baseIncome: 80640
   },
   9: {
     currency: CURRENCY_CHRISTMAS_POINTS,
     currencyConvertDivider: 1000,
-    baseBuildingPrice: 7257600,
+    baseBuildingPrice: 18144000,
     baseIncome: 725760
   },
 }
@@ -157,6 +158,14 @@ export const perksTree = {
   },
 };
 
+export const getTowerLevelBoundaries = function() {
+  let map = {};
+  for (let i = 1; i <= 500; i++) {
+    map[i] = BASE_EXP + Math.pow(1.4, i - 1);
+  }
+  return map;
+}
+
 // TODO implement boost and speed + cooldown
 const mainTowerPerkValue = (perkName, perkLevel, baseValue) => {
   let levelStep = 0;
@@ -212,17 +221,9 @@ export const getMainTowerPerkValue = function(tier, perkName, perkLevel) {
   }
 }
 
-export const getTowerLevelBoundaries = function() {
-  let map = {};
-  for (let i = 1; i <= BASE_EXP; i++) {
-    map[i] = 100 + Math.pow(1.4, i - 1);
-  }
-  return map;
-}
-
 export const getFarmUpgradeData = function(tier, level, perks) {
   let upgradeData = {
-    upgradeMultiplier: 1 + ((tier == 6 ? 0.05 : 0.02) * tier),
+    upgradeMultiplier: 1 + 0.03 * tier,
     baseSaleBuilding: farmConfig[tier].baseBuildingPrice,
     perksMultiplier: 1 + getMainTowerPerkValue(tier, TOWER_PERK_UPGRADE, perks.upgradePerkLevel)
   };
@@ -251,7 +252,7 @@ export const getFarmIncomeData = function(tier, level, perks) {
     cycleDurationPerkLevel: perks.cycleDurationPerkLevel
   });
   let incomePerk = getMainTowerPerkValue(tier, TOWER_PERK_INCOME, perks.incomePerkLevel);
-  let expIncomePerSecond = (1 + incomePerk) * farmConfig[tier].baseIncome * level * ((tier == 6 ? 0 : 1) + 0.01 * tier) * (perks[TOWER_PERK_BOOST] ? 2 : 1) * (perks[TOWER_PERK_SUPER_BOOST] ? 5 : 1) / farmTimeData.cycleLength;
+  let expIncomePerSecond = (1 + incomePerk) * farmConfig[tier].baseIncome * level * (1 + 0.01 * tier) * (perks[TOWER_PERK_BOOST] ? 2 : 1) * (perks[TOWER_PERK_SUPER_BOOST] ? 5 : 1) / farmTimeData.cycleLength;
   let expIncomePerCycle = expIncomePerSecond * farmTimeData.cycleLength;
   let currencyDivider = farmConfig[tier].currencyConvertDivider;
   let result = {
