@@ -82,6 +82,52 @@ export const farmConfig = {
   },
 }
 
+export const balance = {
+  [CURRENCY_SANTABUCKS]: 1000000000000,
+  [CURRENCY_GOLD]: 0,
+  [CURRENCY_UNIT_ESSENCE]: 0,
+  [CURRENCY_CHRISTMAS_POINTS]: 0,
+  [CURRENCY_SHINIES]: 0
+};
+
+export const initialSlotState = {
+  lastLaunch: null,
+  level: 0,
+  accumulated: {
+    currency: 0,
+    exp: 0
+  },
+  progress: {
+    percentage: 0,
+    autoCyclesLeft: 0,
+    autoCyclesSpent: 0
+  },
+  stats: {
+    cycleLength: 1,
+    upgrade: {
+      value: 0,
+      nextLevel: 1
+    },
+    income: {
+      current: {
+        expPerSecond: 0,
+        expPerCycle: 0,
+        currencyPerSecond: 0,
+        currencyPerCycle: 0
+      },
+      next: {
+        expPerSecond: 0,
+        expPerCycle: 0,
+        currencyPerSecond: 0,
+        currencyPerCycle: 0
+      }
+    }
+  }
+};
+export const slots = Object.fromEntries(
+  Array.from({length: 8}, (v, i) => [i+1, _.clone(initialSlotState)])
+);
+
 const perksBranch = {
   [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
   [TOWER_PERK_INCOME]: { level: 0 },
@@ -126,28 +172,28 @@ export const perksTree = {
   [CURRENCY_CHRISTMAS_POINTS]: {
     unlocked: false,
     tiers: {
-      4: {
+      '4': {
         [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
         [TOWER_PERK_UPGRADE]: { level: 0 },
         [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
         [TOWER_PERK_SPEED]: { level: 0, lastActivated: null },
         [TOWER_PERK_SUPER_SPEED]: { level: 0, lastActivated: null }
       },
-      7: {
+      '7': {
         [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
         [TOWER_PERK_UPGRADE]: { level: 0 },
         [TOWER_PERK_INCOME]: { level: 0 },
         [TOWER_PERK_BOOST]: { level: 0, lastActivated: null },
         [TOWER_PERK_SUPER_BOOST]: { level: 0, lastActivated: null }
       },
-      8: {
+      '8': {
         [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
         [TOWER_PERK_UPGRADE]: { level: 0 },
         [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
         [TOWER_PERK_SPEED]: { level: 0, lastActivated: null },
         [TOWER_PERK_SUPER_SPEED]: { level: 0, lastActivated: null }
       },
-      9: {
+      '9': {
         [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
         [TOWER_PERK_UPGRADE]: { level: 0 },
         [TOWER_PERK_INCOME]: { level: 0 },
@@ -252,22 +298,17 @@ export const getFarmIncomeData = function(tier, level, perks) {
     cycleDurationPerkLevel: perks.cycleDurationPerkLevel
   });
   let incomePerk = getMainTowerPerkValue(tier, TOWER_PERK_INCOME, perks.incomePerkLevel);
-  let expIncomePerSecond = (1 + incomePerk) * farmConfig[tier].baseIncome * level * (1 + 0.01 * tier) * (perks[TOWER_PERK_BOOST] ? 2 : 1) * (perks[TOWER_PERK_SUPER_BOOST] ? 5 : 1) / farmTimeData.cycleLength;
-  let expIncomePerCycle = expIncomePerSecond * farmTimeData.cycleLength;
+  let expPerSecond = (1 + incomePerk) * farmConfig[tier].baseIncome * level * (1 + 0.01 * tier) * (perks[TOWER_PERK_BOOST] ? 2 : 1) * (perks[TOWER_PERK_SUPER_BOOST] ? 5 : 1) / farmTimeData.cycleLength;
+  let expPerCycle = expPerSecond * farmTimeData.cycleLength;
   let currencyDivider = farmConfig[tier].currencyConvertDivider;
   let result = {
-    expIncomePerSecond,
-    expIncomePerCycle,
-    currencyIncomePerSecond: expIncomePerSecond / currencyDivider,
-    currencyIncomePerCycle: expIncomePerCycle / currencyDivider
+    expPerSecond,
+    expPerCycle,
+    currencyPerSecond: expPerSecond / currencyDivider,
+    currencyPerCycle: expPerCycle / currencyDivider
   };
   //console.log(`[Tier ${tier} income]`, { ...result, incomePerk, currencyDivider });
-  return {
-    expIncomePerSecond,
-    expIncomePerCycle,
-    currencyIncomePerSecond: expIncomePerSecond / currencyDivider,
-    currencyIncomePerCycle: expIncomePerCycle / currencyDivider
-  };
+  return result;
 }
 
 export function abbreviateNumber(value) {

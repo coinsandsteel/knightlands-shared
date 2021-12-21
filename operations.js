@@ -170,5 +170,10 @@ module.exports = {
     SDungeonRank: "sdungeon_rank",
     SDungeonEnter: "sdungeon_enter",
     SDunegonCommitStats: "sdungeon_commit_stats",
-    SDungeonWithdraw: "sdungeon_withdraw"
+    SDungeonWithdraw: "sdungeon_withdraw",
+    XmasLoad: "xmas_load",
+    XmasFarmUpgrade: "xmas_farm_upgrade",
+    XmasHarvest: "xmas_harvest",
+    XmasCommitPerks: "xmas_commit_perks",
+    XmasUpdateLevelGap: "xmas_update_level_gap",
 }

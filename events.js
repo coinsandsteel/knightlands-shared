@@ -31,5 +31,6 @@ module.exports = {
     CommitChanges: "commit_changes",
     ArmySlots: "army_slots",
     FounderPackAcquired: "founder_pack_acquired",
-    SDungeonUpdate: "sdung_upd"
+    SDungeonUpdate: "sdung_upd",
+    XmasUpdate: "xmas_upd"
 }
