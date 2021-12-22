@@ -125,7 +125,7 @@ export const initialSlotState = {
   }
 };
 export const slots = Object.fromEntries(
-  Array.from({length: 8}, (v, i) => [i+1, _.clone(initialSlotState)])
+  Array.from({length: 9}, (v, i) => [i+1, _.cloneDeep(initialSlotState)])
 );
 
 const perksBranch = {
@@ -205,7 +205,7 @@ export const perksTree = {
 };
 
 export const getTowerLevelBoundaries = function() {
-  let map = {};
+  let map = { 0: 0 };
   for (let i = 1; i <= 500; i++) {
     map[i] = BASE_EXP + Math.pow(1.4, i - 1);
   }
