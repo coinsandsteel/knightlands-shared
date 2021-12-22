@@ -91,6 +91,7 @@ export const balance = {
 };
 
 export const initialSlotState = {
+  launched: false,
   lastLaunch: null,
   level: 0,
   accumulated: {
