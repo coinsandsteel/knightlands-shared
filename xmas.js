@@ -287,9 +287,11 @@ const mainTowerPerkValue = (perkName, perkLevel, baseValue) => {
   return baseValue * (levelStep + perkLevel * multiplier);
 }
 
-export const getMainTowerPerkValue = function(tier, perkName, perkLevel) {
-  let currency = farmConfig[tier].currency;
-
+export const getMainTowerPerkValue = function(tier, perkName, perkLevel, currency) {
+  if (farmConfig[tier]) {
+    currency = farmConfig[tier].currency;
+  }
+  
   switch (currency) {
     case CURRENCY_SANTABUCKS: {
       return mainTowerPerkValue(perkName, perkLevel, TOWER_PERK_AUTOCYCLES_COUNT == perkName ? 42 : -1);
