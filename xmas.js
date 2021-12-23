@@ -180,10 +180,10 @@ export const perksTree = {
     unlocked: false,
     tiers: {
       all: {
-        [TOWER_PERK_INCOME]: { level: 0 },
-        [TOWER_PERK_UPGRADE]: { level: 0 },
-        [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
+        [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
+        [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
+        [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
       }
     }
   },
@@ -191,32 +191,32 @@ export const perksTree = {
     unlocked: false,
     tiers: {
       '4': {
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
-        [TOWER_PERK_UPGRADE]: { level: 0 },
-        [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
-        [TOWER_PERK_SPEED]: { level: 0, lastActivated: null },
-        [TOWER_PERK_SUPER_SPEED]: { level: 0, lastActivated: null }
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
+        [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
+        [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
+        [TOWER_PERK_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
+        [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
       '7': {
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
-        [TOWER_PERK_UPGRADE]: { level: 0 },
-        [TOWER_PERK_INCOME]: { level: 0 },
-        [TOWER_PERK_BOOST]: { level: 0, lastActivated: null },
-        [TOWER_PERK_SUPER_BOOST]: { level: 0, lastActivated: null }
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
+        [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
+        [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
+        [TOWER_PERK_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null },
+        [TOWER_PERK_SUPER_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
       '8': {
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
-        [TOWER_PERK_UPGRADE]: { level: 0 },
-        [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
-        [TOWER_PERK_SPEED]: { level: 0, lastActivated: null },
-        [TOWER_PERK_SUPER_SPEED]: { level: 0, lastActivated: null }
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
+        [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
+        [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
+        [TOWER_PERK_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
+        [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
       '9': {
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
-        [TOWER_PERK_UPGRADE]: { level: 0 },
-        [TOWER_PERK_INCOME]: { level: 0 },
-        [TOWER_PERK_BOOST]: { level: 0, lastActivated: null },
-        [TOWER_PERK_SUPER_BOOST]: { level: 0, lastActivated: null }
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
+        [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
+        [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
+        [TOWER_PERK_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null },
+        [TOWER_PERK_SUPER_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
     }
   },
