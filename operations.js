@@ -176,5 +176,6 @@ module.exports = {
     XmasHarvest: "xmas_harvest",
     XmasCommitPerks: "xmas_commit_perks",
     XmasUpdateLevelGap: "xmas_update_level_gap",
-    XmasCPointsStatus: "xmas_cpoints_sts"
+    XmasCPointsStatus: "xmas_cpoints_sts",
+    XmasActivatePerk: "xmas_activate_perk",
 }
