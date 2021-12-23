@@ -160,6 +160,20 @@ const perksBranch = {
   [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null }
 };
 
+export const basePerkLevel = [
+  [ TOWER_PERK_AUTOCYCLES_COUNT ],
+  [ TOWER_PERK_UPGRADE ],
+  [ TOWER_PERK_INCOME, TOWER_PERK_CYCLE_DURATION ],
+  [ TOWER_PERK_BOOST, TOWER_PERK_SPEED ],
+  [ TOWER_PERK_SUPER_BOOST, TOWER_PERK_SUPER_SPEED ],
+]
+
+export const perkLevels = {
+  [CURRENCY_SANTABUCKS]: basePerkLevel,
+  [CURRENCY_GOLD]: basePerkLevel,
+  [CURRENCY_UNIT_ESSENCE]: basePerkLevel
+}
+
 export const perksUnlock = {
   [TOWER_PERK_AUTOCYCLES_COUNT]: [TOWER_PERK_INCOME, TOWER_PERK_CYCLE_DURATION],
   [TOWER_PERK_UPGRADE]: [TOWER_PERK_INCOME, TOWER_PERK_CYCLE_DURATION],
