@@ -159,7 +159,7 @@ const perksBranch = {
 
 export const perksTree = {
   [CURRENCY_SANTABUCKS]: {
-    unlocked: false,
+    unlocked: true,
     tiers: {
       all: _.cloneDeep(perksBranch)
     }
@@ -183,7 +183,7 @@ export const perksTree = {
         [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
         [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
         [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
       }
     }
   },
@@ -191,28 +191,28 @@ export const perksTree = {
     unlocked: false,
     tiers: {
       '4': {
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
         [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
         [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
         [TOWER_PERK_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
         [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
       '7': {
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
         [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
         [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
         [TOWER_PERK_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null },
         [TOWER_PERK_SUPER_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
       '8': {
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
         [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
         [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
         [TOWER_PERK_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
         [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
       '9': {
-        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: false, level: 0 },
+        [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
         [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
         [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
         [TOWER_PERK_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null },
