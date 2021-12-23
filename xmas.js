@@ -16,6 +16,8 @@ export const TOWER_PERK_BOOST = 'boost';
 export const TOWER_PERK_SPEED = 'speed';
 export const TOWER_PERK_SUPER_BOOST = 'super_boost';
 export const TOWER_PERK_SUPER_SPEED = 'super_speed';
+export const TOWER_PERK_PRESENT = 'present';
+export const TOWER_PERK_SLEEP = 'sleep';
 
 export const currencies = [
   CURRENCY_SANTABUCKS,
@@ -129,15 +131,28 @@ export const slots = Object.fromEntries(
   Array.from({length: 9}, (v, i) => [i+1, _.cloneDeep(initialSlotState)])
 );
 
+export const burstPerksTree = {
+  [TOWER_PERK_PRESENT]: {
+    level: 0,
+    price: 0,
+    lastActivated: null
+  },
+  [TOWER_PERK_SLEEP]: {
+    level: 0,
+    price: 0,
+    lastActivated: null
+  }
+}
+
 const perksBranch = {
   [TOWER_PERK_CYCLE_DURATION]: { level: 0 },
   [TOWER_PERK_INCOME]: { level: 0 },
   [TOWER_PERK_UPGRADE]: { level: 0 },
   [TOWER_PERK_AUTOCYCLES_COUNT]: { level: 0 },
-  [TOWER_PERK_BOOST]: { level: 0, lastActivated: null },
-  [TOWER_PERK_SPEED]: { level: 0, lastActivated: null },
-  [TOWER_PERK_SUPER_BOOST]: { level: 0, lastActivated: null },
-  [TOWER_PERK_SUPER_SPEED]: { level: 0, lastActivated: null }
+  [TOWER_PERK_BOOST]: { level: 0, price: 0, lastActivated: null },
+  [TOWER_PERK_SPEED]: { level: 0, price: 0, lastActivated: null },
+  [TOWER_PERK_SUPER_BOOST]: { level: 0, price: 0, lastActivated: null },
+  [TOWER_PERK_SUPER_SPEED]: { level: 0, price: 0, lastActivated: null }
 };
 
 export const perksTree = {
@@ -213,7 +228,6 @@ export const getTowerLevelBoundaries = function() {
   return map;
 }
 
-// TODO implement boost and speed + cooldown
 const mainTowerPerkValue = (perkName, perkLevel, baseValue) => {
   let levelStep = 0;
   let multiplier = 1;
@@ -293,7 +307,6 @@ export const getFarmTimeData = function(tier, perks) {
   };
 }
 
-// MultiplierShort * BaseIncome * ReductionTime * Level / CycleLength
 export const getFarmIncomeData = function(tier, level, perks) {
   let farmTimeData = getFarmTimeData(tier, {
     cycleDurationPerkLevel: perks.cycleDurationPerkLevel
