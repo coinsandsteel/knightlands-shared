@@ -157,9 +157,7 @@ const perksBranch = {
   [TOWER_PERK_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
 
   [TOWER_PERK_SUPER_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null },
-  [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
-
-  [TOWER_PERK_PRESENT]: { enabled: false, level: 0, price: 0, lastActivated: null }
+  [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null }
 };
 
 export const perksUnlock = {
