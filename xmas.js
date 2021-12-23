@@ -171,7 +171,43 @@ export const basePerkLevel = [
 export const perkLevels = {
   [CURRENCY_SANTABUCKS]: basePerkLevel,
   [CURRENCY_GOLD]: basePerkLevel,
-  [CURRENCY_UNIT_ESSENCE]: basePerkLevel
+  [CURRENCY_UNIT_ESSENCE]: basePerkLevel,
+  [CURRENCY_CHRISTMAS_POINTS]: {
+    "7": [ 
+      [ TOWER_PERK_AUTOCYCLES_COUNT ],
+      [ TOWER_PERK_UPGRADE ],
+      [ TOWER_PERK_INCOME ],
+      [ TOWER_PERK_BOOST ],
+      [ TOWER_PERK_SUPER_BOOST ]
+    ],
+    "9": [ 
+      [ TOWER_PERK_AUTOCYCLES_COUNT ],
+      [ TOWER_PERK_UPGRADE ],
+      [ TOWER_PERK_INCOME ],
+      [ TOWER_PERK_BOOST ],
+      [ TOWER_PERK_SUPER_BOOST ]
+    ],
+    "4": [ 
+      [ TOWER_PERK_AUTOCYCLES_COUNT ],
+      [ TOWER_PERK_UPGRADE ],
+      [ TOWER_PERK_INCOME ],
+      [ TOWER_PERK_SPEED ],
+      [ TOWER_PERK_SUPER_SPEED ]
+    ],
+    "8": [ 
+      [ TOWER_PERK_AUTOCYCLES_COUNT ],
+      [ TOWER_PERK_UPGRADE ],
+      [ TOWER_PERK_INCOME ],
+      [ TOWER_PERK_SPEED ],
+      [ TOWER_PERK_SUPER_SPEED ]
+    ]
+  },
+  [CURRENCY_SHINIES]: [
+    [ TOWER_PERK_AUTOCYCLES_COUNT ],
+    [ TOWER_PERK_UPGRADE ],
+    [ TOWER_PERK_CYCLE_DURATION ],
+    [ TOWER_PERK_INCOME ]
+  ]
 }
 
 export const perksUnlock = {
@@ -224,28 +260,28 @@ export const perksTree = {
       '4': {
         [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
         [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
-        [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
+        [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
         [TOWER_PERK_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
         [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
       '7': {
         [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
         [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
-        [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
+        [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
         [TOWER_PERK_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null },
         [TOWER_PERK_SUPER_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
       '8': {
         [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
         [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
-        [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
+        [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
         [TOWER_PERK_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
         [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
       '9': {
         [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
         [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
-        [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
+        [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
         [TOWER_PERK_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null },
         [TOWER_PERK_SUPER_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null }
       },
@@ -291,7 +327,7 @@ export const getMainTowerPerkValue = function(tier, perkName, perkLevel, currenc
   if (farmConfig[tier]) {
     currency = farmConfig[tier].currency;
   }
-  
+
   switch (currency) {
     case CURRENCY_SANTABUCKS: {
       return mainTowerPerkValue(perkName, perkLevel, TOWER_PERK_AUTOCYCLES_COUNT == perkName ? 42 : -1);
