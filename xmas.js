@@ -147,15 +147,34 @@ export const burstPerksTree = {
 }
 
 const perksBranch = {
-  [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
-  [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
-  [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
   [TOWER_PERK_AUTOCYCLES_COUNT]: { enabled: true, level: 0 },
+  [TOWER_PERK_UPGRADE]: { enabled: false, level: 0 },
+
+  [TOWER_PERK_INCOME]: { enabled: false, level: 0 },
+  [TOWER_PERK_CYCLE_DURATION]: { enabled: false, level: 0 },
+  
   [TOWER_PERK_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null },
   [TOWER_PERK_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
+
   [TOWER_PERK_SUPER_BOOST]: { enabled: false, level: 0, price: 0, lastActivated: null },
-  [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null }
+  [TOWER_PERK_SUPER_SPEED]: { enabled: false, level: 0, price: 0, lastActivated: null },
+
+  [TOWER_PERK_PRESENT]: { enabled: false, level: 0, price: 0, lastActivated: null }
 };
+
+export const perksUnlock = {
+  [TOWER_PERK_AUTOCYCLES_COUNT]: [TOWER_PERK_INCOME, TOWER_PERK_CYCLE_DURATION],
+  [TOWER_PERK_UPGRADE]: [TOWER_PERK_INCOME, TOWER_PERK_CYCLE_DURATION],
+
+  [TOWER_PERK_INCOME]: [TOWER_PERK_BOOST, TOWER_PERK_SPEED],
+  [TOWER_PERK_CYCLE_DURATION]: [TOWER_PERK_BOOST, TOWER_PERK_SPEED],
+
+  [TOWER_PERK_BOOST]: [TOWER_PERK_SUPER_BOOST, TOWER_PERK_SUPER_SPEED],
+  [TOWER_PERK_SPEED]: [TOWER_PERK_SUPER_BOOST, TOWER_PERK_SUPER_SPEED],
+
+  [TOWER_PERK_SUPER_BOOST]: [TOWER_PERK_PRESENT],
+  [TOWER_PERK_SUPER_SPEED]: [TOWER_PERK_PRESENT]
+}
 
 export const perksTree = {
   [CURRENCY_SANTABUCKS]: {
