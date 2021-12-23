@@ -254,8 +254,8 @@ export const perksTree = {
 };
 
 export const getTowerLevelBoundaries = function() {
-  let map = { 0: 0 };
-  for (let i = 1; i <= 500; i++) {
+  let map = { 1: 0 };
+  for (let i = 2; i <= 500; i++) {
     map[i] = BASE_EXP + Math.pow(1.4, i - 1) + map[i - 1];
   }
   return map;
