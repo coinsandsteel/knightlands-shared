@@ -396,16 +396,15 @@ export const getMainTowerPerkValue = function(tier, perkName, perkLevel, currenc
     }
 }
 
-export const getFarmUpgradeData = function(tier, level, perks) {
-    let upgradeData = {
-        upgradeMultiplier: 1 + 0.38 * tier,
+export const getUpgradeTotalPriceAtLevel = function({ upgradeMultiplier, baseSaleBuilding, perksMultiplier }, level) {
+    return (Math.pow(upgradeMultiplier, level) - 1) / (upgradeMultiplier - 1) * baseSaleBuilding / perksMultiplier;
+}
+
+export const getFarmUpgradeData = function(tier, perks) {
+    return {
+        upgradeMultiplier: 1 + 0.038 * tier,
         baseSaleBuilding: farmConfig[tier].baseBuildingPrice,
         perksMultiplier: 1 + getMainTowerPerkValue(tier, TOWER_PERK_UPGRADE, perks.upgradePerkLevel)
-    };
-    let upgrade = (upgradeData.baseSaleBuilding / upgradeData.perksMultiplier) * Math.pow(upgradeData.upgradeMultiplier, level - 1);
-    //console.log(`[Tier ${tier} upgrade]`, { ...upgradeData, upgradePrice });
-    return {
-        upgrade
     };
 }
 
