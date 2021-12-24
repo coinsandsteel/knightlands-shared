@@ -175,9 +175,9 @@ module.exports = {
     XmasFarmUpgrade: "xmas_farm_upgrade",
     XmasHarvest: "xmas_harvest",
     XmasCommitPerks: "xmas_commit_perks",
+    XmasCommitSlotPerks: "xmas_commit_slot_perks",
     XmasUpdateLevelGap: "xmas_update_level_gap",
     XmasCPointsStatus: "xmas_cpoints_sts",
     XmasActivatePerk: "xmas_activate_perk",
-    XmasActivateSlotPerk: "xmas_activate_slot_perk",
     XmasRebalancePerks: "xmas_rebalance_perks",
 }

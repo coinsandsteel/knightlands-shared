@@ -131,9 +131,9 @@ export const initialSlotState = {
         }
     },
     slotPerks: {
-        [SLOT_PERK_CYCLE_DURATION]: false,
-        [SLOT_PERK_UPGRADE]: false,
-        [SLOT_PERK_INCOME]: false
+      [SLOT_PERK_CYCLE_DURATION]: 0,
+      [SLOT_PERK_UPGRADE]: 0,
+      [SLOT_PERK_INCOME]: 0
     }
 };
 export const slots = Object.fromEntries(
