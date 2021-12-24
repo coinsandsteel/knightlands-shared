@@ -178,5 +178,6 @@ module.exports = {
     XmasUpdateLevelGap: "xmas_update_level_gap",
     XmasCPointsStatus: "xmas_cpoints_sts",
     XmasActivatePerk: "xmas_activate_perk",
-    XmasRebalancePerks: "xmas_rebalance_perks"
+    XmasActivateSlotPerk: "xmas_activate_slot_perk",
+    XmasRebalancePerks: "xmas_rebalance_perks",
 }
