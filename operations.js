@@ -180,4 +180,5 @@ module.exports = {
     XmasCPointsStatus: "xmas_cpoints_sts",
     XmasActivatePerk: "xmas_activate_perk",
     XmasRebalancePerks: "xmas_rebalance_perks",
+    PrizePoolWithdraw: "prize_pool_wdraw"
 }
