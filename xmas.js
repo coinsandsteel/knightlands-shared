@@ -89,7 +89,7 @@ export const farmConfig = {
 }
 
 export const balance = {
-    [CURRENCY_SANTABUCKS]: 1000000000000,
+    [CURRENCY_SANTABUCKS]: 0,
     [CURRENCY_GOLD]: 0,
     [CURRENCY_UNIT_ESSENCE]: 0,
     [CURRENCY_CHRISTMAS_POINTS]: 0,
