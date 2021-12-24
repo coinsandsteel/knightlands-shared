@@ -19,6 +19,10 @@ export const TOWER_PERK_SUPER_SPEED = 'super_speed';
 export const TOWER_PERK_PRESENT = 'present';
 export const TOWER_PERK_SLEEP = 'sleep';
 
+export const SLOT_PERK_CYCLE_DURATION = 'slot_cycle_duration';
+export const SLOT_PERK_UPGRADE = 'slot_upgrade';
+export const SLOT_PERK_INCOME = 'slot_income';
+
 export const currencies = [
     CURRENCY_SANTABUCKS,
     CURRENCY_GOLD,
@@ -125,6 +129,11 @@ export const initialSlotState = {
                 currencyPerCycle: 0
             }
         }
+    },
+    slotPerks: {
+      [SLOT_PERK_CYCLE_DURATION]: false,
+      [SLOT_PERK_UPGRADE]: false,
+      [SLOT_PERK_INCOME]: false
     }
 };
 export const slots = Object.fromEntries(
@@ -398,7 +407,7 @@ export const getMainTowerPerkValue = function(tier, perkName, perkLevel, currenc
 
 export const getFarmUpgradeData = function(tier, level, perks) {
     let upgradeData = {
-        upgradeMultiplier: 1 + 0.38 * tier,
+        upgradeMultiplier: 1 + 0.038 * tier,
         baseSaleBuilding: farmConfig[tier].baseBuildingPrice,
         perksMultiplier: 1 + getMainTowerPerkValue(tier, TOWER_PERK_UPGRADE, perks.upgradePerkLevel)
     };
