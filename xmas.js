@@ -410,10 +410,11 @@ export const getUpgradeTotalPriceAtLevel = function({ upgradeMultiplier, baseSal
 }
 
 export const getFarmUpgradeData = function(tier, perks) {
+    let mainTowerPerk = getMainTowerPerkValue(tier, TOWER_PERK_UPGRADE, perks.upgradePerkLevel);
     return {
         upgradeMultiplier: 1 + 0.038 * tier,
         baseSaleBuilding: farmConfig[tier].baseBuildingPrice,
-        perksMultiplier: 1 + getMainTowerPerkValue(tier, TOWER_PERK_UPGRADE, perks.upgradePerkLevel)
+        perksMultiplier: 1 + mainTowerPerk + perks.slotUpgradePerkLevel * 0.01
     };
 }
 
@@ -422,7 +423,7 @@ export const getFarmTimeData = function(tier, perks) {
     let reductionTime = 1;
     let cycleDurationPerk = getMainTowerPerkValue(tier, TOWER_PERK_CYCLE_DURATION, perks.cycleDurationPerkLevel);
     let baseCycleLength = Math.pow(baseTime, tier - 1);
-    let cycleLength = baseCycleLength * reductionTime * (perks[TOWER_PERK_SPEED] ? 0.5 : 1) * (perks[TOWER_PERK_SUPER_SPEED] ? 0.2 : 1) / (1 + cycleDurationPerk);
+    let cycleLength = baseCycleLength * reductionTime * (perks[TOWER_PERK_SPEED] ? 0.5 : 1) * (perks[TOWER_PERK_SUPER_SPEED] ? 0.2 : 1) / (1 + cycleDurationPerk + perks.slotCycleDurationPerkLevel * 0.01);
     //console.log(`[Tier ${tier} time]`, { cycleLength, baseCycleLength, cycleDurationPerk, baseTime, reductionTime });
     return {
         cycleLength
@@ -431,10 +432,11 @@ export const getFarmTimeData = function(tier, perks) {
 
 export const getFarmIncomeData = function(tier, level, perks) {
     let farmTimeData = getFarmTimeData(tier, {
-        cycleDurationPerkLevel: perks.cycleDurationPerkLevel
+        cycleDurationPerkLevel: perks.cycleDurationPerkLevel,
+        slotCycleDurationPerkLevel: perks.slotCycleDurationPerkLevel
     });
     let incomePerk = getMainTowerPerkValue(tier, TOWER_PERK_INCOME, perks.incomePerkLevel);
-    let expPerSecond = (1 + incomePerk) * farmConfig[tier].baseIncome * level * (1 + 0.01 * tier) * (perks[TOWER_PERK_BOOST] ? 2 : 1) * (perks[TOWER_PERK_SUPER_BOOST] ? 5 : 1) / farmTimeData.cycleLength;
+    let expPerSecond = (1 + incomePerk + perks.slotIncomePerkLevel * 0.01) * farmConfig[tier].baseIncome * level * (1 + 0.01 * tier) * (perks[TOWER_PERK_BOOST] ? 2 : 1) * (perks[TOWER_PERK_SUPER_BOOST] ? 5 : 1) / farmTimeData.cycleLength;
     let expPerCycle = expPerSecond * farmTimeData.cycleLength;
     let currencyDivider = farmConfig[tier].currencyConvertDivider;
     let result = {
