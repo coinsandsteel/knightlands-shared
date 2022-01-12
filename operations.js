@@ -180,5 +180,7 @@ module.exports = {
     XmasCPointsStatus: "xmas_cpoints_sts",
     XmasActivatePerk: "xmas_activate_perk",
     XmasRebalancePerks: "xmas_rebalance_perks",
-    PrizePoolWithdraw: "prize_pool_wdraw"
+    PrizePoolWithdraw: "prize_pool_wdraw",
+    CollectDailyLunarReward: "collect_daily_lunar_reward",
+    FetchDailyLunarRewardStatus: "fetch_daily_lunar_reward_status"
 }
