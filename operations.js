@@ -182,5 +182,6 @@ module.exports = {
     XmasRebalancePerks: "xmas_rebalance_perks",
     PrizePoolWithdraw: "prize_pool_wdraw",
     CollectDailyLunarReward: "collect_daily_lunar_reward",
-    FetchDailyLunarRewardStatus: "fetch_daily_lunar_reward_status"
+    FetchDailyLunarRewardStatus: "fetch_daily_lunar_reward_status",
+    LunarLoad: "lunar_load"
 }
