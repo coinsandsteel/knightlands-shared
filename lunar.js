@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
-export const ITEM_CATEGORY_BASIC = 'basic';
-export const ITEM_CATEGORY_ADVANCED = 'advanced';
-export const ITEM_CATEGORY_EXPERT = 'expert';
-export const ITEM_CATEGORY_NFT = 'nft';
+export const ITEM_RARITY_BASIC = 'common';
+export const ITEM_RARITY_ADVANCED = 'rare';
+export const ITEM_RARITY_EXPERT = 'epic';
+export const ITEM_RARITY_NFT = 'legendary';
+
