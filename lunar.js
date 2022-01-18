@@ -3,6 +3,13 @@ export const ITEM_RARITY_ADVANCED = 'rare';
 export const ITEM_RARITY_EXPERT = 'epic';
 export const ITEM_RARITY_NFT = 'legendary';
 
+export const RARITY_CLASS_MAP = {
+  [ITEM_RARITY_BASIC]: 'basic',
+  [ITEM_RARITY_ADVANCED]: 'advanced',
+  [ITEM_RARITY_EXPERT]: 'expert',
+  [ITEM_RARITY_NFT]: 'nft',
+};
+
 export const BASIC_ITEM_CAPTIONS = [
   '1',
   '2',
@@ -188,7 +195,7 @@ function chunk(str, length) {
   return [];
 }
 
-function generateRecipes (inputCaption) {
+function generateRecipes(inputCaption) {
   let caption = inputCaption;
   if (caption[0] === 'l') {
     caption = inputCaption.substr(1);
@@ -198,9 +205,9 @@ function generateRecipes (inputCaption) {
     result: caption,
     ingredients: chunk(
       caption,
-      caption.length > 6
-        ? 6
-        : (caption.length > 3 ? 3 : 1)
+      caption.length > 6 ?
+      6 :
+      (caption.length > 3 ? 3 : 1)
     ),
   };
 }
