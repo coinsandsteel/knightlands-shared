@@ -32,5 +32,6 @@ module.exports = {
     ArmySlots: "army_slots",
     FounderPackAcquired: "founder_pack_acquired",
     SDungeonUpdate: "sdung_upd",
-    XmasUpdate: "xmas_upd"
+    XmasUpdate: "xmas_upd",
+    LunarUpdate: "lunar_upd"
 }

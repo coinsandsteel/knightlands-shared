@@ -186,5 +186,5 @@ module.exports = {
   LunarExchange: "lunar_exchange",
   LunarCollectDailyReward: "lunar_collect_daily_reward",
   LunarFetchDailyRewardStatus: "lunar_fetch_daily_reward_status",
-  LunarAddTestItems: "lunar_add_test_item",
+  LunarTestAction: "lunar_test_action",
 }
