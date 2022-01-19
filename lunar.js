@@ -274,19 +274,20 @@ function chunk(str, length) {
 }
 
 function generateRecipes(inputCaption) {
+  let captionPrefix = 'l';
   let caption = inputCaption;
-  if (caption[0] === 'l') {
+  if (caption[0] === captionPrefix) {
     caption = inputCaption.substr(1);
   }
 
   return {
-    result: caption,
+    achievement: captionPrefix + caption,
     ingredients: chunk(
       caption,
       caption.length > 6 ?
       6 :
       (caption.length > 3 ? 3 : 1)
-    ),
+    ).map((item) => captionPrefix + item),
   };
 }
 
