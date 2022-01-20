@@ -1,6 +1,6 @@
 export const ITEM_RARITY_BASIC = 'common';
 export const ITEM_RARITY_ADVANCED = 'rare';
-export const ITEM_RARITY_EXPERT = 'legendary';
+export const ITEM_RARITY_EXPERT = 'mythical';
 export const ITEM_RARITY_NFT = 'epic';
 
 export const RARITY_CLASS_MAP = {
