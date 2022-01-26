@@ -13,6 +13,7 @@ module.exports = {
     UseItem: "use_item",
     UnequipItem: "unequip_item",
     JoinRaid: "join_raid",
+    PublishRaid: "publish_raid",
     FetchRaidInfo: "fetch_raid_info",
     FetchRaidRewards: "fetch_raid_rewards",
     FetchRaidPoints: "fetch_raid_points",
