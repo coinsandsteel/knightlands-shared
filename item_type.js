@@ -7,7 +7,8 @@ const ItemType = {
     // General: "general",
     Key: "key",
     Currency: "currency",
-    Charm: "charm"
+    Charm: "charm",
+    Lunar: "lunarResource"
 };
 
 module.exports = ItemType;
