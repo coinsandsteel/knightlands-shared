@@ -33,5 +33,6 @@ module.exports = {
     FounderPackAcquired: "founder_pack_acquired",
     SDungeonUpdate: "sdung_upd",
     XmasUpdate: "xmas_upd",
-    LunarUpdate: "lunar_upd"
+    LunarUpdate: "lunar_upd",
+    MarchUpdate: "march_upd",
 }
