@@ -20,3 +20,20 @@ export const UNIT_CLASS_EXTRA_HP = 'extra_hp';
 export const UNIT_CLASS_ARMOR = 'armor';
 export const UNIT_CLASS_BOW = 'bow';
 export const UNIT_CLASS_GOLD = 'gold';
+
+export const DIRECTION_RANDOM5 = 'random5';
+export const DIRECTION_ALL = 'all';
+export const DIRECTION_CROSS = 'cross';
+export const DIRECTION_CROSS_BOW = 'cross_bow';
+
+export const ADJACENT_CELLS = [
+  [1, 3],
+  [0, 2, 4],
+  [1, 5],
+  [0, 4, 6],
+  [1, 3, 5, 7],
+  [2, 4, 8],
+  [3, 7],
+  [4, 6, 8],
+  [5, 7]
+]
