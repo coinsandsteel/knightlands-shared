@@ -7,7 +7,7 @@ export const UNIT_CLASS_BOMB = 'bomb';
 
 // Containers
 export const UNIT_CLASS_CHEST = 'chest';
-export const UNIT_CLASS_BARRELL = 'barell';
+export const UNIT_CLASS_BARREL = 'barrel';
 
 // Enemies
 export const UNIT_CLASS_ENEMY = 'enemy';
