@@ -185,8 +185,12 @@ module.exports = {
   LunarCraft: "lunar_craft",
   LunarExchange: "lunar_exchange",
   LunarCollectDailyReward: "lunar_collect_daily_reward",
-  LunarFetchDailyRewardStatus: "lunar_fetch_daily_reward_status",
   LunarTestAction: "lunar_test_action",
   LunarPurchase: "lunar_purchase",
   MarchLoad: "march_load",
+  MarchRestartGame: "march_restart_game",
+  MarchTouch: "march_touch",
+  MarchCollectDailyReward: "march_collect_daily_reward",
+  MarchTestAction: "march_test_action",
+  MarchPurchase: "march_purchase",
 }
