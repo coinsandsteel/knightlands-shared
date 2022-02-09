@@ -24,7 +24,6 @@ export const UNIT_CLASS_GOLD = 'gold';
 export const DIRECTION_RANDOM5 = 'random5';
 export const DIRECTION_ALL = 'all';
 export const DIRECTION_CROSS = 'cross';
-export const DIRECTION_CROSS_BOW = 'cross_bow';
 
 export const ADJACENT_CELLS = [
   [1, 3],
