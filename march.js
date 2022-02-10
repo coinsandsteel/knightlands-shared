@@ -25,6 +25,9 @@ export const DIRECTION_RANDOM5 = 'random5';
 export const DIRECTION_ALL = 'all';
 export const DIRECTION_CROSS = 'cross';
 
+export const CURRENCY_GOLD = 'gold';
+export const CURRENCY_TICKETS = 'tickets';
+
 export const ADJACENT_CELLS = [
   [1, 3],
   [0, 2, 4],
