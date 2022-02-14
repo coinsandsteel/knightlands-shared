@@ -28,6 +28,8 @@ export const DIRECTION_CROSS = 'cross';
 export const CURRENCY_GOLD = 'gold';
 export const CURRENCY_TICKETS = 'tickets';
 
+export const BOMB_TIMER = 10;
+
 export const ADJACENT_CELLS = [
   [1, 3],
   [0, 2, 4],
