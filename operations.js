@@ -1,3 +1,4 @@
+
 module.exports = {
   Auth: "auth",
   ChangeNickname: "change_nickname",
@@ -188,7 +189,7 @@ module.exports = {
   LunarTestAction: "lunar_test_action",
   LunarPurchase: "lunar_purchase",
   MarchLoad: "march_load",
-  MarchRestartGame: "march_restart_game",
+  MarchStartNewGame: "march_start_new_game",
   MarchTouch: "march_touch",
   MarchCollectDailyReward: "march_collect_daily_reward",
   MarchTestAction: "march_test_action",

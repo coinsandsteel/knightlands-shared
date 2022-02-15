@@ -41,3 +41,149 @@ export const ADJACENT_CELLS = [
   [4, 6, 8],
   [5, 7]
 ]
+
+export const UNIT_PROBABILITIES = {
+  [UNIT_CLASS_ENEMY]: 0.37,
+  [UNIT_CLASS_TRAP]: 0.074,
+  [UNIT_CLASS_HP]: 0.37 / 3,
+  [UNIT_CLASS_ARMOR]: 0.37 / 3,
+  [UNIT_CLASS_BOW]: 0.37 / 3,
+  [UNIT_CLASS_BARREL]: 0.111,
+  [UNIT_CLASS_GOLD]: 0.074
+}
+
+export const UNIT_POOL = [
+  {
+    stepsToBoss: 10,
+    unitStat: {
+      // Enemies
+      [UNIT_CLASS_ENEMY]: { min: 1, max: 4 },
+      // Traps
+      [UNIT_CLASS_TRAP]: { min: 1, max: 1 },
+      // Boosters - hp, armor, bow
+      [UNIT_CLASS_HP]: { min: 1, max: 3 },
+      [UNIT_CLASS_ARMOR]: { min: 1, max: 3 },
+      [UNIT_CLASS_BOW]: { min: 1, max: 3 },
+      // Gold
+      [UNIT_CLASS_GOLD]: { min: 1, max: 3 },
+      // Barrel
+      [UNIT_CLASS_BARREL]: { min: 2, max: 2 },
+      // Boss
+      [UNIT_CLASS_ENEMY_BOSS]: { min: 10, max: 10 },
+    }
+  },
+  {
+    stepsToBoss: 11,
+    unitStat: {
+      // Enemies
+      [UNIT_CLASS_ENEMY]: { min: 1, max: 5 },
+      // Traps
+      [UNIT_CLASS_TRAP]: { min: 1, max: 2 },
+      // Boosters - hp, armor, bow
+      [UNIT_CLASS_HP]: { min: 1, max: 4 },
+      [UNIT_CLASS_ARMOR]: { min: 1, max: 4 },
+      [UNIT_CLASS_BOW]: { min: 1, max: 4 },
+      // Gold
+      [UNIT_CLASS_GOLD]: { min: 1, max: 4 },
+      // Barrel
+      [UNIT_CLASS_BARREL]: { min: 2, max: 2 },
+      // Boss
+      [UNIT_CLASS_ENEMY_BOSS]: { min: 12, max: 12 },
+    }
+  },
+  {
+    stepsToBoss: 12,
+    unitStat: {
+      // Enemies
+      [UNIT_CLASS_ENEMY]: { min: 1, max: 6 },
+      // Traps
+      [UNIT_CLASS_TRAP]: { min: 1, max: 2 },
+      // Boosters - hp, armor, bow
+      [UNIT_CLASS_HP]: { min: 1, max: 4 },
+      [UNIT_CLASS_ARMOR]: { min: 1, max: 4 },
+      [UNIT_CLASS_BOW]: { min: 1, max: 4 },
+      // Gold
+      [UNIT_CLASS_GOLD]: { min: 1, max: 5 },
+      // Barrel
+      [UNIT_CLASS_BARREL]: { min: 2, max: 3 },
+      // Boss
+      [UNIT_CLASS_ENEMY_BOSS]: { min: 14, max: 14 },
+    }
+  },
+  {
+    stepsToBoss: 13,
+    unitStat: {
+      // Enemies
+      [UNIT_CLASS_ENEMY]: { min: 1, max: 7 },
+      // Traps
+      [UNIT_CLASS_TRAP]: { min: 1, max: 3 },
+      // Boosters - hp, armor, bow
+      [UNIT_CLASS_HP]: { min: 1, max: 5 },
+      [UNIT_CLASS_ARMOR]: { min: 1, max: 5 },
+      [UNIT_CLASS_BOW]: { min: 1, max: 5 },
+      // Gold
+      [UNIT_CLASS_GOLD]: { min: 1, max: 6 },
+      // Barrel
+      [UNIT_CLASS_BARREL]: { min: 2, max: 3 },
+      // Boss
+      [UNIT_CLASS_ENEMY_BOSS]: { min: 18, max: 18 },
+    }
+  },
+  {
+    stepsToBoss: 10,
+    unitStat: {
+      // Enemies
+      [UNIT_CLASS_ENEMY]: { min: 1, max: 8 },
+      // Traps
+      [UNIT_CLASS_TRAP]: { min: 1, max: 3 },
+      // Boosters - hp, armor, bow
+      [UNIT_CLASS_HP]: { min: 1, max: 5 },
+      [UNIT_CLASS_ARMOR]: { min: 1, max: 5 },
+      [UNIT_CLASS_BOW]: { min: 1, max: 5 },
+      // Gold
+      [UNIT_CLASS_GOLD]: { min: 1, max: 7 },
+      // Barrel
+      [UNIT_CLASS_BARREL]: { min: 2, max: 3 },
+      // Boss
+      [UNIT_CLASS_ENEMY_BOSS]: { min: 22, max: 22 },
+    }
+  },
+  {
+    stepsToBoss: 14,
+    unitStat: {
+      // Enemies
+      [UNIT_CLASS_ENEMY]: { min: 1, max: 9 },
+      // Traps
+      [UNIT_CLASS_TRAP]: { min: 1, max: 5 },
+      // Boosters - hp, armor, bow
+      [UNIT_CLASS_HP]: { min: 1, max: 6 },
+      [UNIT_CLASS_ARMOR]: { min: 1, max: 6 },
+      [UNIT_CLASS_BOW]: { min: 1, max: 6 },
+      // Gold
+      [UNIT_CLASS_GOLD]: { min: 1, max: 8 },
+      // Barrel
+      [UNIT_CLASS_BARREL]: { min: 2, max: 4 },
+      // Boss
+      [UNIT_CLASS_ENEMY_BOSS]: { min: 26, max: 26 },
+    }
+  },
+  {
+    stepsToBoss: 15,
+    unitStat: {
+      // Enemies
+      [UNIT_CLASS_ENEMY]: { min: 1, max: 10 },
+      // Traps
+      [UNIT_CLASS_TRAP]: { min: 1, max: 5 },
+      // Boosters - hp, armor, bow
+      [UNIT_CLASS_HP]: { min: 1, max: 6 },
+      [UNIT_CLASS_ARMOR]: { min: 1, max: 6 },
+      [UNIT_CLASS_BOW]: { min: 1, max: 6 },
+      // Gold
+      [UNIT_CLASS_GOLD]: { min: 1, max: 9 },
+      // Barrel
+      [UNIT_CLASS_BARREL]: { min: 2, max: 4 },
+      // Boss
+      [UNIT_CLASS_ENEMY_BOSS]: { min: 30, max: 30 },
+    }
+  },
+]
