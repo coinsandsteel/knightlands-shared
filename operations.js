@@ -195,4 +195,5 @@ module.exports = {
   MarchCollectDailyReward: "march_collect_daily_reward",
   MarchTestAction: "march_test_action",
   MarchPurchase: "march_purchase",
+  MarchOpenChest: "march_open_chest"
 }
