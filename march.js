@@ -191,3 +191,25 @@ export const UNIT_POOL = [
     }
   },
 ]
+
+export const UNIT_LOOT = {
+  [UNIT_CLASS_BARREL + '+']: [
+    UNIT_CLASS_ARMOR,
+    UNIT_CLASS_HP,
+    UNIT_CLASS_BOW,
+    UNIT_CLASS_ENEMY,
+  ],
+  [UNIT_CLASS_CHEST + '-']: [
+    UNIT_CLASS_ENEMY,
+    UNIT_CLASS_TRAP,
+    UNIT_CLASS_ARMOR,
+    UNIT_CLASS_HP,
+    UNIT_CLASS_BOW,
+  ],
+  [UNIT_CLASS_CHEST + '+']: [
+    UNIT_CLASS_EXTRA_HP,
+    UNIT_CLASS_BALL_LIGHTNING,
+    UNIT_CLASS_DRAGON_BREATH,
+    UNIT_CLASS_BOMB,
+  ],
+};
