@@ -28,8 +28,8 @@ export const DIRECTION_CROSS = 'cross';
 export const CURRENCY_GOLD = 'gold';
 export const CURRENCY_TICKETS = 'tickets';
 
-export const BOOSTER_HP = 'booster_hp';
-export const BOOSTER_LIFE = 'life';
+export const BOOSTER_HP = 'maxHealth';
+export const BOOSTER_LIFE = 'extraLife';
 export const BOOSTER_KEY = 'key';
 
 export const BOMB_TIMER = 10;
