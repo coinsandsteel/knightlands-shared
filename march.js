@@ -195,11 +195,16 @@ export const UNIT_POOL = [
 ]
 
 export const UNIT_LOOT = {
-  [UNIT_CLASS_BARREL + '+']: [
+  [UNIT_CLASS_BARREL + '-']: [
     UNIT_CLASS_ARMOR,
     UNIT_CLASS_HP,
     UNIT_CLASS_BOW,
     UNIT_CLASS_ENEMY,
+  ],
+  [UNIT_CLASS_BARREL + '+']: [
+    UNIT_CLASS_ARMOR,
+    UNIT_CLASS_HP,
+    UNIT_CLASS_BOW
   ],
   [UNIT_CLASS_CHEST + '-']: [
     UNIT_CLASS_ENEMY,
