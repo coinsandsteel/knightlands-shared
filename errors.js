@@ -35,6 +35,7 @@ export default {
     UnknownClass: "unknown class",
     DailyRewardCollected: "daily reward collected",
     DailyLunarRewardCollected: "daily lunar reward collected",
+    DailyMarchRewardCollected: "daily march reward collected",
     DailyRefillCollected: "daily refills collected",
     BeastMaxLevel: "beast at max level",
     BeastCantEvolve: "cant evolve beast",
