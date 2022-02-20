@@ -198,5 +198,6 @@ module.exports = {
   MarchPurchasePreGameBooster: "march_purchase_booster",
   MarchUnlockPet: "march_unlock_pet",
   MarchUpgradePet: "march_upgrade_pet",
-  MarchRanking: "march_ranking"
+  MarchRanking: "march_ranking",
+  MarchPurchaseCurrency: "march_purchase_currency",
 }
