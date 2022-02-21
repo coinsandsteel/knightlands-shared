@@ -220,3 +220,16 @@ export const UNIT_LOOT = {
     UNIT_CLASS_BOMB,
   ],
 };
+
+export const PETS_PRICE = [
+  [0, 300, 450],
+  [300, 600, 900],
+  [450, 900, 1350],
+  [600, 1200, 1800],
+  [750, 1500, 2250],
+];
+
+// need to be updated
+export const MAX_HP_BOOSTER_PRICE = 100;
+export const EXTRA_LIFE_BOOSTER_PRICE = 100;
+export const KEY_BOOSTER_PRICE = 100;
