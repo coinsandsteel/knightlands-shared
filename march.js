@@ -230,6 +230,11 @@ export const PETS_PRICE = [
 ];
 
 // need to be updated
+export const EVENT_REWARD_ITEM_ID = [
+  [1000, 1001, 1002, 1003, 1004], // level 2: frame
+  [2000, 2001, 2002, 2003, 2004]  // level 3: headwear
+];
+
 export const MAX_HP_BOOSTER_PRICE = 100;
 export const EXTRA_LIFE_BOOSTER_PRICE = 100;
 export const KEY_BOOSTER_PRICE = 100;
