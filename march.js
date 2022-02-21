@@ -25,6 +25,7 @@ export const DIRECTION_RANDOM5 = 'random5';
 export const DIRECTION_ALL = 'all';
 export const DIRECTION_CROSS = 'cross';
 
+export const CURRENCY_SESSION_GOLD = 'sessionGold';
 export const CURRENCY_GOLD = 'gold';
 export const CURRENCY_TICKETS = 'tickets';
 
