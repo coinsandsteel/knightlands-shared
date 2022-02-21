@@ -34,7 +34,7 @@ export const BOOSTER_KEY = 'key';
 
 export const BOMB_TIMER = 10;
 
-export const TICKET_ITEM_ID = 2407;
+export const TICKET_ITEM_ID = 3461;
 
 export const ADJACENT_CELLS = [
   [1, 3],
