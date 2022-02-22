@@ -190,6 +190,7 @@ module.exports = {
   LunarPurchase: "lunar_purchase",
   MarchLoad: "march_load",
   MarchStartNewGame: "march_start_new_game",
+  MarchExitGame: "march_exit_game",
   MarchTouch: "march_touch",
   MarchCollectDailyReward: "march_collect_daily_reward",
   MarchTestAction: "march_test_action",
