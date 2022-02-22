@@ -193,11 +193,10 @@ module.exports = {
   MarchTouch: "march_touch",
   MarchCollectDailyReward: "march_collect_daily_reward",
   MarchTestAction: "march_test_action",
-  MarchPurchase: "march_purchase",
+  MarchPurchaseGold: "march_purchase_gold",
   MarchOpenChest: "march_open_chest",
   MarchPurchasePreGameBooster: "march_purchase_booster",
   MarchUnlockPet: "march_unlock_pet",
   MarchUpgradePet: "march_upgrade_pet",
   MarchRanking: "march_ranking",
-  MarchPurchaseCurrency: "march_purchase_currency",
 }
