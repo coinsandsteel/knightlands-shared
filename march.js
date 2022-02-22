@@ -25,6 +25,7 @@ export const DIRECTION_RANDOM5 = 'random5';
 export const DIRECTION_ALL = 'all';
 export const DIRECTION_CROSS = 'cross';
 
+export const CURRENCY_SESSION_GOLD = 'sessionGold';
 export const CURRENCY_GOLD = 'gold';
 export const CURRENCY_TICKETS = 'tickets';
 
@@ -34,7 +35,7 @@ export const BOOSTER_KEY = 'key';
 
 export const BOMB_TIMER = 10;
 
-export const TICKET_ITEM_ID = 2407;
+export const TICKET_ITEM_ID = 3461;
 
 export const ADJACENT_CELLS = [
   [1, 3],
@@ -230,6 +231,11 @@ export const PETS_PRICE = [
 ];
 
 // need to be updated
+export const EVENT_REWARD_ITEM_ID = [
+  [1000, 1001, 1002, 1003, 1004], // level 2: frame
+  [2000, 2001, 2002, 2003, 2004]  // level 3: headwear
+];
+
 export const MAX_HP_BOOSTER_PRICE = 100;
 export const EXTRA_LIFE_BOOSTER_PRICE = 100;
 export const KEY_BOOSTER_PRICE = 100;
