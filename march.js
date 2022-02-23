@@ -267,3 +267,26 @@ export const PET_ABILITIES = [
     {name: 'Turns armor into ball lightning???'},
   ],
 ];
+
+export const SHOP = [
+  {
+    "quantity": 100,
+    "price": 2.49
+  },
+  {
+    "quantity": 250,
+    "price": 5.89
+  },
+  {
+    "quantity": 500,
+    "price": 10.59
+  },
+  {
+    "quantity": 1000,
+    "price": 19.99
+  },
+  {
+    "quantity": 2500,
+    "price": 49.99
+  }
+];
