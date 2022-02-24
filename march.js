@@ -55,6 +55,12 @@ export const PETS_PRICE = [
   [750, 1500, 2250],
 ];
 
+export const BOOSTERS = {
+  [BOOSTER_HP]: 100,
+  [BOOSTER_LIFE]: 100,
+  [BOOSTER_KEY]: 100,
+};
+
 export const SHOP = [
   {
     "quantity": 100,
