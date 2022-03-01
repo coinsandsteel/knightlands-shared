@@ -57,8 +57,8 @@ export const PETS_PRICE = [
 
 export const BOOSTERS = {
   [BOOSTER_HP]: 100,
-  [BOOSTER_LIFE]: 100,
-  [BOOSTER_KEY]: 100,
+  [BOOSTER_LIFE]: 140,
+  [BOOSTER_KEY]: 180,
 };
 
 const FLESH_USD_RATE = 0.75;
