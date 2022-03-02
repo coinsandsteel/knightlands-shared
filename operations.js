@@ -196,7 +196,6 @@ module.exports = {
   MarchTestAction: "march_test_action",
   MarchPurchaseGold: "march_purchase_gold",
   MarchOpenChest: "march_open_chest",
-  MarchPurchasePreGameBooster: "march_purchase_booster",
   MarchUnlockPet: "march_unlock_pet",
   MarchUpgradePet: "march_upgrade_pet",
   MarchRanking: "march_ranking",
