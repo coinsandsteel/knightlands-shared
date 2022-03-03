@@ -100,30 +100,27 @@ export const SHOP = [
 export const PET_ABILITIES = [
   [
     {},
-    { name: "Health booster value +1???" },
-    { name: "Armor booster value +1???" }
+    { name: "pet-ability-1-2" },
+    { name: "pet-ability-1-3" }
   ],
   [
-    { name: "Bow damage +1???" },
-    { name: "When 2 bows are stacked, +2 damage???" },
-    { name: "Bomb explosion does not damage???" }
+    { name: "pet-ability-2-1" },
+    { name: "pet-ability-2-2" },
+    { name: "pet-ability-2-3" }
   ],
   [
-    { name: "Max HP +1???" },
-    { name: "50% chance to block 1 damage???" },
-    { name: "Extra life at the start of the session???" }
+    { name: "pet-ability-3-1" },
+    { name: "pet-ability-3-2" },
+    { name: "pet-ability-3-3" }
   ],
   [
-    { name: "Gold +1 from gold card???" },
-    { name: "+20% extra gold per session???" },
-    { name: "Chest opens without mini-game???" }
+    { name: "pet-ability-4-1" },
+    { name: "pet-ability-4-2" },
+    { name: "pet-ability-4-3" }
   ],
   [
-    { name: "All barrels have only good content???" },
-    {
-      name:
-        "HP can exceed the maximum, but if the maximum is exceeded, then the booster does not have an effect???"
-    },
-    { name: "Turns armor into ball lightning???" }
+    { name: "pet-ability-5-1" },
+    { name: "pet-ability-5-2" },
+    { name: "pet-ability-5-3" },
   ]
 ];
