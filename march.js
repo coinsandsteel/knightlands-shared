@@ -68,32 +68,32 @@ export const SHOP = [
   {
     "quantity": 100,
     "price": 2.49,
-    'hardPrice': 2.49.toFixed(1) / SHINES_USD_RATE,
-    'fleshPrice': (2.49 / FLESH_USD_RATE).toFixed(2)
+    'hardPrice': 2.49.toFixed(1) / SHRINE_USD_RATE,
+    'fleshPrice': parseFloat((2.49 / FLESH_USD_RATE).toFixed(2))
   },
   {
     "quantity": 250,
     "price": 5.89,
-    'hardPrice': 5.89.toFixed(1) / SHINES_USD_RATE,
-    'fleshPrice': (5.89 / FLESH_USD_RATE).toFixed(2)
+    'hardPrice': 5.89.toFixed(1) / SHRINE_USD_RATE,
+    'fleshPrice': parseFloat((5.89 / FLESH_USD_RATE).toFixed(2))
   },
   {
     "quantity": 500,
     "price": 10.59,
-    'hardPrice': 10.59.toFixed(1) / SHINES_USD_RATE,
-    'fleshPrice': (10.59 / FLESH_USD_RATE).toFixed(2)
+    'hardPrice': 10.59.toFixed(1) / SHRINE_USD_RATE,
+    'fleshPrice': parseFloat((10.59 / FLESH_USD_RATE).toFixed(2))
   },
   {
     "quantity": 1000,
     "price": 19.99,
-    'hardPrice': 19.99.toFixed(1) / SHINES_USD_RATE,
-    'fleshPrice': (19.99 / FLESH_USD_RATE).toFixed(2)
+    'hardPrice': 19.99.toFixed(1) / SHRINE_USD_RATE,
+    'fleshPrice': parseFloat((19.99 / FLESH_USD_RATE).toFixed(2))
   },
   {
     "quantity": 2500,
     "price": 49.99,
-    'hardPrice': 49.99.toFixed(1) / SHINES_USD_RATE,
-    'fleshPrice': (49.99 / FLESH_USD_RATE).toFixed(2)
+    'hardPrice': 49.99.toFixed(1) / SHRINE_USD_RATE,
+    'fleshPrice': parseFloat((49.99 / FLESH_USD_RATE).toFixed(2))
   }
 ];
 
