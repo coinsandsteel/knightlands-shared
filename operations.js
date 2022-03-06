@@ -199,4 +199,5 @@ module.exports = {
   MarchUnlockPet: "march_unlock_pet",
   MarchUpgradePet: "march_upgrade_pet",
   MarchRanking: "march_ranking",
+  MarchClaimRewards: "march_claim_rewards",
 }

@@ -124,3 +124,11 @@ export const PET_ABILITIES = [
     { name: "pet-ability-5-3" },
   ]
 ];
+
+export const EVENT_REWARDS = [
+  {"items":[{"item":3110,"quantity":50},{"item":2982,"quantity":10},{"item":812,"quantity":5},{"item":817,"quantity":20},{"item":2383,"quantity":25000000}]},
+  {"items":[{"item":3110,"quantity":40},{"item":2982,"quantity":8},{"item":812,"quantity":4},{"item":817,"quantity":16},{"item":2383,"quantity":20000000}]},
+  {"items":[{"item":3110,"quantity":30},{"item":2982,"quantity":6},{"item":812,"quantity":3},{"item":817,"quantity":12},{"item":2383,"quantity":15000000}]},
+  {"items":[{"item":3110,"quantity":20},{"item":2982,"quantity":4},{"item":812,"quantity":2},{"item":817,"quantity":8},{"item":2383,"quantity":10000000}]},
+  {"items":[{"item":3110,"quantity":10},{"item":2982,"quantity":2},{"item":812,"quantity":1},{"item":817,"quantity":4},{"item":2383,"quantity":5000000}]}
+];
