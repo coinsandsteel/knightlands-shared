@@ -8,7 +8,8 @@ const ItemType = {
     Key: "key",
     Currency: "currency",
     Charm: "charm",
-    Lunar: "lunarResource"
+    Lunar: "lunarResource",
+    March: "marchResource",
 };
 
 module.exports = ItemType;
