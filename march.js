@@ -33,8 +33,6 @@ export const BOOSTER_HP = 'maxHealth';
 export const BOOSTER_LIFE = 'extraLife';
 export const BOOSTER_KEY = 'key';
 
-export const TICKET_ITEM_ID = 3461;
-
 export const ADJACENT_CELLS = [
   [1, 3],
   [0, 2, 4],
