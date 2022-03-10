@@ -29,6 +29,18 @@ export const BOOSTERS = {
   [BOOSTER_SKIP_A_TURN]: 100,
 };
 
+export const HEROES_PRICE = {
+  [HERO_CLASS_KNIGHT]: 100,
+  [HERO_CLASS_PALADIN]: 200,
+  [HERO_CLASS_ROGUE]: 300,
+};
+
+export const HERO_ABILITIES = {
+  [HERO_CLASS_KNIGHT]: 'hero-knight-ability',
+  [HERO_CLASS_PALADIN]: 'hero-paladin-ability',
+  [HERO_CLASS_ROGUE]: 'hero-rogue-ability',
+};
+
 const FLESH_USD_RATE = 0.75;
 const SHINES_USD_RATE = 1 / 100;
 
