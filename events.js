@@ -35,4 +35,5 @@ module.exports = {
     XmasUpdate: "xmas_upd",
     LunarUpdate: "lunar_upd",
     MarchUpdate: "march_upd",
+    AprilUpdate: "april_upd",
 }
