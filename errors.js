@@ -40,6 +40,7 @@ export default {
     MarchPetMaxLevel: "march pet max level",
     MarchPetNotUnlocked: "march pet not unlocked",
     MarchNoTicket: "no march ticket",
+    DailyAprilRewardCollected: "daily april reward collected",
     DailyRefillCollected: "daily refills collected",
     BeastMaxLevel: "beast at max level",
     BeastCantEvolve: "cant evolve beast",
