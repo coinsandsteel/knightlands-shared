@@ -20,6 +20,14 @@ export const CARD_CLASS_KING = 'king';
 export const CARD_CLASS_BISHOP = 'bishop';
 export const CARD_CLASS_ROOK = 'rook';
 export const CARD_CLASS_QUEEN = 'queen';
+export const CARD_CLASSES = [
+  CARD_CLASS_PAWN,
+  CARD_CLASS_KNIGHT,
+  CARD_CLASS_KING,
+  CARD_CLASS_BISHOP,
+  CARD_CLASS_ROOK,
+  CARD_CLASS_QUEEN,
+];
 
 export const CURRENCY_SESSION_GOLD = 'sessionGold';
 export const CURRENCY_GOLD = 'gold';
