@@ -204,5 +204,6 @@ module.exports = {
   AprilCollectDailyReward: "april_collect_daily_reward",
   AprilRanking: "april_ranking",
   AprilClaimRewards: "april_claim_rewards",
-  AprilClaimPeriodicRewards: "april_claim_periodic_rewards"
+  AprilClaimPeriodicRewards: "april_claim_periodic_rewards",
+  AprilPurchaseCharacter: "april_purchase_character"
 }

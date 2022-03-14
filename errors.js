@@ -37,6 +37,7 @@ export default {
     DailyLunarRewardCollected: "daily lunar reward collected",
     DailyMarchRewardCollected: "daily march reward collected",
     MarchPetUnlocked: "march pet unlocked",
+    AprilCharacterUnlocked: "april character unlocked",
     MarchPetMaxLevel: "march pet max level",
     MarchPetNotUnlocked: "march pet not unlocked",
     MarchNoTicket: "no march ticket",
