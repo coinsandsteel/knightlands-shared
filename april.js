@@ -33,21 +33,21 @@ export const HEROES = [
   /* 0 */
   {
     name: "Knight",
-    heroClass: april.HERO_CLASS_KNIGHT,
+    heroClass: HERO_CLASS_KNIGHT,
     price: 100,
     ability: 'hero-knight-ability'
   },
   /* 1 */
   {
     name: "Paladin",
-    heroClass: april.HERO_CLASS_PALADIN,
+    heroClass: HERO_CLASS_PALADIN,
     price: 200,
     ability: 'hero-paladin-ability'
   },
   /* 2 */
   {
     name: "Rogue",
-    heroClass: april.HERO_CLASS_ROGUE,
+    heroClass: HERO_CLASS_ROGUE,
     price: 300,
     ability: 'hero-rogue-ability'
   }
