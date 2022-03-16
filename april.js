@@ -8,12 +8,11 @@ export const UNIT_CLASS_BOSS = 'boss';
 export const HERO_CLASS_KNIGHT = 'knight';
 export const HERO_CLASS_PALADIN = 'paladin';
 export const HERO_CLASS_ROGUE = 'rogue';
-export const HERO_CLASSES = [
-  HERO_CLASS_KNIGHT,
-  HERO_CLASS_PALADIN,
-  HERO_CLASS_ROGUE,
-];
-export const HERO_CLASSES_PRICES = [100, 200, 300];
+export const HERO_CLASSES = {
+  [HERO_CLASS_KNIGHT]: 100,
+  [HERO_CLASS_PALADIN]: 200,
+  [HERO_CLASS_ROGUE]: 300,
+};
 
 export const CARD_CLASS_PAWN = 'pawn';
 export const CARD_CLASS_KNIGHT = 'knight';
