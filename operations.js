@@ -200,12 +200,15 @@ module.exports = {
   MarchUpgradePet: "march_upgrade_pet",
   MarchRanking: "march_ranking",
   MarchClaimRewards: "march_claim_rewards",
-  
   AprilLoad: "april_load",
-  AprilCollectDailyReward: "april_collect_daily_reward",
-  AprilRanking: "april_ranking",
-  AprilClaimRewards: "april_claim_rewards",
-  AprilClaimPeriodicRewards: "april_claim_periodic_rewards",
+  AprilClaimReward: "april_claim_reward",
+  AprilRankings: "april_rankings",
   AprilPurchaseHero: "april_purchase_hero",
-  AprilPurchaseThirdAction: "april_purchase_third_action"
+  AprilRestart: "april_restart",
+  AprilMove: "april_move",
+  AprilSkip: "april_skip",
+  AprilPurchaseAction: "april_purchase_action",
+  AprilEnterLevel: "april_enter_level",
+  AprilResurrect: "april_resurrect",
+  AprilExit: "april_exit",
 }
