@@ -36,21 +36,43 @@ export const HEROES = [
     name: "Knight",
     heroClass: HERO_CLASS_KNIGHT,
     price: 100,
-    ability: 'hero-knight-ability'
+    ability: 'hero-knight-ability',
+    rewardGoal: 100,
+    // TODO: update correct rewards items
+    rewardItems: [
+      {
+        item: 3462,
+        quantity: 1
+      }
+    ]
   },
   /* 1 */
   {
     name: "Paladin",
     heroClass: HERO_CLASS_PALADIN,
     price: 200,
-    ability: 'hero-paladin-ability'
+    ability: 'hero-paladin-ability',
+    rewardGoal: 100,
+    rewardItems: [
+      {
+        item: 3467,
+        quantity: 1
+      }
+    ]
   },
   /* 2 */
   {
     name: "Rogue",
     heroClass: HERO_CLASS_ROGUE,
     price: 300,
-    ability: 'hero-rogue-ability'
+    ability: 'hero-rogue-ability',
+    rewardGoal: 100,
+    rewardItems: [
+      {
+        item: 3463,
+        quantity: 1
+      }
+    ]
   }
 ];
 
