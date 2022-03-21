@@ -30,6 +30,12 @@ export const REWARD_TYPE_DAILY = 'reward_day';
 export const REWARD_TYPE_RANKING = 'reward_ranking';
 export const REWARD_TYPE_HERO = 'reward_hero';
 
+export const HERO_REWARDS_GOALS = {
+  [HERO_CLASS_KNIGHT]: 1000,
+  [HERO_CLASS_PALADIN]: 2000,
+  [HERO_CLASS_ROGUE]: 3000,
+};
+
 export const HEROES = [
   /* 0 */
   {
