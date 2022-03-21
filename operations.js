@@ -203,6 +203,7 @@ module.exports = {
   AprilLoad: "april_load",
   AprilClaimReward: "april_claim_reward",
   AprilRankings: "april_rankings",
+  AprilHeroStat: "april_hero_stat",
   AprilPurchaseHero: "april_purchase_hero",
   AprilRestart: "april_restart",
   AprilMove: "april_move",
