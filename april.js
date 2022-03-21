@@ -27,6 +27,7 @@ export const SESSION_RESULT_FAIL = 'session_fail';
 
 export const REWARD_TYPE_HOUR = 'reward_hour';
 export const REWARD_TYPE_DAILY = 'reward_day';
+export const REWARD_TYPE_RANKING = 'reward_ranking';
 export const REWARD_TYPE_HERO = 'reward_hero';
 
 export const HEROES = [
