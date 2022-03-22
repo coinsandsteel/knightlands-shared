@@ -105,6 +105,7 @@ export default {
     MaxMines: "max mines",
     PaymentInProgress: "purchase in progress",
     AlreadyPurchased: "already purchased",
+    AlreadyClaimed: "already claimed",
     NameUsed: "name is used",
     NotEnoughLevel: "not enough level",
     ArmyMaxSlots: "army slots at max",
