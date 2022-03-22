@@ -37,7 +37,7 @@ export const HEROES = [
     heroClass: HERO_CLASS_KNIGHT,
     price: 100,
     ability: 'hero-knight-ability',
-    rewardGoal: 1000,
+    rewardGoal: 2,
     // TODO: update correct rewards items
     rewardItems: [
       {
@@ -52,7 +52,7 @@ export const HEROES = [
     heroClass: HERO_CLASS_PALADIN,
     price: 200,
     ability: 'hero-paladin-ability',
-    rewardGoal: 2000,
+    rewardGoal: 3,
     rewardItems: [
       {
         item: 3467,
@@ -66,7 +66,7 @@ export const HEROES = [
     heroClass: HERO_CLASS_ROGUE,
     price: 300,
     ability: 'hero-rogue-ability',
-    rewardGoal: 3000,
+    rewardGoal: 4,
     rewardItems: [
       {
         item: 3463,
