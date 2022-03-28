@@ -209,7 +209,7 @@ module.exports = {
   AprilMove: "april_move",
   AprilSkip: "april_skip",
   AprilPurchaseAction: "april_purchase_action",
-  AprilTestActionAprilTestActionAprilTestAction: "april_purchase_gold",
+  AprilPurchaseGold: "april_purchase_gold",
   AprilEnterLevel: "april_enter_level",
   AprilResurrect: "april_resurrect",
   AprilExit: "april_exit",
