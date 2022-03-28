@@ -200,7 +200,6 @@ module.exports = {
   MarchUpgradePet: "march_upgrade_pet",
   MarchRanking: "march_ranking",
   MarchClaimRewards: "march_claim_rewards",
-  AprilTestAction: "april_test_action",
   AprilLoad: "april_load",
   AprilClaimReward: "april_claim_reward",
   AprilRankings: "april_rankings",
