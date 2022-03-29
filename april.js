@@ -110,3 +110,8 @@ export const SHOP = [{
     'fleshPrice': 49.99 / FLESH_USD_RATE
   }
 ];
+
+export const TICKET_SHOP = [{
+  "quantity": 1,
+  "price": 100
+}];

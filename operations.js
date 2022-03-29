@@ -214,4 +214,5 @@ module.exports = {
   AprilResurrect: "april_resurrect",
   AprilExit: "april_exit",
   AprilTestAction: "april_test_action",
+  AprilPurchaseTicket: "april_purchase_ticket"
 }
