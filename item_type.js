@@ -10,6 +10,7 @@ const ItemType = {
     Charm: "charm",
     Lunar: "lunarResource",
     March: "marchResource",
+    April: "aprilResource",
 };
 
 module.exports = ItemType;
