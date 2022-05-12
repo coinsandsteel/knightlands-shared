@@ -188,6 +188,7 @@ module.exports = {
   LunarCollectDailyReward: "lunar_collect_daily_reward",
   LunarTestAction: "lunar_test_action",
   LunarPurchase: "lunar_purchase",
+
   MarchLoad: "march_load",
   MarchStartNewGame: "march_start_new_game",
   MarchExitGame: "march_exit_game",
@@ -200,6 +201,7 @@ module.exports = {
   MarchUpgradePet: "march_upgrade_pet",
   MarchRanking: "march_ranking",
   MarchClaimRewards: "march_claim_rewards",
+
   AprilLoad: "april_load",
   AprilClaimReward: "april_claim_reward",
   AprilRankings: "april_rankings",
@@ -214,5 +216,22 @@ module.exports = {
   AprilResurrect: "april_resurrect",
   AprilExit: "april_exit",
   AprilTestAction: "april_test_action",
-  AprilPurchaseTicket: "april_purchase_ticket"
+  AprilPurchaseTicket: "april_purchase_ticket",
+  
+  BattleLoad: "battle_load",
+  BattleClaimReward: "battle_claim_reward",
+  BattlePurchase: "battle_purchase",
+  BattleOpenChest: "battle_open_chest",
+  BattleFillSlot: "battle_fill_slot",
+  BattleClearSlot: "battle_clear_slot",
+  BattleMergeUnits: "battle_merge_units",
+  BattleUpgradeUnitLevel: "battle_upgrade_unit_level",
+  BattleUpgradeUnitAbility: "battle_upgrade_unit_ability",
+  BattleApply: "battle_apply",
+  BattleSkip: "battle_skip",
+  BattleEnterLevel: "battle_enter_level",
+  BattleRankings: "battle_rankings",
+  BattleRestart: "battle_restart",
+  BattleExit: "battle_exit",
+  BattleTestAction: "battle_test_action",
 }
