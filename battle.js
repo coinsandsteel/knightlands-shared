@@ -1,79 +1,61 @@
+// Reward types
 export const REWARD_TYPE_DAILY = 'reward_day';
 export const REWARD_TYPE_RANKING = 'reward_ranking';
+export const REWARD_TYPE_SQUAD = 'reward_squad';
 
-// COMMODITY_ENERGY | COMMODITY_COINS | COMMODITY_CRYSTALS | COMMODITY_CHEST
+// Things to buy
+export const COMMODITY_ENERGY  = 'energy';
+export const COMMODITY_COINS = 'coins';
+export const COMMODITY_CRYSTALS  = 'crystals';
+export const COMMODITY_CHEST = 'chest';
 
-/*export const UNIT_CLASS_HERO = 'hero';
-export const UNIT_CLASS_TEETH = 'teeth';
-export const UNIT_CLASS_CLOWN = 'clown';
-export const UNIT_CLASS_JACK = 'jack';
-export const UNIT_CLASS_HARLEQUIN = 'harlequin';
-export const UNIT_CLASS_BOSS = 'boss';
+// Unit tribes
+export const UNIT_TRIBE_KOBOLD = 'kobold';
+export const UNIT_TRIBE_DWARF = 'dwarf';
+export const UNIT_TRIBE_EGYPTIAN = 'egyptian';
+export const UNIT_TRIBE_GOBLIN = 'goblin';
+export const UNIT_TRIBE_INSECT = 'insect';
+export const UNIT_TRIBE_ORC = 'orc';
+export const UNIT_TRIBE_CLOCKWORK = 'clockwork';
+export const UNIT_TRIBE_SKELETON = 'skeleton';
+export const UNIT_TRIBE_ICE = 'ice';
+export const UNIT_TRIBE_ELF = 'elf';
+export const UNIT_TRIBE_ELDRITCH = 'eldritch';
+export const UNIT_TRIBE_FALLEN_KNIGHT = 'fallen_knight';
+export const UNIT_TRIBE_LEGENDARY = 'legendary';
+export const UNIT_TRIBE_TITAN = 'titan';
 
-export const HERO_CLASS_KNIGHT = 'knight';
-export const HERO_CLASS_PALADIN = 'paladin';
-export const HERO_CLASS_ROGUE = 'rogue';
+// Unit classes
+export const UNIT_CLASS_RANGE = 'range';
+export const UNIT_CLASS_MELEE = 'melee';
+export const UNIT_CLASS_MAGE = 'mage';
+export const UNIT_CLASS_TANK = 'tank';
+export const UNIT_CLASS_SUPPORT = 'support';
 
-export const CARD_CLASS_PAWN = 'pawn';
-export const CARD_CLASS_KNIGHT = 'knight';
-export const CARD_CLASS_KING = 'king';
-export const CARD_CLASS_BISHOP = 'bishop';
-export const CARD_CLASS_ROOK = 'rook';
-export const CARD_CLASS_QUEEN = 'queen';
+// Ability groups
+export const ABILITY_GROUP_ATTACK = 'attack';
+export const ABILITY_GROUP_BUFF = 'buff';
+export const ABILITY_GROUP_SELF_BUFF = 'self_buff';
+export const ABILITY_GROUP_DE_BUFF = 'de_buff';
+export const ABILITY_GROUP_JUMP = 'jump';
 
-export const CURRENCY_SESSION_GOLD = 'sessionGold';
-export const CURRENCY_GOLD = 'gold';
+// TODO Squad bonus classes
+// export const BONUS_CLASS_TEST = 'test';
 
-export const BOOSTER_CARD = 'booster_card';
-export const BOOSTER_HP = 'booster_hp';
+// Game modes
+export const GAME_MODE_DUEL = 'duel';
+export const GAME_MODE_ADVENTURE = 'adventure';
 
-export const SESSION_RESULT_SUCCESS = 'session_success';
-export const SESSION_RESULT_FAIL = 'session_fail';
+// Game difficulty levels
+export const GAME_DIFFICULTY_LOW = 'low';
+export const GAME_DIFFICULTY_MEDIUM = 'medium';
+export const GAME_DIFFICULTY_HIGH = 'high';
 
+// Combat results
+export const COMBAT_RESULT_WIN = 'win';
+export const COMBAT_RESULT_LOOSE = 'loose';
 
-export const HEROES = [
-  {
-    name: "Knight",
-    heroClass: HERO_CLASS_KNIGHT,
-    price: 0,
-    ability: 'hero-knight-ability',
-    rewardGoal: 2500,
-    // TODO: update correct rewards items
-    rewardItems: [
-      {
-        item: 3462,
-        quantity: 1
-      }
-    ]
-  },
-  {
-    name: "Paladin",
-    heroClass: HERO_CLASS_PALADIN,
-    price: 2500,
-    ability: 'hero-paladin-ability',
-    rewardGoal: 3500,
-    rewardItems: [
-      {
-        item: 3467,
-        quantity: 1
-      }
-    ]
-  },
-  {
-    name: "Rogue",
-    heroClass: HERO_CLASS_ROGUE,
-    price: 3500,
-    ability: 'hero-rogue-ability',
-    rewardGoal: 4000,
-    rewardItems: [
-      {
-        item: 3463,
-        quantity: 1
-      }
-    ]
-  }
-];
-
+// Shop
 const FLESH_USD_RATE = 0.75;
 const SHINES_USD_RATE = 1 / 100;
 
@@ -108,10 +90,3 @@ export const SHOP = [{
     'fleshPrice': 49.99 / FLESH_USD_RATE
   }
 ];
-
-export const TICKET_SHOP = [{
-  "quantity": 1,
-  "price": 100
-}];
-
-*/
