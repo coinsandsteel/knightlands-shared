@@ -55,6 +55,43 @@ export const GAME_DIFFICULTY_HIGH = 'high';
 export const COMBAT_RESULT_WIN = 'win';
 export const COMBAT_RESULT_LOOSE = 'loose';
 
+// Locations
+export const LOCATIONS = [
+  {
+    id: 1,
+    levels: [
+      { id: 1 },
+      { id: 2 },
+      { id: 3 },
+      { id: 4 },
+      { id: 5 },
+      { id: 6 },
+    ]
+  },
+  {
+    id: 2,
+    levels: [
+      { id: 1 },
+      { id: 2 },
+      { id: 3 },
+      { id: 4 },
+      { id: 5 },
+      { id: 6 },
+    ]
+  },
+  {
+    id: 3,
+    levels: [
+      { id: 1 },
+      { id: 2 },
+      { id: 3 },
+      { id: 4 },
+      { id: 5 },
+      { id: 6 },
+    ]
+  },
+];
+
 // Shop
 const FLESH_USD_RATE = 0.75;
 const SHINES_USD_RATE = 1 / 100;
