@@ -105,6 +105,8 @@ export const GAME_MODE_DUEL = 'duel';
 export const GAME_MODE_ADVENTURE = 'adventure';
 
 // Game difficulty levels
+export const GAME_DIFFICULTY_NORMAL = 'normal';
+export const GAME_DIFFICULTY_HARD = 'hard';
 export const GAME_DIFFICULTY_LOW = 'low';
 export const GAME_DIFFICULTY_MEDIUM = 'medium';
 export const GAME_DIFFICULTY_HIGH = 'high';
@@ -117,35 +119,68 @@ export const COMBAT_RESULT_LOOSE = 'loose';
 export const LOCATIONS = [
   {
     id: 1,
+    name: 'location 1',
     levels: [
-      { id: 1 },
-      { id: 2 },
-      { id: 3 },
-      { id: 4 },
-      { id: 5 },
-      { id: 6 },
+      { id: 1, exp: [125, 188], reward: [100, 150] },
+      { id: 2, exp: [225, 338], reward: [200, 300] },
+      { id: 3, exp: [330, 495], reward: [300, 450] },
+      { id: 4, exp: [440, 660], reward: [400, 600] },
+      { id: 5, exp: [550, 825], reward: [500, 750] },
     ]
   },
   {
     id: 2,
+    name: 'location 2',
     levels: [
-      { id: 1 },
-      { id: 2 },
-      { id: 3 },
-      { id: 4 },
-      { id: 5 },
-      { id: 6 },
+      { id: 1, exp: [625, 938], reward: [600, 900] },
+      { id: 2, exp: [750, 1125], reward: [700, 1050] },
+      { id: 3, exp: [825, 1238], reward: [800, 1200] },
+      { id: 4, exp: [950, 1425], reward: [900, 1350] },
+      { id: 5, exp: [1025, 1538], reward: [1000, 1500] },
     ]
   },
   {
     id: 3,
+    name: 'location 3',
     levels: [
-      { id: 1 },
-      { id: 2 },
-      { id: 3 },
-      { id: 4 },
-      { id: 5 },
-      { id: 6 },
+      { id: 1, exp: [1150, 1725], reward: [1100, 1650] },
+      { id: 2, exp: [1225, 1838], reward: [1200, 1800] },
+      { id: 3, exp: [1350, 2025], reward: [1300, 1950] },
+      { id: 4, exp: [1425, 2138], reward: [1400, 2100] },
+      { id: 5, exp: [1550, 2325], reward: [1500, 2250] },
+    ]
+  },
+  {
+    id: 4,
+    name: 'location 4',
+    levels: [
+      { id: 1, exp: [1625, 2438], reward: [1600, 2400] },
+      { id: 2, exp: [1750, 2625], reward: [1700, 2550] },
+      { id: 3, exp: [1825, 2738], reward: [1800, 2700] },
+      { id: 4, exp: [1950, 2925], reward: [1900, 2850] },
+      { id: 5, exp: [2025, 3038], reward: [2000, 3000] },
+    ]
+  },
+  {
+    id: 5,
+    name: 'location 5',
+    levels: [
+      { id: 1, exp: [2150, 3225], reward: [2100, 3150] },
+      { id: 2, exp: [2325, 3488], reward: [2200, 3450] },
+      { id: 3, exp: [2550, 3825], reward: [2300, 3750] },
+      { id: 4, exp: [2755, 4133], reward: [2400, 4050] },
+      { id: 5, exp: [2970, 4455], reward: [2500, 4350] },
+    ]
+  },
+  {
+    id: 6,
+    name: 'location 6',
+    levels: [
+      { id: 1, exp: [3125, 4688], reward: [3100, 4650] },
+      { id: 2, exp: [3350, 5025], reward: [3300, 4950] },
+      { id: 3, exp: [3450, 5175], reward: [3500, 5250] },
+      { id: 4, exp: [3600, 5400], reward: [3700, 5550] },
+      { id: 5, exp: [3880, 5820], reward: [3900, 5850] },
     ]
   },
 ];
