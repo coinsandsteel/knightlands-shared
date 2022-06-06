@@ -21,7 +21,7 @@ export const UNIT_TRIBE_SKELETON = 'skeleton';
 export const UNIT_TRIBE_ICE = 'ice';
 export const UNIT_TRIBE_ELF = 'elf';
 export const UNIT_TRIBE_ELDRITCH = 'eldritch';
-export const UNIT_TRIBE_FALLEN_KNIGHT = 'fallen_knight';
+export const UNIT_TRIBE_FALLEN_KING = 'fallen_knight';
 export const UNIT_TRIBE_LEGENDARY = 'legendary';
 export const UNIT_TRIBE_TITAN = 'titan';
 
@@ -506,7 +506,7 @@ export const CHARACTERISTICS = {
       { hp: 153, damage: 15, defence: 24, speed: 3, initiative: 6 },
     ]
   ],
-}
+};
 
 export const ABILITIES = {
   [UNIT_CLASS_MELEE]: {
@@ -722,4 +722,1524 @@ export const ABILITIES = {
       [8, 9, 11],
     ],
   },
-}
+};
+
+export const UNITS = [
+  //UNIT_TRIBE_KOBOLD
+  {
+    template: 1, 
+    unitTribe: UNIT_TRIBE_KOBOLD,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: HAMSTRING,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 2, 
+    unitTribe: UNIT_TRIBE_KOBOLD,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: JAVELIN_THROW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FLIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 3, 
+    unitTribe: UNIT_TRIBE_KOBOLD,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SWORD_CRUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 4, 
+    unitTribe: UNIT_TRIBE_KOBOLD,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: MORTAL_BLOW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FLIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 5, 
+    unitTribe: UNIT_TRIBE_KOBOLD,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: HEAL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LAZINESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_DWARF
+  {
+    template: 6, 
+    unitTribe: UNIT_TRIBE_DWARF,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: AXE_BLOW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 7, 
+    unitTribe: UNIT_TRIBE_DWARF,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: AXE_BLOW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: AXE_CRUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 8, 
+    unitTribe: UNIT_TRIBE_DWARF,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: AXE_BLOW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 9, 
+    unitTribe: UNIT_TRIBE_DWARF,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: HEAVY_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_EGYPTIAN
+  {
+    template: 10, 
+    unitTribe: UNIT_TRIBE_EGYPTIAN,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: ACCURATE_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DEATH_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 11, 
+    unitTribe: UNIT_TRIBE_EGYPTIAN,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DASH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DEATH_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 12, 
+    unitTribe: UNIT_TRIBE_EGYPTIAN,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: AXE_BLOW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: AXE_CRUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 13, 
+    unitTribe: UNIT_TRIBE_EGYPTIAN,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: HEAVY_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 14, 
+    unitTribe: UNIT_TRIBE_EGYPTIAN,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: HEAL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WIND_WALK,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_GOBLIN
+  {
+    template: 15, 
+    unitTribe: UNIT_TRIBE_GOBLIN,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DEATH_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 16, 
+    unitTribe: UNIT_TRIBE_GOBLIN,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 17, 
+    unitTribe: UNIT_TRIBE_GOBLIN,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: SPEAR_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WOLF_BITE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FATAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 18, 
+    unitTribe: UNIT_TRIBE_GOBLIN,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: HOLY_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_WALL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 19, 
+    unitTribe: UNIT_TRIBE_GOBLIN,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: SHIELD,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WEAKNESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LAZINESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_INSECT
+  {
+    template: 20, 
+    unitTribe: UNIT_TRIBE_INSECT,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DEATH_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 21, 
+    unitTribe: UNIT_TRIBE_INSECT,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SWORD_CRUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 22, 
+    unitTribe: UNIT_TRIBE_INSECT,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SWORD_CRUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 23, 
+    unitTribe: UNIT_TRIBE_INSECT,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: AGRESSION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_WALL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 24, 
+    unitTribe: UNIT_TRIBE_INSECT,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: SHIELD,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: GROUP_HEAL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_ORC
+  {
+    template: 25, 
+    unitTribe: UNIT_TRIBE_ORC,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: HEAVY_ARROW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DEATH_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 26, 
+    unitTribe: UNIT_TRIBE_ORC,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RAGE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 27, 
+    unitTribe: UNIT_TRIBE_ORC,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: AXE_BLOW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 28, 
+    unitTribe: UNIT_TRIBE_ORC,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: AGRESSION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RETRIBUTION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 29, 
+    unitTribe: UNIT_TRIBE_ORC,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: CURSE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LAZINESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_ASSEMBLING
+  {
+    template: 30, 
+    unitTribe: UNIT_TRIBE_ASSEMBLING,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 31, 
+    unitTribe: UNIT_TRIBE_ASSEMBLING,
+    unitClass: UNIT_CLASS_MAGE,
+    abilities: [
+      {
+        abilityClass: FLAME_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: ENERGY_BOLT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DARK_VORTEX,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 32, 
+    unitTribe: UNIT_TRIBE_ASSEMBLING,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 33, 
+    unitTribe: UNIT_TRIBE_ASSEMBLING,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: AGRESSION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RETRIBUTION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 34, 
+    unitTribe: UNIT_TRIBE_ASSEMBLING,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: SHIELD,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WEAKNESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WIND_WALK,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_CLOCKWORK
+  {
+    template: 35, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 36, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FURY_CLAWS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: BLADE_VORTEX,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 37, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 38, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: AGRESSION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_WALL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 39, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: CURSE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: GROUP_HEAL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_SKELETON
+  {
+    template: 40, 
+    unitTribe: UNIT_TRIBE_SKELETON,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: ARROW_CRUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: HAMSTRING,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 41,
+    unitTribe: UNIT_TRIBE_SKELETON,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SWORD_CRUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 42, 
+    unitTribe: UNIT_TRIBE_SKELETON,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: DRAGON_BITE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FLIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DRAGON_FURY,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 43, 
+    unitTribe: UNIT_TRIBE_SKELETON,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: HEAVY_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 44, 
+    unitTribe: UNIT_TRIBE_SKELETON,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: SHIELD,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WEAKNESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LAZINESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+    // UNIT_TRIBE_CLOCKWORK
+  {
+    template: 35, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 36, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FURY_CLAWS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: BLADE_VORTEX,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 37, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 38, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: AGRESSION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_WALL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 39, 
+    unitTribe: UNIT_TRIBE_CLOCKWORK,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: CURSE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: GROUP_HEAL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_ICE
+  {
+    template: 40, 
+    unitTribe: UNIT_TRIBE_ICE,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RAGE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 41, 
+    unitTribe: UNIT_TRIBE_ICE,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FROST_BLADE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FROZEN_ABYSS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 42, 
+    unitTribe: UNIT_TRIBE_ICE,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: SPEAR_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FATAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 43, 
+    unitTribe: UNIT_TRIBE_ICE,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: AGRESSION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: TELEPORTATION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 44, 
+    unitTribe: UNIT_TRIBE_ICE,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: SHIELD,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LAZINESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_ELF
+  {
+    template: 45, 
+    unitTribe: UNIT_TRIBE_ELF,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DOUBLE_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: HAMSTRING,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 46, 
+    unitTribe: UNIT_TRIBE_ELF,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SWORD_CRUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 47, 
+    unitTribe: UNIT_TRIBE_ELF,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DEATH_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 48, 
+    unitTribe: UNIT_TRIBE_ELF,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: AGRESSION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RETRIBUTION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 49, 
+    unitTribe: UNIT_TRIBE_ELF,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: SHIELD,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: GROUP_HEAL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_ELDRITCH
+  {
+    template: 50, 
+    unitTribe: UNIT_TRIBE_ELDRITCH,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DOUBLE_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: HAMSTRING,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 51, 
+    unitTribe: UNIT_TRIBE_ELDRITCH,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: STRONG_PUNCH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FURY_CLAWS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: BLADE_VORTEX,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 52, 
+    unitTribe: UNIT_TRIBE_ELDRITCH,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 53, 
+    unitTribe: UNIT_TRIBE_ELDRITCH,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: AGRESSION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: TELEPORTATION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STUN,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 54, 
+    unitTribe: UNIT_TRIBE_ELDRITCH,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: SHIELD,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WEAKNESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LAZINESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_FALLEN_KING
+  {
+    template: 55, 
+    unitTribe: UNIT_TRIBE_FALLEN_KING,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: HAMSTRING,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 56, 
+    unitTribe: UNIT_TRIBE_FALLEN_KING,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: AXE_BLOW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: ZEALOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 57, 
+    unitTribe: UNIT_TRIBE_FALLEN_KING,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SWORD_CRUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 58, 
+    unitTribe: UNIT_TRIBE_FALLEN_KING,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: HEAVY_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: HUMMER_BLOW,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 59, 
+    unitTribe: UNIT_TRIBE_FALLEN_KING,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: SHIELD,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WEAKNESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WIND_WALK,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_LEGENDARY
+  {
+    template: 60, 
+    unitTribe: UNIT_TRIBE_LEGENDARY,
+    unitClass: UNIT_CLASS_MAGE,
+    abilities: [
+      {
+        abilityClass: FLAME_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: HURRICANE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DARK_VORTEX,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 61, 
+    unitTribe: UNIT_TRIBE_LEGENDARY,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RUSH,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LETHAL_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 62,
+    unitTribe: UNIT_TRIBE_LEGENDARY,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: KUNAI_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: BLADE_VORTEX,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 63,
+    unitTribe: UNIT_TRIBE_LEGENDARY,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: AGRESSION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: SHIELD_WALL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 64, 
+    unitTribe: UNIT_TRIBE_LEGENDARY,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: SHIELD,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: LAZINESS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  // UNIT_TRIBE_TITAN
+  {
+    template: 65, 
+    unitTribe: UNIT_TRIBE_TITAN,
+    unitClass: UNIT_CLASS_RANGE,
+    abilities: [
+      {
+        abilityClass: POWER_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: STUN_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: DEATH_SHOT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 66, 
+    unitTribe: UNIT_TRIBE_TITAN,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FIRE_BLADE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: CRUSH_OF_DOOM,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 67,
+    unitTribe: UNIT_TRIBE_TITAN,
+    unitClass: UNIT_CLASS_MELEE,
+    abilities: [
+      {
+        abilityClass: POWER_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FROST_BLADE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FROZEN_ABYSS,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 68,
+    unitTribe: UNIT_TRIBE_TITAN,
+    unitClass: UNIT_CLASS_TANK,
+    abilities: [
+      {
+        abilityClass: HOLY_STRIKE,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: FLIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: RETRIBUTION,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+  {
+    template: 69, 
+    unitTribe: UNIT_TRIBE_TITAN,
+    unitClass: UNIT_CLASS_SUPPORT,
+    abilities: [
+      {
+        abilityClass: HEAL,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: MIGHT,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+      {
+        abilityClass: WIND_WALK,
+        abilityGroup: ABILITY_GROUP_ATTACK,
+      },
+    ]
+  },
+];
