@@ -170,8 +170,6 @@ export const GAME_MODE_DUEL = 'duel';
 export const GAME_MODE_ADVENTURE = 'adventure';
 
 // Game difficulty levels
-export const GAME_DIFFICULTY_NORMAL = 'normal';
-export const GAME_DIFFICULTY_HARD = 'hard';
 export const GAME_DIFFICULTY_LOW = 'low';
 export const GAME_DIFFICULTY_MEDIUM = 'medium';
 export const GAME_DIFFICULTY_HIGH = 'high';
