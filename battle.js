@@ -248,6 +248,51 @@ export const LOCATIONS = [
   },
 ];
 
+const TERRAIN_GRASS = 'grass';
+const TERRAIN_SAND = 'sand';
+const TERRAIN_SNOW = 'snow';
+const TERRAIN_FOREST = 'forest';
+const TERRAIN_HILL = 'hill';
+const TERRAIN_SWAM = 'swam';
+const TERRAIN_LAVA = 'lava';
+const TERRAIN_ICE = 'ice';
+const TERRAIN_BUSHES = 'bushes';
+
+const TILE_GRASS = 'grass';
+const TILE_GRASS_HILL = 'grass_hill';
+const TILE_GRASS_SWAMP = 'grass_swamp';
+const TILE_GRASS_SWAMP_A = 'grass_swamp_a';
+const TILE_GRASS_SWAMP_B = 'grass_swamp_b';
+const TILE_GRASS_SWAMP_C = 'grass_swamp_c';
+const TILE_GRASS_SWAMP_D = 'grass_swamp_d';
+const TILE_GRASS_SWAMP_X = 'grass_swamp_x';
+const TILE_GRASS_SWAMP_Y = 'grass_swamp_y';
+const TILE_GRASS_SWAMP_Z = 'grass_swamp_z';
+const TILE_GRASS_SWAMP1 = 'grass_swamp1';
+const TILE_GRASS_SWAMP2 = 'grass_swamp2';
+const TILE_GRASS_WOODS = 'grass_woods';
+const TILE_SAND = 'sand';
+const TILE_SAND_HILL = 'sand_hill';
+const TILE_SAND_LAVA = 'sand_lava';
+const TILE_SAND_LAVA_A = 'sand_lava_a';
+const TILE_SAND_LAVA_B = 'sand_lava_b';
+const TILE_SAND_LAVA_C = 'sand_lava_c';
+const TILE_SAND_LAVA_D = 'sand_lava_d';
+const TILE_SAND_LAVA1 = 'sand_lava1';
+const TILE_SAND_LAVA2 = 'sand_lava2';
+const TILE_SAND_QUICKSAND = 'sand_quicksand';
+const TILE_SAND_THORNS = 'sand_thorns';
+const TILE_SNOW = 'snow';
+const TILE_SNOW_HILL = 'snow_hill';
+const TILE_SNOW_ICE = 'snow_ice';
+const TILE_SNOW_ICE_1 = 'snow_ice_1';
+const TILE_SNOW_ICE_1_1 = 'snow_ice_1-1';
+const TILE_SNOW_ICE_A = 'snow_ice_a';
+const TILE_SNOW_ICE_B = 'snow_ice_b';
+const TILE_SNOW_ICE_C = 'snow_ice_c';
+const TILE_SNOW_ICE_D = 'snow_ice_d';
+const TILE_SNOW_WOODS = 'snow_woods';
+
 // Shop
 const FLESH_USD_RATE = 0.75;
 const SHINES_USD_RATE = 1 / 100;
