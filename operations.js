@@ -230,6 +230,8 @@ module.exports = {
   BattleApply: "battle_apply",
   BattleSkip: "battle_skip",
   BattleEnterLevel: "battle_enter_level",
+  BattleEnterDuel: "battle_enter_duel",
+  BattleFetchDuelOptions: "battle_fetch_duel_options",
   BattleRankings: "battle_rankings",
   BattleRestart: "battle_restart",
   BattleExit: "battle_exit",
