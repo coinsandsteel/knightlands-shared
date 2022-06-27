@@ -227,6 +227,7 @@ module.exports = {
   BattleMergeUnits: "battle_merge_units",
   BattleUpgradeUnitLevel: "battle_upgrade_unit_level",
   BattleUpgradeUnitAbility: "battle_upgrade_unit_ability",
+  BattleUnitChoose: "battle_unit_choose",
   BattleApply: "battle_apply",
   BattleSkip: "battle_skip",
   BattleEnterLevel: "battle_enter_level",
