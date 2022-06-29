@@ -39,6 +39,7 @@ export const ABILITY_GROUP_BUFF = 'buff';
 export const ABILITY_GROUP_SELF_BUFF = 'self_buff';
 export const ABILITY_GROUP_DE_BUFF = 'de_buff';
 export const ABILITY_GROUP_JUMP = 'jump';
+export const ABILITY_GROUP_HEALING = 'healing';
 
 // Abilities
 export const ABILITY_ACCURATE_SHOT = "accurate_shot";
@@ -100,8 +101,8 @@ export const ABILITY_WOLF_BITE = "wolf_bite";
 export const ABILITY_ZEALOT = "zealot";
 
 export const ABILITY_TYPES = {
-  [ABILITY_HEAL]: null, // ???
-  [ABILITY_GROUP_HEAL]: null, // ???
+  [ABILITY_HEAL]: ABILITY_GROUP_HEALING,
+  [ABILITY_GROUP_HEAL]: ABILITY_GROUP_HEALING,
   
   [ABILITY_DASH]: ABILITY_GROUP_JUMP,
   [ABILITY_FLIGHT]: ABILITY_GROUP_JUMP,
