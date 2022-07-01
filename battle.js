@@ -99,6 +99,7 @@ export const ABILITY_WEAKNESS = "weakness";
 export const ABILITY_WIND_WALK = "wind_walk";
 export const ABILITY_WOLF_BITE = "wolf_bite";
 export const ABILITY_ZEALOT = "zealot";
+export const ABILITY_MOVE = "move";
 
 export const ABILITY_TYPES = {
   [ABILITY_HEAL]: ABILITY_TYPE_HEALING,
