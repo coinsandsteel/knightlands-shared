@@ -333,3 +333,5 @@ export const SHOP = [{
     'fleshPrice': 49.99 / FLESH_USD_RATE
   }
 ];
+
+export const BATTLE_MAX_ENERGY = 36;
