@@ -302,36 +302,68 @@ export const TERRAIN_SNOW_WOODS = 'snow_woods';
 const FLESH_USD_RATE = 0.75;
 const SHINES_USD_RATE = 1 / 100;
 
-export const SHOP = [{
-    "quantity": 100,
-    "price": 2.49,
-    'hardPrice': 249, // 2.49 / SHINES_USD_RATE,
-    'fleshPrice': 2.49 / FLESH_USD_RATE
+export const SHOP_STARTER_PACK = 'shop-starter-pack';
+export const SHOP_DAILY_REWARD = 'shop-daily-reward';
+export const SHOP_ENERGY_CHEST = 'shop-energy-chest';
+export const SHOP_COIN_CHEST = 'shop-coin-chest';
+export const SHOP_DONATION_CHEST = 'shop-donation-chest';
+export const SHOP_SQUAD1_CHEST = 'shop-squad1-chest';
+export const SHOP_SQUAD2_CHEST = 'shop-squad2-chest';
+export const SHOP_SQUAD3_CHEST = 'shop-squad3-chest';
+
+export const SHOP = [
+  {
+    name: SHOP_STARTER_PACK,
+    claimable: true,
+    quantity: 1,
   },
   {
-    "quantity": 250,
-    "price": 5.89,
-    'hardPrice': 589, // 5.89 / SHINES_USD_RATE,
-    'fleshPrice': 5.89 / FLESH_USD_RATE
+    name: SHOP_DAILY_REWARD,
+    claimable: true,
+    quantity: 1,
   },
   {
-    "quantity": 500,
-    "price": 10.59,
-    'hardPrice': 1059, // 10.59 / SHINES_USD_RATE,
-    'fleshPrice': 10.59 / FLESH_USD_RATE
+    name: SHOP_ENERGY_CHEST,
+    claimable: false,
+    quantity: 1,
+    hardPrice: 249,
+    fleshPrice: 2.49 / FLESH_USD_RATE
   },
   {
-    "quantity": 1000,
-    "price": 19.99,
-    'hardPrice': 1999, // 19.99 / SHINES_USD_RATE,
-    'fleshPrice': 19.99 / FLESH_USD_RATE
+    name: SHOP_COIN_CHEST,
+    claimable: false,
+    quantity: 1,
+    hardPrice: 249,
+    fleshPrice: 2.49 / FLESH_USD_RATE
   },
   {
-    "quantity": 2500,
-    "price": 49.99,
-    'hardPrice': 4999, // 49.99 / SHINES_USD_RATE,
-    'fleshPrice': 49.99 / FLESH_USD_RATE
-  }
+    name: SHOP_DONATION_CHEST,
+    claimable: false,
+    quantity: 1,
+    hardPrice: 249,
+    fleshPrice: 2.49 / FLESH_USD_RATE
+  },
+  {
+    name: SHOP_SQUAD1_CHEST,
+    claimable: false,
+    quantity: 1,
+    hardPrice: 249,
+    fleshPrice: 2.49 / FLESH_USD_RATE
+  },
+  {
+    name: SHOP_SQUAD2_CHEST,
+    claimable: false,
+    quantity: 1,
+    hardPrice: 249,
+    fleshPrice: 2.49 / FLESH_USD_RATE
+  },
+  {
+    name: SHOP_SQUAD3_CHEST,
+    claimable: false,
+    quantity: 1,
+    hardPrice: 249,
+    fleshPrice: 2.49 / FLESH_USD_RATE
+  },
 ];
 
 export const BATTLE_MAX_ENERGY = 36;
