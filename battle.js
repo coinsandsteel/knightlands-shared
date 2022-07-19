@@ -8,6 +8,7 @@ export const COMMODITY_ENERGY  = 'energy';
 export const COMMODITY_COINS = 'coins';
 export const COMMODITY_CRYSTALS  = 'crystals';
 export const COMMODITY_CHEST = 'chest';
+export const COMMODITY_STARTER_PACK = 'starter_pack';
 
 // Unit tribes
 export const UNIT_TRIBE_KOBOLD = 'kobold';
@@ -316,53 +317,56 @@ export const SHOP = [
     name: SHOP_STARTER_PACK,
     claimable: true,
     quantity: 1,
+    commodity: COMMODITY_STARTER_PACK,
   },
   {
     name: SHOP_DAILY_REWARD,
     claimable: true,
     quantity: 1,
+    commodity: REWARD_TYPE_DAILY,
   },
   {
     name: SHOP_ENERGY_CHEST,
     claimable: false,
+    commodity: COMMODITY_ENERGY,
     quantity: 1,
-    hardPrice: 249,
-    fleshPrice: 2.49 / FLESH_USD_RATE
+    // hardPrice: 249,
+    fleshPrice: 3 / FLESH_USD_RATE
   },
   {
     name: SHOP_COIN_CHEST,
     claimable: false,
+    commodity: COMMODITY_CHEST,
     quantity: 1,
-    hardPrice: 249,
-    fleshPrice: 2.49 / FLESH_USD_RATE
+    ancientCoinsPrice: 1200
   },
   {
     name: SHOP_DONATION_CHEST,
     claimable: false,
+    commodity: COMMODITY_CHEST,
     quantity: 1,
-    hardPrice: 249,
-    fleshPrice: 2.49 / FLESH_USD_RATE
+    fleshPrice: 5 / FLESH_USD_RATE
   },
   {
     name: SHOP_SQUAD1_CHEST,
     claimable: false,
+    commodity: COMMODITY_CHEST,
     quantity: 1,
-    hardPrice: 249,
-    fleshPrice: 2.49 / FLESH_USD_RATE
+    fleshPrice: 15 / FLESH_USD_RATE
   },
   {
     name: SHOP_SQUAD2_CHEST,
     claimable: false,
+    commodity: COMMODITY_CHEST,
     quantity: 1,
-    hardPrice: 249,
-    fleshPrice: 2.49 / FLESH_USD_RATE
+    fleshPrice: 20 / FLESH_USD_RATE
   },
   {
     name: SHOP_SQUAD3_CHEST,
     claimable: false,
+    commodity: COMMODITY_CHEST,
     quantity: 1,
-    hardPrice: 249,
-    fleshPrice: 2.49 / FLESH_USD_RATE
+    fleshPrice: 30 / FLESH_USD_RATE
   },
 ];
 
