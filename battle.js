@@ -317,6 +317,7 @@ export const SHOP = [
     name: SHOP_STARTER_PACK,
     claimable: true,
     quantity: 1,
+    dailyMax: 1,
     commodity: COMMODITY_STARTER_PACK,
     descriptions: [
       '10 units: tier I - 98.5%, tier II - 1%, tier III - 0.5%',
