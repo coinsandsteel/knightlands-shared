@@ -318,55 +318,82 @@ export const SHOP = [
     claimable: true,
     quantity: 1,
     commodity: COMMODITY_STARTER_PACK,
+    descriptions: [
+      '10 units: tier I - 98.5%, tier II - 1%, tier III - 0.5%',
+    ],
   },
   {
     name: SHOP_DAILY_REWARD,
     claimable: true,
     quantity: 1,
+    dailyMax: 2,
     commodity: REWARD_TYPE_DAILY,
+    descriptions: [
+      '3 units: tier I - 97%, tier II - 2%, tier III - 1%',
+    ],
   },
   {
     name: SHOP_ENERGY_CHEST,
     claimable: false,
     commodity: COMMODITY_ENERGY,
     quantity: 1,
+    dailyMax: 6,
     // hardPrice: 249,
-    fleshPrice: 3 / FLESH_USD_RATE
+    fleshPrice: 3 / FLESH_USD_RATE,
+    descriptions: [
+      '+18 energy',
+    ],
   },
   {
     name: SHOP_COIN_CHEST,
     claimable: false,
     commodity: COMMODITY_CHEST,
     quantity: 1,
-    ancientCoinsPrice: 1200
+    dailyMax: 2,
+    ancientCoinsPrice: 1200,
+    descriptions: [
+      '3 units: tier I - 97%, tier II - 2%, tier III - 1%',
+    ],
   },
   {
     name: SHOP_DONATION_CHEST,
     claimable: false,
     commodity: COMMODITY_CHEST,
     quantity: 1,
-    fleshPrice: 5 / FLESH_USD_RATE
+    fleshPrice: 5 / FLESH_USD_RATE,
+    descriptions: [
+      '3 units: tier I - 95%, tier II - 4%, tier III - 1%',
+    ],
   },
   {
     name: SHOP_SQUAD1_CHEST,
     claimable: false,
     commodity: COMMODITY_CHEST,
     quantity: 1,
-    fleshPrice: 15 / FLESH_USD_RATE
+    fleshPrice: 15 / FLESH_USD_RATE,
+    descriptions: [
+      '1 units: tier I - 97%, tier II - 2%, tier III - 1%',
+    ],
   },
   {
     name: SHOP_SQUAD2_CHEST,
     claimable: false,
     commodity: COMMODITY_CHEST,
     quantity: 1,
-    fleshPrice: 20 / FLESH_USD_RATE
+    fleshPrice: 20 / FLESH_USD_RATE,
+    descriptions: [
+      '3 units: tier I - 97%, tier II - 2%, tier III - 1%',
+    ],
   },
   {
     name: SHOP_SQUAD3_CHEST,
     claimable: false,
     commodity: COMMODITY_CHEST,
     quantity: 1,
-    fleshPrice: 30 / FLESH_USD_RATE
+    fleshPrice: 30 / FLESH_USD_RATE,
+    descriptions: [
+      '5 units: tier I - 97%, tier II - 2%, tier III - 1%',
+    ],
   },
 ];
 
