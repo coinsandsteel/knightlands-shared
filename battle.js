@@ -40,6 +40,7 @@ export const ABILITY_TYPE_BUFF = 'buff';
 export const ABILITY_TYPE_SELF_BUFF = 'self_buff';
 export const ABILITY_TYPE_DE_BUFF = 'de_buff';
 export const ABILITY_TYPE_JUMP = 'jump';
+export const ABILITY_TYPE_FLIGHT = 'flight';
 export const ABILITY_TYPE_HEALING = 'healing';
 
 // Abilities
