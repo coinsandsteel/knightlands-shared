@@ -116,6 +116,7 @@ export const TERRAIN_HILL = "hill";
 export const BUFFS = {
   [TERRAIN_ICE]: {
     img: null,
+    positive: false,
     cases: [ // Schema according to unit's bonuses
       "Stops the units. Incoming damage +25%",
       "Stops the units. Incoming damage +18% (squad bonus)",
@@ -126,6 +127,7 @@ export const BUFFS = {
   },
   [TERRAIN_HILL]: {
     img: null,
+    positive: true,
     cases: [ // Schema according to unit's bonuses
       "Damage +25%",
       "Damage +31% (squad bonus)",
@@ -136,6 +138,7 @@ export const BUFFS = {
   },
   [TERRAIN_WOODS]: {
     img: null,
+    positive: true,
     cases: [ // Schema according to unit's bonuses
       "Defense +25%",
       "Defense +31% (squad bonus)",
@@ -146,6 +149,7 @@ export const BUFFS = {
   },
   [TERRAIN_SWAMP]: {
     img: null,
+    positive: false,
     cases: [ // Schema according to unit's bonuses
       "Stops the units. Speed -50% in the next turn",
       "Stops the units. Speed -37% in the next turn (squad bonus)",
@@ -156,6 +160,7 @@ export const BUFFS = {
   },
   [ABILITY_STUN]: {
     img: null,
+    positive: false,
     cases: [ // Levels of ability
       "Stun for 1 turn with a 50% chance",
       "Stun for 1 turn with a 60% chance",
@@ -169,6 +174,7 @@ export const BUFFS = {
   },
   [ABILITY_RAGE]: {
     img: null,
+    positive: true,
     cases: [ // Levels of ability
       "Damage +15%",
       "Damage +20%",
@@ -182,6 +188,7 @@ export const BUFFS = {
   },
   [ABILITY_ZEALOT]: {
     img: null,
+    positive: true,
     cases: [ // Levels of ability
       "Damage +15%",
       "Damage +20%",
@@ -195,6 +202,7 @@ export const BUFFS = {
   },
   [ABILITY_STUN_SHOT]: {
     img: null,
+    positive: false,
     cases: [ // Levels of ability
       "Stun for 1 turn with a 50% chance",
       "Stun for 1 turn with a 60% chance",
@@ -208,6 +216,7 @@ export const BUFFS = {
   },
   [ABILITY_HEAVY_ARROW]: {
     img: null,
+    positive: true,
     cases: [ // Levels of ability
       "Damage +15%",
       "Damage +20%",
@@ -221,6 +230,7 @@ export const BUFFS = {
   },
   [ABILITY_AGRESSION]: {
     img: null,
+    positive: false,
     cases: [ // Levels of ability
       "Forces to counter-attack for 1 turn with a 50% chance",
       "Forces to counter-attack for 1 turn with a 55% chance",
@@ -241,6 +251,7 @@ export const BUFFS = {
   },
   [ABILITY_SHIELD_STUN]: {
     img: null,
+    positive: false,
     cases: [ // Levels of ability
       "Stun for 1 turn with a 70% chance",
       "Stun for 1 turn with a 100% chance",
@@ -248,6 +259,7 @@ export const BUFFS = {
   },
   [ABILITY_SHIELD_WALL]: {
     img: null,
+    positive: true,
     cases: [ // Levels of ability
       "Defense +75% for 1 turn. The unit cannot move.",
       "Defense +100% for 1 turn. The unit cannot move.",
@@ -256,6 +268,7 @@ export const BUFFS = {
   },
   [ABILITY_SHIELD]: {
     img: null,
+    positive: true,
     cases: [ // Levels of ability
       "Defence +15%",
       "Defence +18%",
@@ -276,6 +289,7 @@ export const BUFFS = {
   },	
   [ABILITY_CURSE]: {
     img: null,
+    positive: false,
     cases: [ // Levels of ability
       "Defence -15%",
       "Defence -18%",
@@ -296,6 +310,7 @@ export const BUFFS = {
   },	
   [ABILITY_MIGHT]: {
     img: null,
+    positive: true,
     cases: [ // Levels of ability
       "Damage +15%",
       "Damage +20%",
@@ -309,6 +324,7 @@ export const BUFFS = {
   },	
   [ABILITY_WEAKNESS]: {
     img: null,
+    positive: false,
     cases: [ // Levels of ability
       "Damage -15%",
       "Damage -20%",
@@ -322,6 +338,7 @@ export const BUFFS = {
   },	
   [ABILITY_WIND_WALK]: {
     img: null,
+    positive: true,
     cases: [ // Levels of ability
       "Speed +20%",
       "Speed +25%",
@@ -330,6 +347,7 @@ export const BUFFS = {
   },	
   [ABILITY_LAZINESS	]: {
     img: null,
+    positive: false,
     cases: [ // Levels of ability
       "Initiative -20%",
       "Initiative -25%",
