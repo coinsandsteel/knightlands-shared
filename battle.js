@@ -104,6 +104,240 @@ export const ABILITY_ZEALOT = "zealot";
 export const ABILITY_MOVE = "move";
 export const ABILITY_ATTACK = "attack";
 
+// Terrain
+export const TERRAIN_ICE = "ice";
+export const TERRAIN_SWAMP = "swamp";
+export const TERRAIN_LAVA = "lava";
+export const TERRAIN_THORNS = "thorns";
+export const TERRAIN_WOODS = "woods";
+export const TERRAIN_HILL = "hill";
+
+// Buff list
+export const BUFFS = {
+  [TERRAIN_ICE]: {
+    img: null,
+    cases: [ // Schema according to unit's bonuses
+      "Stops the units. Incoming damage +25%",
+      "Stops the units. Incoming damage +18% (squad bonus)",
+      "Stops the units. Incoming damage +12% (squad bonus)",
+      "Stops the units. Incoming damage +6% (squad bonus)",
+      "Stops the units. Incoming damage +0% (squad bonus)",
+    ]
+  },
+  [TERRAIN_HILL]: {
+    img: null,
+    cases: [ // Schema according to unit's bonuses
+      "Damage +25%",
+      "Damage +31% (squad bonus)",
+      "Damage +37% (squad bonus)",
+      "Damage +43% (squad bonus)",
+      "Damage +50% (squad bonus)",
+    ]
+  },
+  [TERRAIN_WOODS]: {
+    img: null,
+    cases: [ // Schema according to unit's bonuses
+      "Defense +25%",
+      "Defense +31% (squad bonus)",
+      "Defense +37% (squad bonus)",
+      "Defense +43% (squad bonus)",
+      "Defense +50% (squad bonus)",
+    ]
+  },
+  [TERRAIN_SWAMP]: {
+    img: null,
+    cases: [ // Schema according to unit's bonuses
+      "Stops the units. Speed -50% in the next turn",
+      "Stops the units. Speed -37% in the next turn (squad bonus)",
+      "Stops the units. Speed -25% in the next turn (squad bonus)",
+      "Stops the units. Speed -12% in the next turn (squad bonus)",
+      "Stops the units. Speed -0% in the next turn (squad bonus)",
+    ]
+  },
+  [ABILITY_STUN]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Stun for 1 turn with a 50% chance",
+      "Stun for 1 turn with a 60% chance",
+      "Stun for 1 turn with a 70% chance",
+      "Stun for 1 turn with a 80% chance",
+      "Stun for 1 turn with a 90% chance",
+      "Stun for 1 turn with a 100% chance",
+      "Stun for 1 turn with a 100% chance and for 1 more turn with a 15% chance",
+      "Stun for 1 turn with a 100% chance and for 1 more turn with a 25% chance",
+    ]
+  },
+  [ABILITY_RAGE]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Damage +15%",
+      "Damage +20%",
+      "Damage +25%",
+      "Damage +30%",
+      "Damage +35%",
+      "Damage +40%",
+      "Damage +45%",
+      "Damage +50%",
+    ]
+  },
+  [ABILITY_ZEALOT]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Damage +15%",
+      "Damage +20%",
+      "Damage +25%",
+      "Damage +30%",
+      "Damage +35%",
+      "Damage +40%",
+      "Damage +45%",
+      "Damage +50%",
+    ]
+  },
+  [ABILITY_STUN_SHOT]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Stun for 1 turn with a 50% chance",
+      "Stun for 1 turn with a 60% chance",
+      "Stun for 1 turn with a 70% chance",
+      "Stun for 1 turn with a 80% chance",
+      "Stun for 1 turn with a 90% chance",
+      "Stun for 1 turn with a 100% chance",
+      "Stun for 1 turn with a 100% chance and for 1 more turn with a 15% chance",
+      "Stun for 1 turn with a 100% chance and for 1 more turn with a 25% chance",
+    ]
+  },
+  [ABILITY_HEAVY_ARROW]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Damage +15%",
+      "Damage +20%",
+      "Damage +25%",
+      "Damage +30%",
+      "Damage +35%",
+      "Damage +40%",
+      "Damage +45%",
+      "Damage +50%",
+    ]
+  },
+  [ABILITY_AGRESSION]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Forces to counter-attack for 1 turn with a 50% chance",
+      "Forces to counter-attack for 1 turn with a 55% chance",
+      "Forces to counter-attack for 1 turn with a 60% chance",
+      "Forces to counter-attack for 1 turn with a 65% chance",
+      "Forces to counter-attack for 1 turn with a 70% chance",
+      "Forces to counter-attack for 1 turn with a 75% chance",
+      "Forces to counter-attack for 1 turn with a 80% chance",
+      "Forces to counter-attack for 1 turn with a 85% chance",
+      "Forces to counter-attack for 1 turn with a 90% chance",
+      "Forces to counter-attack for 1 turn with a 95% chance",
+      "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 10% chance",
+      "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 20% chance",
+      "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 30% chance",
+      "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 40% chance",
+      "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 50% chance"			    
+    ]
+  },
+  [ABILITY_SHIELD_STUN]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Stun for 1 turn with a 70% chance",
+      "Stun for 1 turn with a 100% chance",
+      "Stun for 1 turn with a 100% chance and for 1 more turn with a 30% chance"				    ]
+  },
+  [ABILITY_SHIELD_WALL]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Defense +75% for 1 turn. The unit cannot move.",
+      "Defense +100% for 1 turn. The unit cannot move.",
+      "Defense +125% for 1 turn. The unit cannot move.",
+    ]
+  },
+  [ABILITY_SHIELD]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Defence +15%",
+      "Defence +18%",
+      "Defence +20%",
+      "Defence +21%",
+      "Defence +24%",
+      "Defence +27%",
+      "Defence +30%",
+      "Defence +32%",
+      "Defence +35%",
+      "Defence +38%",
+      "Defence +40%",
+      "Defence +42%",
+      "Defence +45%",
+      "Defence +48%",
+      "Defence +50%",
+    ]
+  },	
+  [ABILITY_CURSE]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Defence -15%",
+      "Defence -18%",
+      "Defence -20%",
+      "Defence -21%",
+      "Defence -24%",
+      "Defence -27%",
+      "Defence -30%",
+      "Defence -32%",
+      "Defence -35%",
+      "Defence -38%",
+      "Defence -40%",
+      "Defence -42%",
+      "Defence -45%",
+      "Defence -48%",
+      "Defence -50%",
+    ]
+  },	
+  [ABILITY_MIGHT]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Damage +15%",
+      "Damage +20%",
+      "Damage +25%",
+      "Damage +30%",
+      "Damage +35%",
+      "Damage +40%",
+      "Damage +45%",
+      "Damage +50%",
+    ]
+  },	
+  [ABILITY_WEAKNESS]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Damage -15%",
+      "Damage -20%",
+      "Damage -25%",
+      "Damage -30%",
+      "Damage -35%",
+      "Damage -40%",
+      "Damage -45%",
+      "Damage -50%",
+    ]
+  },	
+  [ABILITY_WIND_WALK]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Speed +20%",
+      "Speed +25%",
+      "Speed +30%",
+    ]
+  },	
+  [ABILITY_LAZINESS	]: {
+    img: null,
+    cases: [ // Levels of ability
+      "Initiative -20%",
+      "Initiative -25%",
+      "Initiative -30%",
+    ]
+  }
+}
+
 export const ABILITY_TYPES = {
   [ABILITY_HEAL]: ABILITY_TYPE_HEALING,
   [ABILITY_GROUP_HEAL]: ABILITY_TYPE_HEALING,
@@ -254,16 +488,6 @@ export const LOCATIONS = [
     ]
   },
 ];
-
-// const TERRAIN_GRASS = 'grass';
-// const TERRAIN_SAND = 'sand';
-// const TERRAIN_SNOW = 'snow';
-// const TERRAIN_FOREST = 'forest';
-// const TERRAIN_HILL = 'hill';
-// const TERRAIN_SWAM = 'swam';
-// const TERRAIN_LAVA = 'lava';
-// const TERRAIN_ICE = 'ice';
-// const TERRAIN_BUSHES = 'bushes';
 
 export const TERRAIN_GRASS = 'grass';
 export const TERRAIN_GRASS_HILL = 'grass_hill';
