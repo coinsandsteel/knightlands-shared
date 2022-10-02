@@ -246,7 +246,7 @@ export const BUFFS = {
       "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 20% chance",
       "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 30% chance",
       "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 40% chance",
-      "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 50% chance"			    
+      "Forces to counter-attack for 1 turn with a 100% chance and for 1 more turn with a 50% chance"
     ]
   },
   [ABILITY_SHIELD_STUN]: {
@@ -286,7 +286,7 @@ export const BUFFS = {
       "Defence +48%",
       "Defence +50%",
     ]
-  },	
+  },
   [ABILITY_CURSE]: {
     img: null,
     positive: false,
@@ -307,7 +307,7 @@ export const BUFFS = {
       "Defence -48%",
       "Defence -50%",
     ]
-  },	
+  },
   [ABILITY_MIGHT]: {
     img: null,
     positive: true,
@@ -321,7 +321,7 @@ export const BUFFS = {
       "Damage +45%",
       "Damage +50%",
     ]
-  },	
+  },
   [ABILITY_WEAKNESS]: {
     img: null,
     positive: false,
@@ -335,7 +335,7 @@ export const BUFFS = {
       "Damage -45%",
       "Damage -50%",
     ]
-  },	
+  },
   [ABILITY_WIND_WALK]: {
     img: null,
     positive: true,
@@ -344,7 +344,7 @@ export const BUFFS = {
       "Speed +25%",
       "Speed +30%",
     ]
-  },	
+  },
   [ABILITY_LAZINESS	]: {
     img: null,
     positive: false,
@@ -359,16 +359,16 @@ export const BUFFS = {
 export const ABILITY_TYPES = {
   [ABILITY_HEAL]: ABILITY_TYPE_HEALING,
   [ABILITY_GROUP_HEAL]: ABILITY_TYPE_HEALING,
-  
+
   [ABILITY_DASH]: ABILITY_TYPE_JUMP,
   [ABILITY_FLIGHT]: ABILITY_TYPE_JUMP,
   [ABILITY_RUSH]: ABILITY_TYPE_JUMP,
   [ABILITY_TELEPORTATION]: ABILITY_TYPE_JUMP,
-  
+
   [ABILITY_MIGHT]: ABILITY_TYPE_BUFF,
   [ABILITY_SHIELD]: ABILITY_TYPE_BUFF,
   [ABILITY_WIND_WALK]: ABILITY_TYPE_BUFF,
-  
+
   [ABILITY_AGRESSION]: ABILITY_TYPE_DE_BUFF,
   [ABILITY_CURSE]: ABILITY_TYPE_DE_BUFF,
   [ABILITY_FROZEN_ABYSS]: ABILITY_TYPE_DE_BUFF,
@@ -378,12 +378,12 @@ export const ABILITY_TYPES = {
   [ABILITY_STUN]: ABILITY_TYPE_DE_BUFF,
   [ABILITY_STUN_SHOT]: ABILITY_TYPE_DE_BUFF,
   [ABILITY_WEAKNESS]: ABILITY_TYPE_DE_BUFF,
-  
+
   [ABILITY_HEAVY_ARROW]: ABILITY_TYPE_SELF_BUFF,
   [ABILITY_RAGE]: ABILITY_TYPE_SELF_BUFF,
   [ABILITY_SHIELD_WALL]: ABILITY_TYPE_SELF_BUFF,
   [ABILITY_ZEALOT]: ABILITY_TYPE_SELF_BUFF,
-  
+
   [ABILITY_ACCURATE_SHOT]: ABILITY_TYPE_ATTACK,
   [ABILITY_ARROW_CRUSH]: ABILITY_TYPE_ATTACK,
   [ABILITY_AXE_BLOW]: ABILITY_TYPE_ATTACK,
@@ -436,6 +436,554 @@ export const GAME_DIFFICULTY_HIGH = 'high';
 // Combat results
 export const COMBAT_RESULT_WIN = 'win';
 export const COMBAT_RESULT_LOOSE = 'loose';
+
+export const ADVENTURE_ENEGRY_PRICE = {
+  [GAME_DIFFICULTY_MEDIUM]: 8,
+  [GAME_DIFFICULTY_HIGH]: 12,
+};
+
+export const ADVENTURES = {
+  [GAME_DIFFICULTY_MEDIUM]: [
+    // Medium
+    [
+      {
+        reward: { xp: 70, coins: 100 },
+        enemies: {
+          templates: [4, 24, 27, 78, 81],
+          level: 1,
+          abilities: [1, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 88, coins: 200 },
+        enemies: {
+          templates: [39, 57, 60, 155, 160],
+          level: 2,
+          abilities: [1, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 109, coins: 300 },
+        enemies: {
+          templates: [84, 87, 182, 125, 128],
+          level: 3,
+          abilities: [1, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 137, coins: 400 },
+        enemies: {
+          templates: [194, 137, 134, 203, 81],
+          level: 4,
+          abilities: [2, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 171, coins: 500 },
+        bossReward: {
+          [COMMODITY_COINS]: 10500,
+          [COMMODITY_CRYSTALS]: 25,
+        },
+        enemies: {
+          templates: [4, 11, 14, 17, 20],
+          boss: 14,
+          level: 5,
+          abilities: [3, 0, 0],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 250, coins: 600 },
+        enemies: {
+          templates: [209, 137, 134, 155, 221],
+          level: 6,
+          abilities: [2, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 288, coins: 700 },
+        enemies: {
+          templates: [105, 182, 185, 125, 128],
+          level: 7,
+          abilities: [3, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 331, coins: 800 },
+        enemies: {
+          templates: [163, 60, 114, 173, 66],
+          level: 8,
+          abilities: [3, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 380, coins: 900 },
+        enemies: {
+          templates: [224, 24, 27, 233, 81],
+          level: 9,
+          abilities: [3, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 437, coins: 1000 },
+        bossReward: {
+          [COMMODITY_COINS]: 15750,
+          [COMMODITY_CRYSTALS]: 25,
+        },
+        enemies: {
+          templates: [99, 102, 105, 108, 111],
+          boss: 99,
+          level: 10,
+          abilities: [4, 0, 0],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 515, coins: 1100 },
+        enemies: {
+          templates: [9, 118, 25, 37, 21],
+          level: 16,
+          abilities: [6, 1, 0],
+        },
+      },
+      {
+        reward: { xp: 567, coins: 1200 },
+        enemies: {
+          templates: [210, 123, 216, 64, 67],
+          level: 17,
+          abilities: [6, 1, 0],
+        },
+      },
+      {
+        reward: { xp: 623, coins: 1300 },
+        enemies: {
+          templates: [106, 150, 186, 109, 161],
+          level: 18,
+          abilities: [6, 1, 0],
+        },
+      },
+      {
+        reward: { xp: 685, coins: 1400 },
+        enemies: {
+          templates: [195, 31, 34, 174, 177],
+          level: 19,
+          abilities: [7, 1, 0],
+        },
+      },
+      {
+        reward: { xp: 754, coins: 1500 },
+        bossReward: {
+          [COMMODITY_COINS]: 21000,
+          [COMMODITY_CRYSTALS]: 40,
+        },
+        enemies: {
+          templates: [115, 118, 123, 126, 129],
+          boss: 123,
+          level: 20,
+          abilities: [7, 2, 0],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 835, coins: 1600 },
+        enemies: {
+          templates: [43, 228, 138, 49, 237],
+          level: 21,
+          abilities: [7, 2, 0],
+        },
+      },
+      {
+        reward: { xp: 877, coins: 1700 },
+        enemies: {
+          templates: [85, 58, 147, 94, 67],
+          level: 22,
+          abilities: [8, 2, 0],
+        },
+      },
+      {
+        reward: { xp: 921, coins: 1800 },
+        enemies: {
+          templates: [225, 135, 73, 234, 144],
+          level: 23,
+          abilities: [8, 2, 0],
+        },
+      },
+      {
+        reward: { xp: 967, coins: 1900 },
+        enemies: {
+          templates: [180, 198, 171, 189, 207],
+          level: 24,
+          abilities: [8, 3, 0],
+        },
+      },
+      {
+        reward: { xp: 1015, coins: 2000 },
+        bossReward: {
+          [COMMODITY_COINS]: 31500,
+          [COMMODITY_CRYSTALS]: 40,
+        },
+        enemies: {
+          templates: [180, 183, 186, 189, 192],
+          boss: 189,
+          level: 25,
+          abilities: [9, 3, 0],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 1075, coins: 2100 },
+        enemies: {
+          templates: [13, 59, 62, 19, 68],
+          level: 31,
+          abilities: [11, 4, 1],
+        },
+      },
+      {
+        reward: { xp: 1129, coins: 2300 },
+        enemies: {
+          templates: [41, 35, 47, 38, 53],
+          level: 32,
+          abilities: [11, 5, 1],
+        },
+      },
+      {
+        reward: { xp: 1185, coins: 2500 },
+        enemies: {
+          templates: [86, 154, 92, 159, 162],
+          level: 33,
+          abilities: [11, 5, 1],
+        },
+      },
+      {
+        reward: { xp: 1244, coins: 2700 },
+        enemies: {
+          templates: [196, 77, 202, 80, 208],
+          level: 34,
+          abilities: [12, 5, 1],
+        },
+      },
+      {
+        reward: { xp: 1307, coins: 2900 },
+        bossReward: {
+          [COMMODITY_COINS]: 34300,
+          [COMMODITY_CRYSTALS]: 55,
+        },
+        enemies: {
+          templates: [148, 151, 154, 159, 162],
+          boss: 151,
+          level: 35,
+          abilities: [12, 5, 1],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 1400, coins: 3100 },
+        enemies: {
+          templates: [211, 119, 124, 220, 223],
+          level: 36,
+          abilities: [12, 6, 1],
+        },
+      },
+      {
+        reward: { xp: 1470, coins: 3300 },
+        enemies: {
+          templates: [226, 139, 136, 235, 238],
+          level: 37,
+          abilities: [13, 6, 1],
+        },
+      },
+      {
+        reward: { xp: 1544, coins: 3500 },
+        enemies: {
+          templates: [107, 104, 184, 190, 113],
+          level: 38,
+          abilities: [13, 6, 2],
+        },
+      },
+      {
+        reward: { xp: 1621, coins: 3700 },
+        enemies: {
+          templates: [166, 169, 199, 205, 208],
+          level: 39,
+          abilities: [13, 6, 2],
+        },
+      },
+      {
+        reward: { xp: 1702, coins: 3900 },
+        bossReward: {
+          [COMMODITY_COINS]: 51450,
+          [COMMODITY_CRYSTALS]: 55,
+        },
+        enemies: {
+          templates: [211, 214, 217, 220, 223],
+          boss: 220,
+          level: 40,
+          abilities: [14, 7, 2],
+        },
+      },
+    ],
+  ],
+  [GAME_DIFFICULTY_HIGH]: [
+    [
+      // Hard
+      {
+        reward: { xp: 116, coins: 175 },
+        enemies: {
+          templates: [4, 24, 27, 78, 81],
+          level: 11,
+          abilities: [4, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 144, coins: 350 },
+        enemies: {
+          templates: [39, 57, 60, 155, 160],
+          level: 11,
+          abilities: [4, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 180, coins: 525 },
+        enemies: {
+          templates: [84, 87, 182, 125, 128],
+          level: 12,
+          abilities: [4, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 226, coins: 700 },
+        enemies: {
+          templates: [194, 137, 134, 203, 81],
+          level: 12,
+          abilities: [4, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 282, coins: 875 },
+        enemies: {
+          templates: [4, 11, 14, 17, 20],
+          level: 13,
+          abilities: [5, 0, 0],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 413, coins: 1050 },
+        enemies: {
+          templates: [209, 137, 134, 155, 221],
+          level: 13,
+          abilities: [5, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 474, coins: 1225 },
+        enemies: {
+          templates: [105, 182, 185, 125, 128],
+          level: 14,
+          abilities: [5, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 546, coins: 1400 },
+        enemies: {
+          templates: [163, 60, 114, 173, 66],
+          level: 14,
+          abilities: [5, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 627, coins: 1575 },
+        enemies: {
+          templates: [224, 24, 27, 233, 81],
+          level: 15,
+          abilities: [5, 0, 0],
+        },
+      },
+      {
+        reward: { xp: 721, coins: 1750 },
+        enemies: {
+          templates: [99, 102, 105, 108, 111],
+          level: 15,
+          abilities: [5, 0, 0],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 850, coins: 1925 },
+        enemies: {
+          templates: [9, 118, 25, 37, 21],
+          level: 26,
+          abilities: [9, 3, 0],
+        },
+      },
+      {
+        reward: { xp: 935, coins: 2100 },
+        enemies: {
+          templates: [210, 123, 216, 64, 67],
+          level: 26,
+          abilities: [9, 3, 0],
+        },
+      },
+      {
+        reward: { xp: 1028, coins: 2275 },
+        enemies: {
+          templates: [106, 150, 186, 109, 161],
+          level: 27,
+          abilities: [9, 3, 0],
+        },
+      },
+      {
+        reward: { xp: 1131, coins: 2450 },
+        enemies: {
+          templates: [195, 31, 34, 174, 177],
+          level: 27,
+          abilities: [9, 3, 0],
+        },
+      },
+      {
+        reward: { xp: 1244, coins: 2625 },
+        enemies: {
+          templates: [115, 118, 123, 126, 129],
+          level: 28,
+          abilities: [10, 4, 0],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 1461, coins: 2800 },
+        enemies: {
+          templates: [43, 228, 138, 49, 237],
+          level: 30,
+          abilities: [10, 4, 0],
+        },
+      },
+      {
+        reward: { xp: 1534, coins: 2975 },
+        enemies: {
+          templates: [86, 59, 148, 95, 68],
+          level: 33,
+          abilities: [11, 5, 1],
+        },
+      },
+      {
+        reward: { xp: 1611, coins: 3150 },
+        enemies: {
+          templates: [226, 136, 74, 235, 145],
+          level: 35,
+          abilities: [12, 5, 1],
+        },
+      },
+      {
+        reward: { xp: 1692, coins: 3325 },
+        enemies: {
+          templates: [181, 199, 172, 190, 208],
+          level: 37,
+          abilities: [13, 7, 1],
+        },
+      },
+      {
+        reward: { xp: 1776, coins: 3500 },
+        enemies: {
+          templates: [181, 184, 187, 190, 193],
+          level: 40,
+          abilities: [14, 7, 2],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 1774, coins: 3675 },
+        enemies: {
+          templates: [13, 59, 62, 19, 68],
+          level: 41,
+          abilities: [14, 7, 2],
+        },
+      },
+      {
+        reward: { xp: 1862, coins: 4025 },
+        enemies: {
+          templates: [41, 35, 47, 38, 53],
+          level: 41,
+          abilities: [14, 7, 2],
+        },
+      },
+      {
+        reward: { xp: 1956, coins: 4375 },
+        enemies: {
+          templates: [86, 154, 92, 159, 162],
+          level: 42,
+          abilities: [14, 7, 2],
+        },
+      },
+      {
+        reward: { xp: 2053, coins: 4725 },
+        enemies: {
+          templates: [196, 77, 202, 80, 208],
+          level: 42,
+          abilities: [14, 7, 2],
+        },
+      },
+      {
+        reward: { xp: 2156, coins: 5075 },
+        enemies: {
+          templates: [148, 151, 154, 159, 162],
+          level: 43,
+          abilities: [15, 7, 2],
+        },
+      },
+    ],
+    [
+      {
+        reward: { xp: 2450, coins: 5425 },
+        enemies: {
+          templates: [211, 119, 124, 220, 223],
+          level: 43,
+          abilities: [15, 7, 2],
+        },
+      },
+      {
+        reward: { xp: 2573, coins: 5775 },
+        enemies: {
+          templates: [226, 139, 136, 235, 238],
+          level: 44,
+          abilities: [15, 8, 2],
+        },
+      },
+      {
+        reward: { xp: 2701, coins: 6125 },
+        enemies: {
+          templates: [107, 104, 184, 190, 113],
+          level: 44,
+          abilities: [15, 8, 2],
+        },
+      },
+      {
+        reward: { xp: 2836, coins: 6475 },
+        enemies: {
+          templates: [166, 169, 199, 205, 208],
+          level: 45,
+          abilities: [15, 8, 3],
+        },
+      },
+      {
+        reward: { xp: 2978, coins: 6825 },
+        enemies: {
+          templates: [211, 214, 217, 220, 223],
+          level: 45,
+          abilities: [15, 8, 3],
+        },
+      },
+    ],
+  ],
+};
 
 // Locations
 export const LOCATIONS = [
