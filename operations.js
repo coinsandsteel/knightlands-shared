@@ -217,7 +217,7 @@ module.exports = {
   AprilExit: "april_exit",
   AprilTestAction: "april_test_action",
   AprilPurchaseTicket: "april_purchase_ticket",
-  
+
   BattleLoad: "battle_load",
   BattleClaimReward: "battle_claim_reward",
   BattlePurchase: "battle_purchase",
@@ -227,6 +227,7 @@ module.exports = {
   BattleMergeUnits: "battle_merge_units",
   BattleUpgradeUnitLevel: "battle_upgrade_unit_level",
   BattleUpgradeUnitAbility: "battle_upgrade_unit_ability",
+  BattleSetAdventuresDifficulty: "battle_set_adventure_difficulty",
   BattleChooseAbility: "battle_choose_ability",
   BattleApply: "battle_apply",
   BattleSkip: "battle_skip",
