@@ -23,7 +23,7 @@ export const UNIT_TRIBE_ICE = "ice";
 export const UNIT_TRIBE_ELF = "elf";
 export const UNIT_TRIBE_ELDRITCH = "eldritch";
 export const UNIT_TRIBE_ASSEMBLING = "assembling";
-export const UNIT_TRIBE_FALLEN_KING = "fallen_knight";
+export const UNIT_TRIBE_FALLEN_KING = "fallenKing";
 export const UNIT_TRIBE_LEGENDARY = "legendary";
 export const UNIT_TRIBE_TITAN = "titan";
 
@@ -33,15 +33,6 @@ export const UNIT_CLASS_MELEE = "melee";
 export const UNIT_CLASS_MAGE = "mage";
 export const UNIT_CLASS_TANK = "tank";
 export const UNIT_CLASS_SUPPORT = "support";
-
-// Ability groups
-export const ABILITY_TYPE_ATTACK = "attack";
-export const ABILITY_TYPE_BUFF = "buff";
-export const ABILITY_TYPE_SELF_BUFF = "self_buff";
-export const ABILITY_TYPE_DE_BUFF = "de_buff";
-export const ABILITY_TYPE_JUMP = "jump";
-export const ABILITY_TYPE_FLIGHT = "flight";
-export const ABILITY_TYPE_HEALING = "healing";
 
 // Abilities
 export const ABILITY_ACCURATE_SHOT = "accurate_shot";
