@@ -512,6 +512,11 @@ export const ADVENTURE_ENEGRY_PRICE = {
   [GAME_DIFFICULTY_HIGH]: 12,
 };
 
+export const DUEL_REWARDS = {
+  win: 25,
+  loose: -5
+};
+
 export const ADVENTURES = [
   {
     name: "Dark Forest",
