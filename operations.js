@@ -224,7 +224,7 @@ module.exports = {
   BattleOpenChest: "battle_open_chest",
   BattleFillSquadSlot: "battle_fill_squad_slot",
   BattleClearSquadSlot: "battle_clear_squad_slot",
-  BattleMergeUnits: "battle_merge_units",
+  BattleMerge: "battle_merge",
   BattleUpgradeUnitLevel: "battle_upgrade_unit_level",
   BattleUpgradeUnitAbility: "battle_upgrade_unit_ability",
   BattleSetAdventuresDifficulty: "battle_set_adventure_difficulty",
