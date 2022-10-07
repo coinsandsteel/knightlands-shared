@@ -513,8 +513,8 @@ export const ADVENTURE_ENEGRY_PRICE = {
 };
 
 export const DUEL_REWARDS = {
-  win: 25,
-  loose: -5
+  win: { crystals: 25, rank: 1 },
+  loose: { crystals: -5, rank: -2 }
 };
 
 export const ADVENTURES = [
