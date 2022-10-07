@@ -517,7 +517,7 @@ export const DUEL_REWARDS = {
   loose: { crystals: -5, rank: -2 },
 };
 
-export const RANKING_REWADS = [
+export const RANKING_REWARDS = [
   {
     items: [
       {
