@@ -514,8 +514,131 @@ export const ADVENTURE_ENEGRY_PRICE = {
 
 export const DUEL_REWARDS = {
   win: { crystals: 25, rank: 1 },
-  loose: { crystals: -5, rank: -2 }
+  loose: { crystals: -5, rank: -2 },
 };
+
+export const RANKING_REWADS = [
+  {
+    items: [
+      {
+        item: 3110, // raid_ticket
+        quantity: 23,
+      },
+      {
+        item: 2982, // adv_summon_scroll
+        quantity: 5,
+      },
+      {
+        item: 812, // big_armour_xp
+        quantity: 3,
+      },
+      {
+        item: 817, // demonic_key
+        quantity: 9,
+      },
+      {
+        item: 2383, // gold
+        quantity: 9375000,
+      },
+    ],
+  },
+  {
+    items: [
+      {
+        item: 3110, // raid_ticket
+        quantity: 19,
+      },
+      {
+        item: 2982, // adv_summon_scroll
+        quantity: 4,
+      },
+      {
+        item: 812, // big_armour_xp
+        quantity: 2,
+      },
+      {
+        item: 817, // demonic_key
+        quantity: 8,
+      },
+      {
+        item: 2383, // gold
+        quantity: 7500000,
+      },
+    ],
+  },
+  {
+    items: [
+      {
+        item: 3110, // raid_ticket
+        quantity: 14,
+      },
+      {
+        item: 2982, // adv_summon_scroll
+        quantity: 3,
+      },
+      {
+        item: 812, // big_armour_xp
+        quantity: 2,
+      },
+      {
+        item: 817, // demonic_key
+        quantity: 6,
+      },
+      {
+        item: 2383, // gold
+        quantity: 5625000,
+      },
+    ],
+  },
+  {
+    items: [
+      {
+        item: 3110, // raid_ticket
+        quantity: 9,
+      },
+      {
+        item: 2982, // adv_summon_scroll
+        quantity: 2,
+      },
+      {
+        item: 812, // big_armour_xp
+        quantity: 1,
+      },
+      {
+        item: 817, // demonic_key
+        quantity: 4,
+      },
+      {
+        item: 2383, // gold
+        quantity: 3750000,
+      },
+    ],
+  },
+  {
+    items: [
+      {
+        item: 3110, // raid_ticket
+        quantity: 5,
+      },
+      {
+        item: 2982, // adv_summon_scroll
+        quantity: 1,
+      },
+      {
+        item: 812, // big_armour_xp
+        quantity: 1,
+      },
+      {
+        item: 817, // demonic_key
+        quantity: 2,
+      },
+      {
+        item: 2383, // gold
+        quantity: 1875000,
+      },
+    ],
+  },
+];
 
 export const ADVENTURES = [
   {
