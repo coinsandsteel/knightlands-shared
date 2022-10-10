@@ -1274,3 +1274,21 @@ export const ADVENTURES = [
     ],
   },
 ];
+
+export const SQUAD_REWARDS = [
+  {
+    tribe: UNIT_TRIBE_TITAN,
+    templates: [226, 229, 232, 235, 238],
+    reward: 3479
+  },
+  {
+    tribe: UNIT_TRIBE_LEGENDARY,
+    templates: [211, 214, 217, 220, 223],
+    reward: 3480
+  },
+  {
+    tribe: UNIT_TRIBE_FALLEN_KING,
+    templates: [196, 199, 202, 205, 208],
+    reward: 3481
+  },
+];
