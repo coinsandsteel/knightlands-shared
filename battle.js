@@ -1,3 +1,5 @@
+export const ITEM_RARITY_NFT = 'mythical';
+
 // Ability types
 export const ABILITY_TYPE_ATTACK = "attack";
 export const ABILITY_TYPE_BUFF = "buff";
