@@ -423,6 +423,7 @@ const SHINES_USD_RATE = 1 / 100;
 // Currencies
 export const CURRENCY_COINS = "coins";
 export const CURRENCY_CRYSTALS = "crystals";
+export const CURRENCY_ENERGY = "energy";
 
 // Shop positions
 export const COMMODITY_DAILY_CHEST = "daily_chest";
