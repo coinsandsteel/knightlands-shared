@@ -433,6 +433,7 @@ export const COMMODITY_STARTER_PACK = "starter_pack";
 
 export const SHOP = [
   {
+    id: 1,
     name: "daily-chest",
     commodity: COMMODITY_DAILY_CHEST,
     claimable: true,
@@ -445,6 +446,7 @@ export const SHOP = [
     dailyMax: 2,
   },
   {
+    id: 2,
     name: "coin-chest",
     commodity: COMMODITY_COIN_CHEST,
     claimable: false,
@@ -457,6 +459,7 @@ export const SHOP = [
     dailyMax: 2,
   },
   {
+    id: 3,
     name: "donation-chest",
     commodity: COMMODITY_CHEST,
     claimable: false,
@@ -469,6 +472,7 @@ export const SHOP = [
     dailyMax: null
   },
   {
+    id: 4,
     name: "squad1-chest",
     commodity: COMMODITY_CHEST,
     claimable: false,
@@ -481,6 +485,7 @@ export const SHOP = [
     dailyMax: null
   },
   {
+    id: 5,
     name: "squad2-chest",
     commodity: COMMODITY_CHEST,
     claimable: false,
@@ -493,6 +498,7 @@ export const SHOP = [
     dailyMax: null
   },
   {
+    id: 6,
     name: "squad3-chest",
     commodity: COMMODITY_CHEST,
     claimable: false,
@@ -505,6 +511,7 @@ export const SHOP = [
     dailyMax: null
   },
   {
+    id: 7,
     name: "energy-potion",
     commodity: COMMODITY_ENERGY,
     claimable: false,
@@ -516,6 +523,7 @@ export const SHOP = [
     dailyMax: null
   },
   {
+    id: 8,
     name: "starter-pack",
     commodity: COMMODITY_STARTER_PACK,
     claimable: true,
