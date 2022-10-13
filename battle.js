@@ -510,8 +510,7 @@ export const SHOP = [
     claimable: false,
     price: { currency: "flesh", amount: 5 / FLESH_USD_RATE },
     content: {
-      units: 5,
-      tierProbabilities: [97, 2, 1],
+      energy: 18,
       description: ["+18 energy"],
     },
     dailyMax: null
