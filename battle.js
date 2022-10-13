@@ -1,4 +1,4 @@
-export const ITEM_RARITY_NFT = 'mythical';
+export const ITEM_RARITY_NFT = "mythical";
 
 // Ability types
 export const ABILITY_TYPE_ATTACK = "attack";
@@ -9,16 +9,8 @@ export const ABILITY_TYPE_JUMP = "jump";
 export const ABILITY_TYPE_HEALING = "healing";
 
 // Reward types
-export const REWARD_TYPE_DAILY = "reward_day";
 export const REWARD_TYPE_RANKING = "reward_ranking";
 export const REWARD_TYPE_SQUAD = "reward_squad";
-
-// Things to buy
-export const COMMODITY_ENERGY = "energy";
-export const COMMODITY_COINS = "coins";
-export const COMMODITY_CRYSTALS = "crystals";
-export const COMMODITY_CHEST = "chest";
-export const COMMODITY_STARTER_PACK = "starter_pack";
 
 // Unit tribes
 export const UNIT_TRIBE_KOBOLD = "kobold";
@@ -428,82 +420,113 @@ export const TERRAIN_SNOW_WOODS = "snow_woods";
 const FLESH_USD_RATE = 0.75;
 const SHINES_USD_RATE = 1 / 100;
 
-export const SHOP_STARTER_PACK = "shop-starter-pack";
-export const SHOP_DAILY_REWARD = "shop-daily-reward";
-export const SHOP_ENERGY_CHEST = "shop-energy-chest";
-export const SHOP_COIN_CHEST = "shop-coin-chest";
-export const SHOP_DONATION_CHEST = "shop-donation-chest";
-export const SHOP_SQUAD1_CHEST = "shop-squad1-chest";
-export const SHOP_SQUAD2_CHEST = "shop-squad2-chest";
-export const SHOP_SQUAD3_CHEST = "shop-squad3-chest";
+// Currencies
+export const CURRENCY_COINS = "coins";
+export const CURRENCY_CRYSTALS = "crystals";
+
+// Shop positions
+export const COMMODITY_DAILY_CHEST = "daily_chest";
+export const COMMODITY_COIN_CHEST = "coin_chest";
+export const COMMODITY_CHEST = "chest";
+export const COMMODITY_ENERGY_POTION = "energy_potion";
+export const COMMODITY_STARTER_PACK = "starter_pack";
 
 export const SHOP = [
   {
-    name: SHOP_STARTER_PACK,
+    name: "daily-chest",
+    commodity: COMMODITY_DAILY_CHEST,
     claimable: true,
-    quantity: 1,
-    dailyMax: 1,
-    commodity: COMMODITY_STARTER_PACK,
-    descriptions: ["10 units: tier I - 98.5%, tier II - 1%, tier III - 0.5%"],
-  },
-  {
-    name: SHOP_DAILY_REWARD,
-    claimable: true,
-    quantity: 1,
+    price: null,
+    content: {
+      units: 3,
+      tierProbabilities: [97, 2, 1],
+      description: ["3 units: tier I - 97%, tier II - 2%, tier III - 1%"],
+    },
     dailyMax: 2,
-    commodity: REWARD_TYPE_DAILY,
-    descriptions: ["3 units: tier I - 97%, tier II - 2%, tier III - 1%"],
   },
   {
-    name: SHOP_ENERGY_CHEST,
+    name: "coin-chest",
+    commodity: COMMODITY_COIN_CHEST,
     claimable: false,
+    price: { currency: CURRENCY_COINS, amount: 1200 },
+    content: {
+      units: 3,
+      tierProbabilities: [97, 2, 1],
+      description: ["3 units: tier I - 97%, tier II - 2%, tier III - 1%"],
+    },
+    dailyMax: 2,
+  },
+  {
+    name: "donation-chest",
+    commodity: COMMODITY_CHEST,
+    claimable: false,
+    price: { currency: "flesh", amount: 5 / FLESH_USD_RATE },
+    content: {
+      units: 3,
+      tierProbabilities: [95, 4, 1],
+      description: ["3 units: tier I - 95%, tier II - 4%, tier III - 1%"],
+    },
+    dailyMax: null
+  },
+  {
+    name: "squad1-chest",
+    commodity: COMMODITY_CHEST,
+    claimable: false,
+    price: { currency: "flesh", amount: 15 / FLESH_USD_RATE },
+    content: {
+      units: 1,
+      tierProbabilities: [97, 2, 1],
+      description: ["1 unit: tier I - 97%, tier II - 2%, tier III - 1%"],
+    },
+    dailyMax: null
+  },
+  {
+    name: "squad2-chest",
+    commodity: COMMODITY_CHEST,
+    claimable: false,
+    price: { currency: "flesh", amount: 20 / FLESH_USD_RATE },
+    content: {
+      units: 3,
+      tierProbabilities: [97, 2, 1],
+      description: ["3 units: tier I - 97%, tier II - 2%, tier III - 1%"],
+    },
+    dailyMax: null
+  },
+  {
+    name: "squad3-chest",
+    commodity: COMMODITY_CHEST,
+    claimable: false,
+    price: { currency: "flesh", amount: 30 / FLESH_USD_RATE },
+    content: {
+      units: 5,
+      tierProbabilities: [97, 2, 1],
+      description: ["5 unit: tier I - 97%, tier II - 2%, tier III - 1%"],
+    },
+    dailyMax: null
+  },
+  {
+    name: "energy-potion",
     commodity: COMMODITY_ENERGY,
-    quantity: 1,
-    dailyMax: 6,
-    // hardPrice: 249,
-    fleshPrice: 3 / FLESH_USD_RATE,
-    descriptions: ["+18 energy"],
+    claimable: false,
+    price: { currency: "flesh", amount: 5 / FLESH_USD_RATE },
+    content: {
+      units: 5,
+      tierProbabilities: [97, 2, 1],
+      description: ["+18 energy"],
+    },
+    dailyMax: null
   },
   {
-    name: SHOP_COIN_CHEST,
-    claimable: false,
-    commodity: COMMODITY_CHEST,
-    quantity: 1,
-    dailyMax: 2,
-    ancientCoinsPrice: 1200,
-    descriptions: ["3 units: tier I - 97%, tier II - 2%, tier III - 1%"],
-  },
-  {
-    name: SHOP_DONATION_CHEST,
-    claimable: false,
-    commodity: COMMODITY_CHEST,
-    quantity: 1,
-    fleshPrice: 5 / FLESH_USD_RATE,
-    descriptions: ["3 units: tier I - 95%, tier II - 4%, tier III - 1%"],
-  },
-  {
-    name: SHOP_SQUAD1_CHEST,
-    claimable: false,
-    commodity: COMMODITY_CHEST,
-    quantity: 1,
-    fleshPrice: 15 / FLESH_USD_RATE,
-    descriptions: ["1 units: tier I - 97%, tier II - 2%, tier III - 1%"],
-  },
-  {
-    name: SHOP_SQUAD2_CHEST,
-    claimable: false,
-    commodity: COMMODITY_CHEST,
-    quantity: 1,
-    fleshPrice: 20 / FLESH_USD_RATE,
-    descriptions: ["3 units: tier I - 97%, tier II - 2%, tier III - 1%"],
-  },
-  {
-    name: SHOP_SQUAD3_CHEST,
-    claimable: false,
-    commodity: COMMODITY_CHEST,
-    quantity: 1,
-    fleshPrice: 30 / FLESH_USD_RATE,
-    descriptions: ["5 units: tier I - 97%, tier II - 2%, tier III - 1%"],
+    name: "starter-pack",
+    commodity: COMMODITY_STARTER_PACK,
+    claimable: true,
+    price: null,
+    content: {
+      units: 10,
+      tierProbabilities: [98.5, 1, 0.5],
+      description: ["10 units: tier I - 98.5%, tier II - 1%, tier III - 0.5%"],
+    },
+    dailyMax: null
   },
 ];
 
@@ -1279,16 +1302,16 @@ export const SQUAD_REWARDS = [
   {
     tribe: UNIT_TRIBE_TITAN,
     templates: [226, 229, 232, 235, 238],
-    reward: 3479
+    reward: 3479,
   },
   {
     tribe: UNIT_TRIBE_LEGENDARY,
     templates: [211, 214, 217, 220, 223],
-    reward: 3480
+    reward: 3480,
   },
   {
     tribe: UNIT_TRIBE_FALLEN_KING,
     templates: [196, 199, 202, 205, 208],
-    reward: 3481
+    reward: 3481,
   },
 ];
