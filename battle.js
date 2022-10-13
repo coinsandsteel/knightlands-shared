@@ -514,7 +514,7 @@ export const SHOP = [
   {
     id: 7,
     name: "energy-potion",
-    commodity: COMMODITY_ENERGY,
+    commodity: COMMODITY_ENERGY_POTION,
     claimable: false,
     price: { currency: "flesh", amount: 5 / FLESH_USD_RATE },
     content: {
