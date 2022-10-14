@@ -435,6 +435,19 @@ export const COMMODITY_STARTER_PACK = "starter_pack";
 export const SHOP = [
   {
     id: 1,
+    name: "starter-pack",
+    commodity: COMMODITY_STARTER_PACK,
+    claimable: true,
+    price: null,
+    content: {
+      units: 10,
+      tierProbabilities: [98.5, 1, 0.5],
+      description: ["10 units: tier I - 98.5%, tier II - 1%, tier III - 0.5%"],
+    },
+    dailyMax: null
+  },
+  {
+    id: 2,
     name: "daily-chest",
     commodity: COMMODITY_DAILY_CHEST,
     claimable: true,
@@ -447,7 +460,7 @@ export const SHOP = [
     dailyMax: 2,
   },
   {
-    id: 2,
+    id: 3,
     name: "coin-chest",
     commodity: COMMODITY_COIN_CHEST,
     claimable: false,
@@ -460,7 +473,7 @@ export const SHOP = [
     dailyMax: 2,
   },
   {
-    id: 3,
+    id: 4,
     name: "donation-chest",
     commodity: COMMODITY_CHEST,
     claimable: false,
@@ -473,7 +486,7 @@ export const SHOP = [
     dailyMax: null
   },
   {
-    id: 4,
+    id: 5,
     name: "squad1-chest",
     commodity: COMMODITY_CHEST,
     claimable: false,
@@ -486,7 +499,7 @@ export const SHOP = [
     dailyMax: null
   },
   {
-    id: 5,
+    id: 6,
     name: "squad2-chest",
     commodity: COMMODITY_CHEST,
     claimable: false,
@@ -499,7 +512,7 @@ export const SHOP = [
     dailyMax: null
   },
   {
-    id: 6,
+    id: 7,
     name: "squad3-chest",
     commodity: COMMODITY_CHEST,
     claimable: false,
@@ -512,7 +525,7 @@ export const SHOP = [
     dailyMax: null
   },
   {
-    id: 7,
+    id: 8,
     name: "energy-potion",
     commodity: COMMODITY_ENERGY_POTION,
     claimable: false,
@@ -522,20 +535,7 @@ export const SHOP = [
       description: ["+18 energy"],
     },
     dailyMax: null
-  },
-  {
-    id: 8,
-    name: "starter-pack",
-    commodity: COMMODITY_STARTER_PACK,
-    claimable: true,
-    price: null,
-    content: {
-      units: 10,
-      tierProbabilities: [98.5, 1, 0.5],
-      description: ["10 units: tier I - 98.5%, tier II - 1%, tier III - 0.5%"],
-    },
-    dailyMax: null
-  },
+  }
 ];
 
 export const BATTLE_MAX_ENERGY = 36;
