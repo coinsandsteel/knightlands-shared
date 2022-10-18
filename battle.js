@@ -539,6 +539,7 @@ export const SHOP = [
 ];
 
 export const BATTLE_MAX_ENERGY = 36;
+export const BATTLE_MAX_DUELS_DAILY = 5;
 
 export const ADVENTURE_ENEGRY_PRICE = {
   [GAME_DIFFICULTY_MEDIUM]: 8,
