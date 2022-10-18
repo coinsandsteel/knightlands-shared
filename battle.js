@@ -136,11 +136,11 @@ export const BUFFS = {
     positive: true,
     cases: [
       // Schema according to unit's bonuses
-      "Defense +25%",
-      "Defense +31% (squad bonus)",
-      "Defense +37% (squad bonus)",
-      "Defense +43% (squad bonus)",
-      "Defense +50% (squad bonus)",
+      "Defence +25%",
+      "Defence +31% (squad bonus)",
+      "Defence +37% (squad bonus)",
+      "Defence +43% (squad bonus)",
+      "Defence +50% (squad bonus)",
     ],
   },
   [TERRAIN_SWAMP]: {
@@ -267,9 +267,9 @@ export const BUFFS = {
     positive: true,
     cases: [
       // Levels of ability
-      "Defense +75% for 1 turn. The unit cannot move.",
-      "Defense +100% for 1 turn. The unit cannot move.",
-      "Defense +125% for 1 turn. The unit cannot move.",
+      "Defence +75% for 1 turn. The unit cannot move.",
+      "Defence +100% for 1 turn. The unit cannot move.",
+      "Defence +125% for 1 turn. The unit cannot move.",
     ],
   },
   [ABILITY_SHIELD]: {
