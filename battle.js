@@ -493,6 +493,7 @@ export const SHOP = [
     price: { currency: "flesh", amount: 15 / FLESH_USD_RATE },
     content: {
       units: 1,
+      canSelectTribe: true,
       tierProbabilities: [97, 2, 1],
       description: ["1 unit: tier I - 97%, tier II - 2%, tier III - 1%"],
     },
@@ -506,6 +507,7 @@ export const SHOP = [
     price: { currency: "flesh", amount: 20 / FLESH_USD_RATE },
     content: {
       units: 3,
+      canSelectTribe: true,
       tierProbabilities: [97, 2, 1],
       description: ["3 units: tier I - 97%, tier II - 2%, tier III - 1%"],
     },
@@ -519,6 +521,7 @@ export const SHOP = [
     price: { currency: "flesh", amount: 30 / FLESH_USD_RATE },
     content: {
       units: 5,
+      canSelectTribe: true,
       tierProbabilities: [97, 2, 1],
       description: ["5 unit: tier I - 97%, tier II - 2%, tier III - 1%"],
     },
