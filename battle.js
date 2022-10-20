@@ -441,8 +441,14 @@ export const SHOP = [
     price: null,
     content: {
       units: 10,
-      tierProbabilities: [98.5, 1, 0.5],
-      description: ["10 units: tier I - 98.5%, tier II - 1%, tier III - 0.5%"],
+      unitClasses: {
+        [UNIT_CLASS_MELEE]: 3,
+        [UNIT_CLASS_RANGE]: 3,
+        [UNIT_CLASS_TANK]: 2,
+        [UNIT_CLASS_SUPPORT]: 2
+      },
+      tierProbabilities: [100, 0, 0],
+      description: ["10 tier I units: 3 Melee, 3 Range, 2 Tank, 2 Support"],
     },
     dailyMax: null
   },
@@ -523,7 +529,7 @@ export const SHOP = [
       units: 5,
       canSelectTribe: true,
       tierProbabilities: [97, 2, 1],
-      description: ["5 unit: tier I - 97%, tier II - 2%, tier III - 1%"],
+      description: ["5x unit: tier I - 97%, tier II - 2%, tier III - 1%"],
     },
     dailyMax: null
   },
