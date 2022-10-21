@@ -11,6 +11,14 @@ const ItemType = {
     Lunar: "lunarResource",
     March: "marchResource",
     April: "aprilResource",
+    Battle: "battleResource",
 };
 
-module.exports = ItemType;
+const EventItemType = [
+    ItemType.Lunar,
+    ItemType.March,
+    ItemType.April,
+    ItemType.Battle
+];
+
+module.exports = { ItemType, EventItemType };

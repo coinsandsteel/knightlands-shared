@@ -3,7 +3,7 @@
 const {
     getSlot
 } = require("./equipment_slot");
-const ItemType = require("./item_type");
+const { ItemType } = require("./item_type");
 
 export default class ItemStatResolver {
     constructor(statConversions, itemPower, slotFactors, charmPowerFactor) {

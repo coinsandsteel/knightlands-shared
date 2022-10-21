@@ -36,4 +36,5 @@ module.exports = {
     LunarUpdate: "lunar_upd",
     MarchUpdate: "march_upd",
     AprilUpdate: "april_upd",
+    BattleUpdate: "battle_upd",
 }
