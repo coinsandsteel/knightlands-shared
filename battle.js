@@ -461,7 +461,10 @@ export const SHOP = [
     content: {
       units: 3,
       tierProbabilities: [97, 2, 1],
-      description: ["3 units: tier I - 97%, tier II - 2%, tier III - 1%"],
+      description: [
+        "Need to complete Daily Tasks 3.",
+        "3 units: tier I - 97%, tier II - 2%, tier III - 1%"
+      ],
     },
     dailyMax: 2,
   },
@@ -556,8 +559,18 @@ export const ADVENTURE_ENEGRY_PRICE = {
 };
 
 export const DUEL_REWARDS = {
-  win: { crystals: 25, rank: 1 },
-  loose: { crystals: -5, rank: -2 },
+  [GAME_DIFFICULTY_LOW]: {
+    win: { crystals: 15, rank: 1 },
+    loose: { crystals: 5, rank: -3 },
+  },
+  [GAME_DIFFICULTY_MEDIUM]: {
+    win: { crystals: 20, rank: 2 },
+    loose: { crystals: 5, rank: -2 },
+  },
+  [GAME_DIFFICULTY_HIGH]: {
+    win: { crystals: 25, rank: 3 },
+    loose: { crystals: 5, rank: -1 },
+  }
 };
 
 export const RANKING_REWARDS = [
