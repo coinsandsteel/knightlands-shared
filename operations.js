@@ -157,6 +157,7 @@ module.exports = {
   FetchSeason: "fetch_season",
   FetchFounderPresale: "fetch_founder_sale",
   DepositFounderPack: "deposit_founder_pack",
+
   SDungeonGenerateNew: "sdungeon_generate_new",
   SDungeonLoad: "sdungeon_load",
   SDungeonRevealCell: "sdungeon_reveal_tile",
@@ -172,6 +173,8 @@ module.exports = {
   SDungeonEnter: "sdungeon_enter",
   SDunegonCommitStats: "sdungeon_commit_stats",
   SDungeonWithdraw: "sdungeon_withdraw",
+  SDungeonPurchase: "sdungeon_purchase",
+
   XmasLoad: "xmas_load",
   XmasFarmUpgrade: "xmas_farm_upgrade",
   XmasHarvest: "xmas_harvest",
@@ -182,6 +185,7 @@ module.exports = {
   XmasActivatePerk: "xmas_activate_perk",
   XmasRebalancePerks: "xmas_rebalance_perks",
   PrizePoolWithdraw: "prize_pool_wdraw",
+
   LunarLoad: "lunar_load",
   LunarCraft: "lunar_craft",
   LunarExchange: "lunar_exchange",
