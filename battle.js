@@ -473,13 +473,19 @@ export const SHOP = [
     name: "coin-chest",
     commodity: COMMODITY_COIN_CHEST,
     claimable: false,
-    price: { currency: CURRENCY_COINS, amount: 1200 },
+    price: {
+      currency: CURRENCY_COINS,
+      progression: {
+        multiplier: 1.25,
+        baseCost: 1200
+      }
+    },
     content: {
       units: 3,
       tierProbabilities: [97, 2, 1],
       description: ["3 units: tier I - 97%, tier II - 2%, tier III - 1%"],
     },
-    dailyMax: 2,
+    dailyMax: null
   },
   {
     id: 4,
